@@ -1,0 +1,20 @@
+﻿<Window x:Class="EyesPower.AccountNew"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EyesPower"
+        mc:Ignorable="d"
+        Title="EyesPower: Новый аккаунт" ResizeMode="NoResize" Height="450" Width="661.161">
+    <Grid>
+        <Image HorizontalAlignment="Left" Source="Resources/icon.png" Height="113" Margin="253,10,0,0" VerticalAlignment="Top" Width="182"/>
+        <Label Content="email" FontSize="20" HorizontalAlignment="Left" Margin="146,159,0,0" VerticalAlignment="Top"/>
+        <Label Content="пароль" FontSize="20" HorizontalAlignment="Left" Margin="128,218,0,0" VerticalAlignment="Top"/>
+        <Label Content="повторите пароль" FontSize="20" HorizontalAlignment="Left" Margin="26,282,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="tbpass" HorizontalAlignment="Left" FontSize="20" Margin="223,218,0,0" VerticalAlignment="Top" Width="255" Height="37"/>
+        <TextBox x:Name="tbemail" HorizontalAlignment="Left" FontSize="20" Margin="223,159,0,0" VerticalAlignment="Top" Width="255" Height="37"/>
+        <PasswordBox x:Name="tbpassreplay" HorizontalAlignment="Left" FontSize="20" Margin="223,282,0,0" VerticalAlignment="Top" Width="255" Height="37"/>
+        <Button x:Name="btnewaccount" Content="Зарегистрировать" FontSize="20" HorizontalAlignment="Left" Margin="241,345,0,0" VerticalAlignment="Top" Width="212" Height="45" Click="btnewaccount_Click"/>
+
+    </Grid>
+</Window>

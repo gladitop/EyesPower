@@ -1,0 +1,18 @@
+﻿<Window x:Class="EyesPower.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EyesPower"
+        mc:Ignorable="d"
+        Title="EyesPower: Вход" ResizeMode="NoResize" Height="450" Width="371.875" Closing="Window_Closing">
+    <Grid>
+        <Button x:Name="btaccountyes" Content="С аккаунтом"  FontSize="20" HorizontalAlignment="Left" Margin="114,183,0,0" VerticalAlignment="Top" Width="141" Height="42" Click="btaccountyes_Click">
+
+        </Button>
+        <Image HorizontalAlignment="Left" Source="Resources\icon.png" Height="113" Margin="91,-3,0,0" VerticalAlignment="Top" Width="182"/>
+        <Label Content="Как зайди?" FontSize="15" HorizontalAlignment="Left" Margin="144,106,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnotakk" Content="Без аккаунта"  FontSize="20" HorizontalAlignment="Left" Margin="114,247,0,0" VerticalAlignment="Top" Width="141" Height="42" Click="btnotakk_Click"/>
+        <Button x:Name="btaccountinput" Content="Новый аккаунт"  FontSize="20" HorizontalAlignment="Left" Margin="102,315,0,0" VerticalAlignment="Top" Width="162" Height="42" Click="btaccountinput_Click"/>
+    </Grid>
+</Window>
