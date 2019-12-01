@@ -28,5 +28,25 @@ namespace EyesPower
         {
 
         }
+
+        private void btinput_Click(object sender, RoutedEventArgs e)//Вход
+        {
+            if (string.IsNullOrWhiteSpace(tbemail.Text))
+            {
+                MessageBox.Show("Без email нельзя!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else if (string.IsNullOrWhiteSpace(tbpass.Password))
+            {
+                MessageBox.Show("Без пароля нельзя!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                try
+                {
+                    
+                }
+                catch { }
+            }
+        }
     }
 }

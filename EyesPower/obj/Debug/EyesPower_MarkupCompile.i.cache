@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Дамир\source\repos\EyesPower\EyesPower\obj\Debug\
+C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\
 EyesPower
 none
 false
 DEBUG;TRACE
-C:\Users\Дамир\source\repos\EyesPower\EyesPower\App.xaml
-41531643889
+C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\App.xaml
+61900583100
 
-9-869359844
+11-1360717735
 141183416626
-AccountInput.xaml;AccountNew.xaml;Main.xaml;MainWindow.xaml;
+About.xaml;AccountInput.xaml;AccountNew.xaml;Main.xaml;MainWindow.xaml;Start.xaml;
 
-False
+True
 

@@ -58,5 +58,17 @@ namespace EyesPower.Properties {
                 this["Passworld"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool StartProgram {
+            get {
+                return ((bool)(this["StartProgram"]));
+            }
+            set {
+                this["StartProgram"] = value;
+            }
+        }
     }
 }

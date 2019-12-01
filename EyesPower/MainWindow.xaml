@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="EyesPower: Вход" ResizeMode="NoResize" Height="450" Width="371.875" Closing="Window_Closing">
     <Grid>
-        <Button x:Name="btaccountyes" Content="С аккаунтом"  FontSize="20" HorizontalAlignment="Left" Margin="114,183,0,0" VerticalAlignment="Top" Width="141" Height="42" Click="btaccountyes_Click">
+        <Button x:Name="btaccountyes"  Content="С аккаунтом"  FontSize="20" HorizontalAlignment="Left" Margin="114,183,0,0" VerticalAlignment="Top" Width="141" Height="42" Click="btaccountyes_Click" BorderBrush="#7F000006" Background="#CC27EEE3">
 
         </Button>
         <Image HorizontalAlignment="Left" Source="Resources\icon.png" Height="113" Margin="91,-3,0,0" VerticalAlignment="Top" Width="182"/>

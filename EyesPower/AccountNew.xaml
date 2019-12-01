@@ -14,7 +14,7 @@
         <PasswordBox x:Name="tbpass" HorizontalAlignment="Left" FontSize="20" Margin="223,218,0,0" VerticalAlignment="Top" Width="255" Height="37"/>
         <TextBox x:Name="tbemail" HorizontalAlignment="Left" FontSize="20" Margin="223,159,0,0" VerticalAlignment="Top" Width="255" Height="37"/>
         <PasswordBox x:Name="tbpassreplay" HorizontalAlignment="Left" FontSize="20" Margin="223,282,0,0" VerticalAlignment="Top" Width="255" Height="37"/>
-        <Button x:Name="btnewaccount" Content="Зарегистрировать" FontSize="20" HorizontalAlignment="Left" Margin="241,345,0,0" VerticalAlignment="Top" Width="212" Height="45" Click="btnewaccount_Click"/>
+        <Button x:Name="btnewaccount" Content="Зарегистрировать" FontSize="20" HorizontalAlignment="Left" Margin="241,345,0,0" VerticalAlignment="Top" Width="212" Height="45" Click="btnewaccount_Click" Background="#FF00FFE8"/>
 
     </Grid>
 </Window>

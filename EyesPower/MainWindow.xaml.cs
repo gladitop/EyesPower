@@ -33,8 +33,7 @@ namespace EyesPower
             if (answer == MessageBoxResult.Yes)
             {
                 Settings.Default.Account = false;
-                Settings.Default.Login = "Login";
-                Settings.Default.Passworld = "Passworld";
+                Settings.Default.StartProgram = true;
                 Settings.Default.Save();
                 Main m = new Main();
                 m.Show();

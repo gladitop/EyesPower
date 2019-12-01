@@ -30,7 +30,6 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\MainWindow.g.
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\App.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\EyesPower_MarkupCompile.cache
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\EyesPower_MarkupCompile.lref
-C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\App.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\AccountInput.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\AccountNew.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Main.baml
@@ -40,3 +39,7 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\EyesPower.Pro
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\EyesPower.csproj.GenerateResource.cache
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\EyesPower.exe
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\EyesPower.pdb
+C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Start.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Start.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\About.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\About.baml

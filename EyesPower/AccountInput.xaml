@@ -13,6 +13,6 @@
         <Label Content="пароль" FontSize="20" HorizontalAlignment="Left" Margin="6,221,0,0" VerticalAlignment="Top"/>
         <PasswordBox x:Name="tbpass" HorizontalAlignment="Left" FontSize="20" Margin="101,221,0,0" VerticalAlignment="Top" Width="255" Height="37"/>
         <TextBox x:Name="tbemail" HorizontalAlignment="Left" FontSize="20" Margin="101,162,0,0" VerticalAlignment="Top" Width="255" Height="37"/>
-        <Button Content="Вход" FontSize="30" HorizontalAlignment="Left" Margin="101,304,0,0" VerticalAlignment="Top" Width="225" Height="58"/>
+        <Button x:Name="btinput" Content="Вход" FontSize="30" HorizontalAlignment="Left" Margin="101,304,0,0" VerticalAlignment="Top" Width="225" Height="58" BorderBrush="#7F000000" Background="#FF03F3DD" Click="btinput_Click"/>
     </Grid>
 </Window>

@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="EyesPower: Основное" Height="450" Width="800" ResizeMode="CanMinimize" Closing="Window_Closing">
     <Grid>
-        
+        <Border BorderBrush="Snow" BorderThickness="1" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="794" Background="#FF0CE7B4" Margin="0,0,-0.4,0"/>
+        <Image Source="Resources\user.png" HorizontalAlignment="Left" Height="52" Margin="732,0,0,0" VerticalAlignment="Top" Width="52"/>
+
     </Grid>
 </Window>
