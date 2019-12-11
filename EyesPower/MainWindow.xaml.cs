@@ -47,15 +47,24 @@ namespace EyesPower
             f.ShowDialog();
         }
 
-        private void btaccountinput_Click(object sender, RoutedEventArgs e)
+        private void btaccountinput_Click(object sender, RoutedEventArgs e)//При аккаунте
         {
             AccountNew f = new AccountNew();
             f.ShowDialog();
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)//закрытие проги
         {
             Environment.Exit(0);
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F1)
+            {
+                About about = new About();
+                about.ShowDialog();
+            }
         }
     }
 }

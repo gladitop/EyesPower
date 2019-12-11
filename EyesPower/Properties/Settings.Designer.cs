@@ -70,5 +70,17 @@ namespace EyesPower.Properties {
                 this["StartProgram"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Customization {
+            get {
+                return ((bool)(this["Customization"]));
+            }
+            set {
+                this["Customization"] = value;
+            }
+        }
     }
 }
