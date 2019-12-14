@@ -58,7 +58,7 @@ namespace EyesPower
             Environment.Exit(0);
         }
 
-        private void Window_KeyDown(object sender, KeyEventArgs e)
+        private void mainWindow_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.F1)
             {

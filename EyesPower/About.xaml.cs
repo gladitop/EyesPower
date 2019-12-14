@@ -23,5 +23,10 @@ namespace EyesPower
         {
             InitializeComponent();
         }
+
+        private void btexit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

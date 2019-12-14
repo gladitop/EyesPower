@@ -53,7 +53,7 @@ namespace EyesPower
             }
         }
 
-        private void btsetting_KeyDown(object sender, KeyEventArgs e)
+        private void main_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.F1)
             {
