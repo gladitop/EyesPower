@@ -12,7 +12,7 @@
         <Image x:Name="imagesstate" Source="Resources\stategood.png" HorizontalAlignment="Left" Height="174" Margin="257,52,0,0" VerticalAlignment="Top" Width="289"/>
         <Label x:Name="lbstate" Content="Состояние: Отличное" HorizontalAlignment="Left" Margin="336,208,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbcustomization" Content="Требуется пройти настройку!"  HorizontalAlignment="Left" Margin="316,239,0,0" VerticalAlignment="Top" Foreground="#FFFF0707"/>
-        <Button x:Name="btsetting" Content="Настройка" FontSize="25" HorizontalAlignment="Left" Margin="317,288,0,0" VerticalAlignment="Top" Width="162"/>
+        <Button x:Name="btsetting" Content="Настройка" FontSize="25" HorizontalAlignment="Left" Margin="317,288,0,0" VerticalAlignment="Top" Width="162" Click="btsetting_Click"/>
 
     </Grid>
 </Window>

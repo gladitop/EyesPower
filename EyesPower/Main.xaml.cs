@@ -37,6 +37,8 @@ namespace EyesPower
 
         public void CheckState()//проверка состояние
         {
+            //настройка
+
             if (Settings.Default.Customization == false)
             {
                 imagesstate.Source = BitmapFrame.Create(new Uri(@"pack://application:,,,/Resources/statebad.png"));
@@ -53,13 +55,19 @@ namespace EyesPower
             }
         }
 
-        private void main_KeyDown(object sender, KeyEventArgs e)
+        private void main_KeyDown(object sender, KeyEventArgs e)//горячие клавиши
         {
             if (e.Key == Key.F1)
             {
                 About about = new About();
                 about.ShowDialog();
             }
+        }
+
+        private void btsetting_Click(object sender, RoutedEventArgs e)//Настройка
+        {
+            Customizationing customizationing = new Customizationing();
+            customizationing.ShowDialog();
         }
     }
 }

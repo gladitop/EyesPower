@@ -22,7 +22,6 @@ C:\Users\Дамир\source\repos\EyesPower\EyesPower\obj\Debug\AccountInput.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\bin\Debug\EyesPower.exe.config
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\bin\Debug\EyesPower.exe
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\bin\Debug\EyesPower.pdb
-C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\EyesPower.csprojAssemblyReference.cache
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\AccountInput.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\AccountNew.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Main.g.cs
@@ -43,3 +42,7 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Start.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Start.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\About.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\About.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Customizationing.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Customizationing.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Pages\Welcome.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Pages\Welcome.baml
