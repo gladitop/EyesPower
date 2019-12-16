@@ -30,15 +30,16 @@ namespace EyesPower.Pages
         {
             if (Data.numberanswer == 1)
                 btnext.IsEnabled = true;
+            Data.NewPage = true;
         }
 
         private void btnext_Click(object sender, RoutedEventArgs e)//Дальше
         {
             if (btyes.IsChecked.Value == true)
             {
-
+                Data.numberanswer++;
             }
-            else
+            else if (btno.IsChecked.Value == true)
             {
                 MessageBoxResult lol = MessageBox.Show("При отказе это окно закроетс, но вы можете пройди это потом!", "EysePower: Настройка", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 if (lol == MessageBoxResult.Yes)
@@ -46,7 +47,7 @@ namespace EyesPower.Pages
                     Data.exit = true;
                 }
             }
-                
+
         }
 
         private void btno_Checked(object sender, RoutedEventArgs e)//Кнопка нет

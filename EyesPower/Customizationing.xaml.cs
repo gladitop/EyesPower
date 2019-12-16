@@ -23,22 +23,36 @@ namespace EyesPower
         public Customizationing()
         {
             InitializeComponent();
-            Thread thread = new Thread(new ThreadStart(Exit));
+            Thread thread = new Thread(new ThreadStart(Update));
             thread.Start();
 
             frame.Navigate(new Pages.Welcome());
         }
 
-        public void Exit()
+        public void Update()
         {
-            if (Pages.Data.exit == true)
+            while (true)
             {
-                this.Dispatcher.Invoke(new Action(() =>
-                {
-                    Pages.Data.exit = false;
-                    this.Close();
-                }));
+                Task.Delay(10).Wait();
 
+                //проверка выхода
+                if (Pages.Data.exit == true)
+                {
+                    this.Dispatcher.Invoke(new Action(() =>
+                    {
+                        Pages.Data.exit = false;
+                        this.Close();
+                    }));
+                }
+
+                if (Pages.Data.numberanswer == 2 && Pages.Data.NewPage == true)
+                {
+                    this.Dispatcher.Invoke(new Action(() =>
+                    {
+                        frame.Navigate(new Pages.SendAndHelp());
+                        Pages.Data.NewPage = false;
+                    }));
+                }
             }
         }
     }

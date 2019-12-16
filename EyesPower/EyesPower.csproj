@@ -71,6 +71,9 @@
       <DependentUpon>Customizationing.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Data.cs" />
+    <Compile Include="Pages\SendAndHelp.xaml.cs">
+      <DependentUpon>SendAndHelp.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
@@ -118,6 +121,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\SendAndHelp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Welcome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
