@@ -49,3 +49,5 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Pages\Welcome
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\EyesPower.csprojAssemblyReference.cache
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Pages\SendAndHelp.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Pages\SendAndHelp.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Pages\CheckUpdate.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Pages\CheckUpdate.baml

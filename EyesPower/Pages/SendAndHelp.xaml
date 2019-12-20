@@ -15,6 +15,8 @@
         <Label Content="Вы хотите нам помочь?" FontSize="45" HorizontalAlignment="Left" VerticalAlignment="Top" Height="74" Width="543" Margin="150,26,0,0" Foreground="Black"/>
         <Label Content="Программа будет отсылать о своей работе" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="582" Margin="150,100,0,0" Foreground="Black"/>
         <Label Content="(аниномно)" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="165" Margin="339,142,0,0" Foreground="Black"/>
+        <RadioButton x:Name="btyes" Content="Да" FontSize="25" HorizontalAlignment="Left" Margin="32,214,0,0" VerticalAlignment="Top" Checked="btyes_Checked"/>
+        <RadioButton x:Name="btno" Content="Нет" FontSize="25" HorizontalAlignment="Left" Margin="32,269,0,0" VerticalAlignment="Top" Checked="btno_Checked"/>
 
     </Grid>
 </Page>

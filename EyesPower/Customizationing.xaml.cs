@@ -53,6 +53,15 @@ namespace EyesPower
                         Pages.Data.NewPage = false;
                     }));
                 }
+
+                if (Pages.Data.numberanswer == 3)
+                {
+                    this.Dispatcher.Invoke(new Action(() =>
+                    {
+                        frame.Navigate(new Pages.CheckUpdate());
+                        Pages.Data.NewPage = false;
+                    }));
+                }
             }
         }
     }
