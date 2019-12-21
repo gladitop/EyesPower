@@ -45,6 +45,24 @@ namespace EyesPower
                     }));
                 }
 
+                if (Pages.Data.numberanswer == 1 && Pages.Data.BackPage == true)
+                {
+                    this.Dispatcher.Invoke(new Action(() =>
+                    {
+                        frame.Navigate(new Pages.Welcome());
+                        Pages.Data.BackPage = false;
+                    }));
+                }
+
+                if (Pages.Data.numberanswer == 2 && Pages.Data.BackPage == true)
+                {
+                    this.Dispatcher.Invoke(new Action(() =>
+                    {
+                        frame.Navigate(new Pages.SendAndHelp());
+                        Pages.Data.BackPage = false;
+                    }));
+                }
+
                 if (Pages.Data.numberanswer == 2 && Pages.Data.NewPage == true)
                 {
                     this.Dispatcher.Invoke(new Action(() =>
@@ -54,7 +72,7 @@ namespace EyesPower
                     }));
                 }
 
-                if (Pages.Data.numberanswer == 3)
+                if (Pages.Data.numberanswer == 3 && Pages.Data.NewPage == true)
                 {
                     this.Dispatcher.Invoke(new Action(() =>
                     {
@@ -62,6 +80,36 @@ namespace EyesPower
                         Pages.Data.NewPage = false;
                     }));
                 }
+            
+                if (Pages.Data.numberanswer == 4 && Pages.Data.NewPage == true)
+                {
+                    this.Dispatcher.Invoke(new Action(() =>
+                    {
+                        frame.Navigate(new Pages.Programs());
+                        Pages.Data.NewPage = false;
+                    }));
+                }
+            }
+        }
+
+        public void discharge()//сброс (переменных)
+        {
+            Pages.Data.BackPage = false;
+            Pages.Data.NewPage = false;
+            Pages.Data.exit = false;
+            Pages.Data.numberanswer = 1;
+            Pages.Data.yesHelp = false;
+        }
+
+        private void customizationing_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            MessageBoxResult lol = MessageBox.Show("Если вы хотите закрыть это окно, то все ваши настройки будут сброшаны", "EysePower: Настройка", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            if (lol == MessageBoxResult.Yes)
+            {
+                e.Cancel = false;//прикол)
+                discharge();
             }
         }
     }

@@ -13,7 +13,8 @@ namespace EyesPower.Pages
         public static bool yesHelp = false;//помощь есть? (то есть отсылать данные мне :) )
         public static short numberanswer = 1;// счёт
         public static bool exit = false;//Закрыть форму настройки
-        public static bool NewPage = false;//Для нормального обновление страниц
-
+        public static bool NewPage = false;//Для нормального обновление страниц (след. страница)
+        public static bool BackPage = false;//Для нормального обновление страниц (назад страница)
+        public static bool Program = false;//Используваете вы специальные программы (фотошоп и дургие)
     }
 }

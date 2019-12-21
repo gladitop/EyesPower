@@ -37,7 +37,8 @@ namespace EyesPower.Pages
         {
             if (btyes.IsChecked.Value == true)
             {
-                Data.numberanswer++;
+                Data.numberanswer = 2;
+                Data.NewPage = true;
             }
             else if (btno.IsChecked.Value == true)
             {

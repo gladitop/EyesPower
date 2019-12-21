@@ -38,19 +38,25 @@ namespace EyesPower.Pages
 
         private void btnext_Click(object sender, RoutedEventArgs e)//Дальше
         {
-            if (btyes.IsChecked.HasValue == true)
+            if (btyes.IsChecked.Value == true)
             {
-                Data.numberanswer = 3;
                 Data.yesHelp = true;
                 Data.NewPage = true;
-                MessageBox.Show(Convert.ToString(Data.yesHelp));
-                MessageBox.Show(Convert.ToString(Data.NewPage));
+                Data.numberanswer = 3;
             }
             else if (btno.IsChecked.Value == true)
             {
-
+                Data.numberanswer = 3;
+                Data.yesHelp = false;
+                Data.NewPage = true;
             }
+        }
 
+        private void btback_Click(object sender, RoutedEventArgs e)//Назад
+        {
+            Data.yesHelp = false;
+            Data.numberanswer = 1;
+            Data.BackPage = true;
         }
     }
 }

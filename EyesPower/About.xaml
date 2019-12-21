@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EyesPower"
         mc:Ignorable="d"
-        Title="EysePower: О программе" ResizeMode="NoResize" Icon="Resources\question.ico" Height="450" Width="410.448">
+        Title="EysePower: О программе" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Resources\question.ico" Height="450" Width="410.448">
     <Grid>
         <Image HorizontalAlignment="Left" Source="Resources/icon.png" Height="148" Margin="84,10,0,0" VerticalAlignment="Top" Width="238"/>
         <Label Content="Название программы: Eysepower" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top"/>

@@ -23,6 +23,40 @@ namespace EyesPower.Pages
         public CheckUpdate()
         {
             InitializeComponent();
+            lbnumber.Content = $"{Data.numberanswer}/5";
+        }
+
+        private void btnext_Click(object sender, RoutedEventArgs e)//Далее
+        {
+            if (btyes.IsChecked.Value == true)
+            {
+                Data.yesHelp = true;
+                Data.NewPage = true;
+                Data.numberanswer = 4;
+            }
+            else if (btno.IsChecked.Value == true)
+            {
+                Data.numberanswer = 4;
+                Data.yesHelp = false;
+                Data.NewPage = true;
+            }
+        }
+
+        private void btback_Click(object sender, RoutedEventArgs e)//Назад
+        {
+            Data.yesHelp = false;
+            Data.numberanswer = 2;
+            Data.BackPage = true;
+        }
+
+        private void btyes_Checked(object sender, RoutedEventArgs e)//Да
+        {
+            btnext.IsEnabled = true;
+        }
+
+        private void btno_Checked(object sender, RoutedEventArgs e)//Нер
+        {
+            btnext.IsEnabled = true;
         }
     }
 }

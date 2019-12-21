@@ -9,6 +9,14 @@
       Title="CheckUpdate">
 
     <Grid>
-        
+        <Label Content="Вы хотите включить обновление?" FontSize="45" HorizontalAlignment="Left" VerticalAlignment="Top" Height="74" Width="730" Margin="47,15,0,0" Foreground="Black"/>
+        <Label Content="Программа будет проверять при каждом запуске обновление" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="745" Margin="32,94,0,0" Foreground="Black"/>
+        <Label Content="(нужен интернет)" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="207" Margin="322,139,0,0" Foreground="Black"/>
+        <RadioButton x:Name="btyes" Content="Да" FontSize="25" HorizontalAlignment="Left" Margin="32,214,0,0" VerticalAlignment="Top" Checked="btyes_Checked"/>
+        <RadioButton x:Name="btno" Content="Нет" FontSize="25" HorizontalAlignment="Left" Margin="32,269,0,0" VerticalAlignment="Top" Checked="btno_Checked"/>
+        <Button x:Name="btnext" Content="Дальше" IsEnabled="False" FontSize="25" HorizontalAlignment="Left" Margin="616,353,0,0" VerticalAlignment="Top" Width="133" Click="btnext_Click"/>
+        <Button x:Name="btback" Content="Назад" FontSize="25" IsEnabled="True" HorizontalAlignment="Left" Margin="32,353,0,0" VerticalAlignment="Top" Width="133" Click="btback_Click"/>
+        <Label x:Name="lbnumber" Content="1/5" HorizontalAlignment="Left" Margin="386,356,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Page>
