@@ -1,0 +1,6 @@
+C:\Users\Дамир\source\repos\ServerEysePower\ServerEysePower\bin\Debug\ServerEysePower.exe.config
+C:\Users\Дамир\source\repos\ServerEysePower\ServerEysePower\bin\Debug\ServerEysePower.exe
+C:\Users\Дамир\source\repos\ServerEysePower\ServerEysePower\bin\Debug\ServerEysePower.pdb
+C:\Users\Дамир\source\repos\ServerEysePower\ServerEysePower\obj\Debug\ServerEysePower.csprojAssemblyReference.cache
+C:\Users\Дамир\source\repos\ServerEysePower\ServerEysePower\obj\Debug\ServerEysePower.exe
+C:\Users\Дамир\source\repos\ServerEysePower\ServerEysePower\obj\Debug\ServerEysePower.pdb

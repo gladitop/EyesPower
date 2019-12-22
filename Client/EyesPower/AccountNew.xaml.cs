@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Net;
+using System.Net.Sockets;
 
 namespace EyesPower
 {
@@ -19,6 +21,7 @@ namespace EyesPower
     /// </summary>
     public partial class AccountNew : Window
     {
+        Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         public AccountNew()
         {
             InitializeComponent();
@@ -45,6 +48,11 @@ namespace EyesPower
             else if (tbpass.Password != tbpassreplay.Password)
             {
                 MessageBox.Show("Ваш пароль не одинаковый", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else {
+                
+
+
             }
         }
     }
