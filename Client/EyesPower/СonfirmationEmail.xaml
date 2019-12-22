@@ -1,0 +1,14 @@
+﻿<Window x:Class="EyesPower.СonfirmationEmail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EyesPower"
+        mc:Ignorable="d"
+        Title="СonfirmationEmail" WindowStyle="None" WindowStartupLocation="CenterScreen" Height="265.944" Width="557.597">
+    <Grid>
+        <Label Content="подтвердите свой email" FontSize="30" HorizontalAlignment="Left" Margin="115,24,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="btcode" HorizontalAlignment="Left" FontSize="25" Height="34" Margin="159,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
+        <Button x:Name="btsend" Content="Отправить" FontSize="25" HorizontalAlignment="Left" Margin="208,182,0,0" VerticalAlignment="Top" Width="157" Height="40" Click="btsend_Click"/>
+    </Grid>
+</Window>

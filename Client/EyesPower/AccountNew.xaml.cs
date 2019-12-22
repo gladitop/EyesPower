@@ -22,6 +22,7 @@ namespace EyesPower
     public partial class AccountNew : Window
     {
         Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
         public AccountNew()
         {
             InitializeComponent();
@@ -49,10 +50,28 @@ namespace EyesPower
             {
                 MessageBox.Show("Ваш пароль не одинаковый", Title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else {
-                
-
-
+            else
+            {
+                try
+                {
+                    client.Connect("127.0.0.1", 904);
+                    client.Send(Encoding.UTF8.GetBytes("EysePower 1.0"));
+                    Task.Delay(100).Wait();
+                    client.Send(Encoding.UTF8.GetBytes("Reg"));
+                    Task.Delay(10).Wait();
+                    client.Send(Encoding.UTF8.GetBytes(tbemail.Text));
+                    Task.Delay(10).Wait();
+                    client.Send(Encoding.UTF8.GetBytes(tbpass.Password));
+                    СonfirmationEmail email = new СonfirmationEmail();
+                    Data.client = client;
+                    email.ShowDialog();
+                }
+                catch(Exception ex)
+                {
+                    client.Close();
+                    Data.client.Close();
+                    MessageBox.Show($"Ошибка! {ex.Message}", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
     }

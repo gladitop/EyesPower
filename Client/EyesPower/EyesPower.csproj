@@ -70,6 +70,7 @@
     <Compile Include="Customizationing.xaml.cs">
       <DependentUpon>Customizationing.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data.cs" />
     <Compile Include="Pages\CheckUpdate.xaml.cs">
       <DependentUpon>CheckUpdate.xaml</DependentUpon>
     </Compile>
@@ -85,6 +86,9 @@
     </Compile>
     <Compile Include="Start.xaml.cs">
       <DependentUpon>Start.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="СonfirmationEmail.xaml.cs">
+      <DependentUpon>СonfirmationEmail.xaml</DependentUpon>
     </Compile>
     <Page Include="About.xaml">
       <SubType>Designer</SubType>
@@ -144,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Start.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="СonfirmationEmail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
