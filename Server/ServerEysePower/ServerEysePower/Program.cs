@@ -84,6 +84,14 @@ namespace ServerEysePower
             return false;
         }
 
+        static bool LoginAccount(Socket client, string email, string pass)
+        {
+            OleDbCommand command = new OleDbCommand($"SELECT Login FROM Accounts WHERE Login = '{email}'", myConnection);
+            string answer = command.ExecuteScalar().ToString();
+            Console.WriteLine(answer);
+            return false;
+        }
+
         static void MessClient(object clien)
         {
             Socket client = (Socket)clien;
@@ -121,6 +129,30 @@ namespace ServerEysePower
                         else
                         { Write("Ошибка: не тот код!", ConsoleColor.Red); }
 
+                    }
+
+                    //Вход
+
+                    if (Encoding.UTF8.GetString(buffer, 0, messi) == "Log")
+                    {
+                        //email
+
+                        messi = client.Receive(buffer);
+                        string email = Encoding.UTF8.GetString(buffer, 0, messi);
+
+                        //пароль
+
+                        messi = client.Receive(buffer);
+                        string pass = Encoding.UTF8.GetString(buffer, 0, messi);
+
+                        if (LoginAccount(client, email, pass) == true)
+                        {
+
+                        }
+                        else
+                        {
+                            
+                        }
                     }
                 }
                 catch(Exception ex) { Write($"Ошибка! {ex.Message}", ConsoleColor.Red); }
