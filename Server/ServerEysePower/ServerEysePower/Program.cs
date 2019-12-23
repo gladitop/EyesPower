@@ -9,6 +9,7 @@ using System.Net.Sockets;
 using System.IO;
 using System.Threading;
 using System.Net.Mail;
+using System.Net.NetworkInformation;
 
 namespace ServerEysePower
 {
@@ -61,41 +62,65 @@ namespace ServerEysePower
 
         static bool EmailConfirmation(Socket client, string email)
         {
-            MailAddress tomail = new MailAddress(email);
-            MailMessage message = new MailMessage(frommail, tomail);
-            message.Subject = "EysePower: подтвердите свой email";
-            string code = Convert.ToString(rand.Next(1, 9999));
-            message.Body = $"Ваш код: {code}";
-
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-            smtp.Credentials = new NetworkCredential("dam.almaev@gmail.com", "1506.2006A");
-            smtp.EnableSsl = true;
-            Write($"Отправка письма от {email}", ConsoleColor.Yellow);
-            smtp.Send(message);
-            Write("Готово", ConsoleColor.Green);
-
-            Write("Ожидание кода...", ConsoleColor.Yellow);
-            int messi = client.Receive(buffer);
-            if (Encoding.UTF8.GetString(buffer, 0, messi) == code)
+            try
             {
-                Write("Подтверждение есть!", ConsoleColor.Green);
-                return true;
+                MailAddress tomail = new MailAddress(email);
+                MailMessage message = new MailMessage(frommail, tomail);
+                message.Subject = "EysePower: подтвердите свой email";
+                string code = Convert.ToString(rand.Next(1, 9999));
+                message.Body = $"Ваш код: {code}";
+
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+                smtp.Credentials = new NetworkCredential("dam.almaev@gmail.com", "1506.2006A");
+                smtp.EnableSsl = true;
+                Write($"Отправка письма от {email}", ConsoleColor.Yellow);
+                smtp.Send(message);
+                Write("Готово", ConsoleColor.Green);
+
+                Write("Ожидание кода...", ConsoleColor.Yellow);
+                int messi = client.Receive(buffer);
+                if (Encoding.UTF8.GetString(buffer, 0, messi) == code)
+                {
+                    Write("Подтверждение есть!", ConsoleColor.Green);
+                    return true;
+                }
+                return false;
             }
-            return false;
+            catch 
+            {
+                if (CheckConnectError(client) == false)
+                {
+                    Thread.Sleep(0);
+                }
+                return false;
+            }
         }
 
         static bool LoginAccount(Socket client, string email, string pass)
         {
-            OleDbCommand command = new OleDbCommand($"SELECT Login FROM Accounts WHERE Login = '{email}'", myConnection);
-            string answer = command.ExecuteScalar().ToString();
-            Console.WriteLine(answer);
+            try
+            {
+                OleDbCommand command = new OleDbCommand($"SELECT Login FROM Accounts WHERE Login = '{email}'", myConnection);
+                command.ExecuteScalar().ToString();
+                command = new OleDbCommand($"SELECT Passworld FROM Accounts WHERE Passworld = '{pass}'", myConnection);
+                command.ExecuteScalar().ToString();
+                return true;
+            }
+            catch 
+            {
+                if (CheckConnectError(client) == false)
+                {
+                    Thread.Sleep(0);
+                }
+            }
             return false;
         }
 
         static void MessClient(object clien)
         {
             Socket client = (Socket)clien;
-            while (true)
+            bool whiles = true;
+            while (whiles)
             {
                 try
                 {
@@ -147,16 +172,47 @@ namespace ServerEysePower
 
                         if (LoginAccount(client, email, pass) == true)
                         {
-
+                            Write($"Вход в аккаунт: {email}, {pass}!", ConsoleColor.Green);
+                            client.Send(Encoding.UTF8.GetBytes("Login Yes"));
                         }
                         else
                         {
-                            
+                            client.Send(Encoding.UTF8.GetBytes("Login No"));
+                            Write($"Вход не удался в аккаунт: {email}, {pass}", ConsoleColor.Red);
                         }
                     }
                 }
-                catch(Exception ex) { Write($"Ошибка! {ex.Message}", ConsoleColor.Red); }
+                catch(Exception ex) 
+                { 
+                    Write($"Ошибка! {ex.Message}", ConsoleColor.Red);
+
+                    if (CheckConnectError(client) == false)
+                    {
+                        whiles = false;
+                    }
+                }
             }
+        }
+
+        static bool CheckConnectError(Socket client)//проверка клиента после ошибки
+        {
+            try
+            {
+                string ip = Convert.ToString(client.Ttl);
+                Ping ping = new Ping();
+                PingReply reply = ping.Send(ip, 200);
+
+                if (reply.Status == IPStatus.Success)
+                {
+                    Write("Проверка клиента завершена!", ConsoleColor.Green);
+                    return true;
+                }
+            }
+            catch 
+            { 
+                Write("Отключение клиента!", ConsoleColor.Red);
+            }
+            return false;
         }
 
         static void CheckConnect(object clien)
@@ -176,6 +232,7 @@ namespace ServerEysePower
                 {
                     Write("Ошибка нового подключения!", ConsoleColor.Red);
                     client.Close();
+                    Thread.Sleep(0);
                 }
             }
             catch { }
@@ -192,7 +249,7 @@ namespace ServerEysePower
                     Thread thread = new Thread(new ParameterizedThreadStart(CheckConnect));
                     thread.Start(client);
                 }
-                catch { }
+                catch { Thread.Sleep(0); }
             }
         }
 

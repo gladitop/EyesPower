@@ -22,6 +22,7 @@ namespace EyesPower
     public partial class AccountInput : Window
     {
         Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        byte[] buffer = new byte[1024];
 
         public AccountInput()
         {
@@ -56,6 +57,19 @@ namespace EyesPower
                     client.Send(Encoding.UTF8.GetBytes(tbemail.Text));
                     Task.Delay(30).Wait();
                     client.Send(Encoding.UTF8.GetBytes(tbpass.Password));
+                    int i = client.Receive(buffer);
+                    if (Encoding.UTF8.GetString(buffer, 0, i) == "Login Yes")
+                    {
+                        MessageBox.Show("Вход удался!", "EyesPower: Вход", MessageBoxButton.OK, MessageBoxImage.Information);
+                        client.Close();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Не найдено аккаунта!", "EyesPower: Вход", MessageBoxButton.OK, MessageBoxImage.Error);
+                        client.Disconnect(true);
+                        client.Close();
+                    }
                 }
                 catch { }
             }
