@@ -24,6 +24,7 @@ namespace EyesPower.Pages
         {
             InitializeComponent();
             lbnumber.Content = $"{Data.numberanswer}/5";
+            Data.NewPage = false;
         }
 
         private void btyes_Checked(object sender, RoutedEventArgs e)//Кнопка да

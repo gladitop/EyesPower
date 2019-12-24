@@ -89,3 +89,5 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\EyesPo
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\EyesPower.pdb
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\СonfirmationEmail.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\СonfirmationEmail.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\Training.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\Training.baml

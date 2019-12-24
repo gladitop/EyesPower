@@ -24,27 +24,28 @@ namespace EyesPower.Pages
         {
             InitializeComponent();
             lbnumber.Content = $"{Data.numberanswer}/5";
+            Data.NewPage = false;
         }
 
         private void btnext_Click(object sender, RoutedEventArgs e)//Далее
         {
             if (btyes.IsChecked.Value == true)
             {
-                Data.yesHelp = true;
+                Data.Update = true;
                 Data.NewPage = true;
                 Data.numberanswer = 4;
             }
             else if (btno.IsChecked.Value == true)
             {
                 Data.numberanswer = 4;
-                Data.yesHelp = false;
+                Data.Update = false;
                 Data.NewPage = true;
             }
         }
 
         private void btback_Click(object sender, RoutedEventArgs e)//Назад
         {
-            Data.yesHelp = false;
+            Data.Update = false;
             Data.numberanswer = 2;
             Data.BackPage = true;
         }

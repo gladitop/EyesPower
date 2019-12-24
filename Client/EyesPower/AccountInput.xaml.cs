@@ -64,7 +64,7 @@ namespace EyesPower
                         client.Close();
                         this.Close();
                     }
-                    else
+                    else if (Encoding.UTF8.GetString(buffer, 0, i) == "Login No")
                     {
                         MessageBox.Show("Не найдено аккаунта!", "EyesPower: Вход", MessageBoxButton.OK, MessageBoxImage.Error);
                         client.Disconnect(true);
