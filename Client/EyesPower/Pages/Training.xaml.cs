@@ -24,6 +24,8 @@ namespace EyesPower.Pages
         public Training()
         {
             InitializeComponent();
+            lbnumber.Content = $"{Data.numberanswer}/5";
+            Data.NewPage = false;
         }
 
         private void btnext_Click(object sender, RoutedEventArgs e)
@@ -41,6 +43,12 @@ namespace EyesPower.Pages
             MessageBox.Show("Вы успешно закончили настройку!", "EysePower: Настройка", MessageBoxButton.OK, MessageBoxImage.Information);
             Settings.Default.Customization = true;
             Settings.Default.Save();
+            EyesPower.Data.Program = Data.Program;
+            EyesPower.Data.Training = Data.Training;
+            EyesPower.Data.Update = Data.Update;
+            EyesPower.Data.yesHelp = Data.yesHelp;
+            EyesPower.Data.UpdateCustomizationing = true;
+            Data.exit = true;
         }
 
         private void btback_Click(object sender, RoutedEventArgs e)

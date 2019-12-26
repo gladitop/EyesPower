@@ -24,6 +24,7 @@ namespace ServerEysePower
 
         static void Main(string[] args)
         {
+            Console.Title = "EysePower: Сервер";
             Write("Запуск всех компонентах..", ConsoleColor.Yellow);
             Write("Запуск сервера...", ConsoleColor.Yellow);
             server.Bind(new IPEndPoint(IPAddress.Any, 904));
@@ -49,6 +50,7 @@ namespace ServerEysePower
             thread.Start();
             Write("Потоки пашут!", ConsoleColor.Green);
             Write("Центр команд активен!", ConsoleColor.Green);
+            Console.Beep();
             while (true)
             {
                 string answer = Console.ReadLine();
@@ -180,6 +182,13 @@ namespace ServerEysePower
                             client.Send(Encoding.UTF8.GetBytes("Login No"));
                             Write($"Вход не удался в аккаунт: {email}, {pass}", ConsoleColor.Red);
                         }
+                    }
+
+                    //Сихронизация
+
+                    if (Encoding.UTF8.GetString(buffer, 0, messi) == "Scr")
+                    {
+                        
                     }
                 }
                 catch(Exception ex) 

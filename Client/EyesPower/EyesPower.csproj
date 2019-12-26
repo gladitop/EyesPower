@@ -87,8 +87,14 @@
     <Compile Include="Pages\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\WelcomTraning.xaml.cs">
+      <DependentUpon>WelcomTraning.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Start.xaml.cs">
       <DependentUpon>Start.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartTraning.xaml.cs">
+      <DependentUpon>StartTraning.xaml</DependentUpon>
     </Compile>
     <Compile Include="СonfirmationEmail.xaml.cs">
       <DependentUpon>СonfirmationEmail.xaml</DependentUpon>
@@ -154,7 +160,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\WelcomTraning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Start.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StartTraning.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

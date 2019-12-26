@@ -20,6 +20,8 @@ namespace EyesPower
     /// </summary>
     public partial class Customizationing : Window
     {
+        public bool exit = false;//выход
+
         public Customizationing()
         {
             InitializeComponent();
@@ -41,6 +43,7 @@ namespace EyesPower
                     this.Dispatcher.Invoke(new Action(() =>
                     {
                         Pages.Data.exit = false;
+                        exit = true;
                         this.Close();
                     }));
                 }
@@ -130,13 +133,20 @@ namespace EyesPower
 
         private void customizationing_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            e.Cancel = true;
-            MessageBoxResult lol = MessageBox.Show("Если вы хотите закрыть это окно, то все ваши настройки будут сброшаны", "EysePower: Настройка", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-
-            if (lol == MessageBoxResult.Yes)
+            if (exit == true)
             {
-                e.Cancel = false;//прикол)
-                discharge();
+                e.Cancel = false;
+            }
+            else if (exit == false)
+            {
+                e.Cancel = true;
+                MessageBoxResult lol = MessageBox.Show("Если вы хотите закрыть это окно, то все ваши настройки будут сброшаны", "EysePower: Настройка", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+                if (lol == MessageBoxResult.Yes)
+                {
+                    e.Cancel = false;//прикол)
+                    discharge();
+                }
             }
         }
     }

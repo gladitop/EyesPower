@@ -12,7 +12,7 @@
         <Button x:Name="btnext" Content="Готово" IsEnabled="False" FontSize="25" HorizontalAlignment="Left" Margin="616,353,0,0" VerticalAlignment="Top" Width="133" Click="btnext_Click"/>
         <Button x:Name="btback" Content="Назад" FontSize="25" IsEnabled="True" HorizontalAlignment="Left" Margin="32,353,0,0" VerticalAlignment="Top" Width="133" Click="btback_Click"/>
         <Label x:Name="lbnumber" Content="1/5" HorizontalAlignment="Left" Margin="386,356,0,0" VerticalAlignment="Top"/>
-        <Label Content="Вы хотите тренироваться?" FontSize="45" HorizontalAlignment="Left" VerticalAlignment="Top" Height="74" Width="543" Margin="143,26,0,0" Foreground="Black"/>
+        <Label Content="Вы хотите тренироваться?" FontSize="45" HorizontalAlignment="Left" VerticalAlignment="Top" Height="74" Width="564" Margin="140,26,0,0" Foreground="Black"/>
         <Label Content="Программа будет напонимать о тренировках глаз" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="610" Margin="122,100,0,0" Foreground="Black"/>
         <RadioButton x:Name="btyes" Content="Да" FontSize="25" HorizontalAlignment="Left" Margin="32,214,0,0" VerticalAlignment="Top" Checked="btyes_Checked"/>
         <RadioButton x:Name="btno" Content="Нет" FontSize="25" HorizontalAlignment="Left" Margin="32,269,0,0" VerticalAlignment="Top" Checked="btno_Checked"/>

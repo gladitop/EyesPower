@@ -39,11 +39,12 @@ namespace EyesPower
         {
             //настройка
 
-            if (Settings.Default.Customization == false)
+            if (Data.UpdateCustomizationing == false)
             {
                 imagesstate.Source = BitmapFrame.Create(new Uri(@"pack://application:,,,/Resources/statebad.png"));
                 lbcustomization.Visibility = Visibility.Visible;
                 btsetting.Visibility = Visibility.Visible;
+                btstarttraning.Visibility = Visibility.Collapsed;
                 lbstate.Content = "Состояние: Плохое";
             }
             else
@@ -51,6 +52,24 @@ namespace EyesPower
                 imagesstate.Source = BitmapFrame.Create(new Uri(@"pack://application:,,,/Resources/stategood.png"));
                 lbcustomization.Visibility = Visibility.Collapsed;
                 btsetting.Visibility = Visibility.Collapsed;
+                btstarttraning.Visibility = Visibility.Visible;
+                lbstate.Content = "Состояние: Отличное";
+            }
+
+            if (Settings.Default.Customization == false)
+            {
+                imagesstate.Source = BitmapFrame.Create(new Uri(@"pack://application:,,,/Resources/statebad.png"));
+                lbcustomization.Visibility = Visibility.Visible;
+                btsetting.Visibility = Visibility.Visible;
+                btstarttraning.Visibility = Visibility.Collapsed;
+                lbstate.Content = "Состояние: Плохое";
+            }
+            else
+            {
+                imagesstate.Source = BitmapFrame.Create(new Uri(@"pack://application:,,,/Resources/stategood.png"));
+                lbcustomization.Visibility = Visibility.Collapsed;
+                btsetting.Visibility = Visibility.Collapsed;
+                btstarttraning.Visibility = Visibility.Visible;
                 lbstate.Content = "Состояние: Отличное";
             }
         }
@@ -68,6 +87,13 @@ namespace EyesPower
         {
             Customizationing customizationing = new Customizationing();
             customizationing.ShowDialog();
+            CheckState();
+        }
+
+        private void btstarttraning_Click(object sender, RoutedEventArgs e)//Начать тренировку
+        {
+            StartTraning startTraning = new StartTraning();
+            startTraning.ShowDialog();
         }
     }
 }

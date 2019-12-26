@@ -1,0 +1,17 @@
+﻿<Page x:Class="EyesPower.Pages.WelcomTraning"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EyesPower.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="WelcomTraning">
+
+    <Grid>
+        <Label Content="Вы хотите начать тренировку?" FontSize="45" HorizontalAlignment="Left" Margin="86,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btyes" Click="btyes_Click" Content="Да" FontSize="40" HorizontalAlignment="Left" Margin="52,289,0,0" VerticalAlignment="Top" Width="83"/>
+        <Button x:Name="btno" Click="btno_Click" Content="Нет" FontSize="40" HorizontalAlignment="Left" Margin="615,289,0,0" VerticalAlignment="Top" Width="88"/>
+
+    </Grid>
+</Page>

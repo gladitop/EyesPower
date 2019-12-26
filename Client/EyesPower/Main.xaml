@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EyesPower"
         mc:Ignorable="d"
-        Title="EyesPower: Основное"  Height="450" Width="800" ResizeMode="CanMinimize" Closing="Window_Closing" KeyDown="main_KeyDown">
+        Title="EyesPower: Основное" WindowStartupLocation="CenterScreen" Height="450" Width="800" ResizeMode="CanMinimize" Closing="Window_Closing" KeyDown="main_KeyDown">
     <Grid>
         <Border BorderBrush="Snow" BorderThickness="1" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="794" Background="#FF0CE7B4" Margin="0,0,-0.4,0"/>
         <Image Source="Resources\user.png" HorizontalAlignment="Left" Height="52" Margin="732,0,0,0" VerticalAlignment="Top" Width="52"/>
         <Image x:Name="imagesstate" Source="Resources\stategood.png" HorizontalAlignment="Left" Height="174" Margin="257,52,0,0" VerticalAlignment="Top" Width="289"/>
         <Label x:Name="lbstate" Content="Состояние: Отличное" HorizontalAlignment="Left" Margin="336,208,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbcustomization" Content="Требуется пройти настройку!"  HorizontalAlignment="Left" Margin="316,239,0,0" VerticalAlignment="Top" Foreground="#FFFF0707"/>
-        <Button x:Name="btsetting" Content="Настройка" FontSize="25" HorizontalAlignment="Left" Margin="317,288,0,0" VerticalAlignment="Top" Width="162" Click="btsetting_Click"/>
+        <Label x:Name="lbcustomization" Visibility="Collapsed" Content="Требуется пройти настройку!"  HorizontalAlignment="Left" Margin="316,239,0,0" VerticalAlignment="Top" Foreground="#FFFF0707"/>
+        <Button x:Name="btsetting" Content="Настройка" Visibility="Collapsed" FontSize="25" HorizontalAlignment="Left" Margin="317,288,0,0" VerticalAlignment="Top" Width="162" Click="btsetting_Click"/>
+        <Button x:Name="btstarttraning" Click="btstarttraning_Click" Content="Начать тренировку" FontSize="20" HorizontalAlignment="Left" Margin="24,258,0,0" VerticalAlignment="Top" Width="204" Height="43"/>
 
     </Grid>
 </Window>
