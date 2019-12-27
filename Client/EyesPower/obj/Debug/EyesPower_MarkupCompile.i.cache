@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\
 EyesPower
 none
 false
 DEBUG;TRACE
-C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\App.xaml
-17-1000784637
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\App.xaml
+19-1950782829
 
-241078421846
-141183416626
-About.xaml;Account.xaml;AccountInput.xaml;AccountNew.xaml;Customizationing.xaml;Main.xaml;MainWindow.xaml;Pages\CheckUpdate.xaml;Pages\Programs.xaml;Pages\SendAndHelp.xaml;Pages\Training.xaml;Pages\Welcome.xaml;Pages\WelcomTraning.xaml;SettingsForm.xaml;Start.xaml;StartTraning.xaml;СonfirmationEmail.xaml;
+26-1521190773
+141266040058
+About.xaml;Account.xaml;AccountInput.xaml;AccountNew.xaml;Customizationing.xaml;Main.xaml;MainWindow.xaml;Pages\CheckUpdate.xaml;Pages\NoAccount.xaml;Pages\Programs.xaml;Pages\SendAndHelp.xaml;Pages\Training.xaml;Pages\Welcome.xaml;Pages\WelcomTraning.xaml;Pages\YesAccount.xaml;SettingsForm.xaml;Start.xaml;StartTraning.xaml;СonfirmationEmail.xaml;
 
 True
 

@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="EysePower: Ваш аккаунт" ResizeMode="NoResize" Icon="Resources\UserIcon.ico" Height="450" Width="491.336">
     <Grid>
-        
+        <Frame x:Name="frame" Content="" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="421" VerticalAlignment="Top" Width="485"/>
+
     </Grid>
 </Window>

@@ -78,6 +78,9 @@
       <DependentUpon>CheckUpdate.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Data.cs" />
+    <Compile Include="Pages\NoAccount.xaml.cs">
+      <DependentUpon>NoAccount.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Programs.xaml.cs">
       <DependentUpon>Programs.xaml</DependentUpon>
     </Compile>
@@ -92,6 +95,9 @@
     </Compile>
     <Compile Include="Pages\WelcomTraning.xaml.cs">
       <DependentUpon>WelcomTraning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\YesAccount.xaml.cs">
+      <DependentUpon>YesAccount.xaml</DependentUpon>
     </Compile>
     <Compile Include="SettingsForm.xaml.cs">
       <DependentUpon>SettingsForm.xaml</DependentUpon>
@@ -154,6 +160,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\NoAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Programs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -171,6 +181,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\WelcomTraning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\YesAccount.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

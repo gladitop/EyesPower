@@ -10,23 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using EyesPower.Properties;
 
-namespace EyesPower
+namespace EyesPower.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Account.xaml
+    /// Логика взаимодействия для NoAccount.xaml
     /// </summary>
-    public partial class Account : Window
+    public partial class NoAccount : Page
     {
-        public Account()
+        public NoAccount()
         {
             InitializeComponent();
-            if (Settings.Default.Account == false)
-                frame.Navigate(new Pages.NoAccount());
-            else if (Settings.Default.Account == true)
-                frame.Navigate(new Pages.YesAccount());
         }
     }
 }

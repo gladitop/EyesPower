@@ -23,12 +23,5 @@ namespace EyesPower
 
         public static bool UpdateCustomizationing = false;//Проверка настройки
         public static bool ExitMain = false;//Это нужно чтобы закрыть Main
-
-        //Настройки
-
-        public static void UpdateSettings()//Для обновление настройки
-        {
-            
-        }
     }
 }
