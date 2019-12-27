@@ -15,8 +15,10 @@
 
 # Что надо установить?
 
-> Перейди на [Мой сайт](https://www.microsoft.com/en-us/download/details.aspx?id=13255)
+> Перейди на [Сайт](https://www.microsoft.com/en-us/download/details.aspx?id=13255)
+
 > Скачать Microsoft Access Database Engine 2010
+
 > Установить
 
 Всё! Сервер будет работать
