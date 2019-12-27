@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:EyesPower"
         mc:Ignorable="d"
         Title="EyesPower: Основное" WindowStartupLocation="CenterScreen" Height="450" Width="800" ResizeMode="CanMinimize" Closing="Window_Closing" KeyDown="main_KeyDown">
-    <Grid>
+    <Grid Margin="0,2,0,-2">
         <Border BorderBrush="Snow" BorderThickness="1" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="794" Background="#FF0CE7B4" Margin="0,0,-0.4,0"/>
         <Image Source="Resources\user.png" HorizontalAlignment="Left" Height="52" Margin="732,0,0,0" VerticalAlignment="Top" Width="52"/>
         <Image x:Name="imagesstate" Source="Resources\stategood.png" HorizontalAlignment="Left" Height="174" Margin="257,52,0,0" VerticalAlignment="Top" Width="289"/>
@@ -15,8 +15,9 @@
         <Button x:Name="btsetting" Content="Настройка" Visibility="Collapsed" FontSize="25" HorizontalAlignment="Left" Margin="317,288,0,0" VerticalAlignment="Top" Width="162" Click="btsetting_Click"/>
         <Button x:Name="btstarttraning" Click="btstarttraning_Click" Content="Начать тренировку" FontSize="20" HorizontalAlignment="Left" Margin="24,258,0,0" VerticalAlignment="Top" Width="204" Height="43"/>
         <Image x:Name="imagesettings" Source="Resources/Settings.png" HorizontalAlignment="Left" Height="52" Margin="676,-1,0,0" VerticalAlignment="Top" Width="54"/>
-        <Button x:Name="btsettings" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="676,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btsettings_Click"/>
+        <Button x:Name="btsettings" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="674,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btsettings_Click"/>
+        <Image x:Name="imageupdate" Source="Resources/Update.png" HorizontalAlignment="Left" Height="52" Margin="611,-1,0,0" VerticalAlignment="Top" Width="54"/>
         <Button x:Name="btaccount" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="732,-1,0,0" VerticalAlignment="Top" Width="52" Height="52" Click="btaccount_Click"/>
-
+        <Button x:Name="btupdate" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="615,0,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btupdate_Click"/>
     </Grid>
 </Window>

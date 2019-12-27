@@ -108,6 +108,9 @@
     <Compile Include="StartTraning.xaml.cs">
       <DependentUpon>StartTraning.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Update.xaml.cs">
+      <DependentUpon>Update.xaml</DependentUpon>
+    </Compile>
     <Compile Include="СonfirmationEmail.xaml.cs">
       <DependentUpon>СonfirmationEmail.xaml</DependentUpon>
     </Compile>
@@ -200,6 +203,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Update.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="СonfirmationEmail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -258,6 +265,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\UserIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\UpdateIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

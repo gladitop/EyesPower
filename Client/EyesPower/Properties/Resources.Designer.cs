@@ -133,6 +133,26 @@ namespace EyesPower.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Update {
+            get {
+                object obj = ResourceManager.GetObject("Update", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon UpdateIcon {
+            get {
+                object obj = ResourceManager.GetObject("UpdateIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);

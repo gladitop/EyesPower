@@ -98,14 +98,34 @@ namespace EyesPower
 
         private void btsettings_Click(object sender, RoutedEventArgs e)//Настройки
         {
-            SettingsForm settingsForm = new SettingsForm();
-            settingsForm.ShowDialog();
+            if (Settings.Default.Customization == true)
+            {
+                SettingsForm settingsForm = new SettingsForm();
+                settingsForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Пройдите настройку!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btaccount_Click(object sender, RoutedEventArgs e)//Аккаунт
         {
-            Account account = new Account();
-            account.ShowDialog();
+            if (Settings.Default.Customization == true)
+            {
+                Account account = new Account();
+                account.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Пройдите настройку!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void btupdate_Click(object sender, RoutedEventArgs e)//Обновление
+        {
+            Update update = new Update();
+            update.ShowDialog();
         }
     }
 }
