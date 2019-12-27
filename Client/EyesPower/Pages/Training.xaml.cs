@@ -42,12 +42,16 @@ namespace EyesPower.Pages
             //MessageBox.Show($"{Data.Program}, {Data.Training}, {Data.yesHelp}, {Data.Update}");
             MessageBox.Show("Вы успешно закончили настройку!", "EysePower: Настройка", MessageBoxButton.OK, MessageBoxImage.Information);
             Settings.Default.Customization = true;
-            Settings.Default.Save();
             EyesPower.Data.Program = Data.Program;
             EyesPower.Data.Training = Data.Training;
             EyesPower.Data.Update = Data.Update;
             EyesPower.Data.yesHelp = Data.yesHelp;
             EyesPower.Data.UpdateCustomizationing = true;
+            Settings.Default.Program = Data.Program;
+            Settings.Default.Training = Data.Training;
+            Settings.Default.Update = Data.Update;
+            Settings.Default.YesHelp = Data.yesHelp;
+            Settings.Default.Save();
             Data.exit = true;
         }
 

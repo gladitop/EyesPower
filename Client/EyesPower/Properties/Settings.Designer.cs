@@ -61,7 +61,7 @@ namespace EyesPower.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool StartProgram {
             get {
                 return ((bool)(this["StartProgram"]));
@@ -80,6 +80,54 @@ namespace EyesPower.Properties {
             }
             set {
                 this["Customization"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool YesHelp {
+            get {
+                return ((bool)(this["YesHelp"]));
+            }
+            set {
+                this["YesHelp"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Program {
+            get {
+                return ((bool)(this["Program"]));
+            }
+            set {
+                this["Program"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Update {
+            get {
+                return ((bool)(this["Update"]));
+            }
+            set {
+                this["Update"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Training {
+            get {
+                return ((bool)(this["Training"]));
+            }
+            set {
+                this["Training"] = value;
             }
         }
     }

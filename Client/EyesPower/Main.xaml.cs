@@ -95,5 +95,11 @@ namespace EyesPower
             StartTraning startTraning = new StartTraning();
             startTraning.ShowDialog();
         }
+
+        private void btsettings_Click(object sender, RoutedEventArgs e)//Настройки
+        {
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.ShowDialog();
+        }
     }
 }

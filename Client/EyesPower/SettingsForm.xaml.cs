@@ -11,26 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Threading;
 
 namespace EyesPower
 {
     /// <summary>
-    /// Логика взаимодействия для StartTraning.xaml
+    /// Логика взаимодействия для SettingsForm.xaml
     /// </summary>
-    public partial class StartTraning : Window
+    public partial class SettingsForm : Window
     {
-        public StartTraning()
+        public SettingsForm()
         {
             InitializeComponent();
-            frame.Navigate(new Pages.WelcomTraning());
-            Thread thread = new Thread(new ThreadStart(Update));
-            thread.Start();
-        }
-
-        public void Update()
-        {
-            
         }
     }
 }

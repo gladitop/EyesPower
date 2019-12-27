@@ -16,7 +16,11 @@ namespace EyesPower.Pages
         public static bool NewPage = false;//Для нормального обновление страниц (след. страница)
         public static bool BackPage = false;//Для нормального обновление страниц (назад страница)
         public static bool Program = false;//Используваете вы специальные программы (фотошоп и дургие)
-        public static bool Training = false;//Тренировки
+        public static bool Training = false;//Тренировки (сообщать)
         public static bool Update = false;//Автомочитеская проверка обновлений
+
+        //Для тренировки
+
+        public static bool YesTraining = false;//Есть подтверждение тренировки
     }
 }
