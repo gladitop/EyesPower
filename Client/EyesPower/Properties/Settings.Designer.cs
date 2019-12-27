@@ -61,7 +61,7 @@ namespace EyesPower.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool StartProgram {
             get {
                 return ((bool)(this["StartProgram"]));
@@ -128,6 +128,18 @@ namespace EyesPower.Properties {
             }
             set {
                 this["Training"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Autoload {
+            get {
+                return ((bool)(this["Autoload"]));
+            }
+            set {
+                this["Autoload"] = value;
             }
         }
     }

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Net.Sockets;
 using System.Net;
+using EyesPower.Properties;
 
 namespace EyesPower
 {
@@ -62,6 +63,14 @@ namespace EyesPower
                     {
                         MessageBox.Show("Вход удался!", "EyesPower: Вход", MessageBoxButton.OK, MessageBoxImage.Information);
                         client.Close();
+                        Main main = new Main();
+                        main.Show();
+                        Settings.Default.Login = tbemail.Text;
+                        Settings.Default.Passworld = tbpass.Password;
+                        Settings.Default.Account = true;
+                        Settings.Default.StartProgram = true;
+                        Settings.Default.Save();
+                        Data.ExitMain = true;
                         this.Close();
                     }
                     else if (Encoding.UTF8.GetString(buffer, 0, i) == "Login No")
@@ -69,6 +78,7 @@ namespace EyesPower
                         MessageBox.Show("Не найдено аккаунта!", "EyesPower: Вход", MessageBoxButton.OK, MessageBoxImage.Error);
                         client.Disconnect(true);
                         client.Close();
+                        Data.ExitMain = false;
                     }
                 }
                 catch { }

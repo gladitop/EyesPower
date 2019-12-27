@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using EyesPower.Properties;
 
 namespace EyesPower
 {
@@ -21,5 +22,13 @@ namespace EyesPower
         //разные подтверждения
 
         public static bool UpdateCustomizationing = false;//Проверка настройки
+        public static bool ExitMain = false;//Это нужно чтобы закрыть Main
+
+        //Настройки
+
+        public static void UpdateSettings()//Для обновление настройки
+        {
+            
+        }
     }
 }

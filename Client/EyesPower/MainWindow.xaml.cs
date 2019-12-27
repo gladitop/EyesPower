@@ -45,6 +45,8 @@ namespace EyesPower
         {
             AccountInput f = new AccountInput();
             f.ShowDialog();
+            if (Data.ExitMain == true)
+                this.Hide();
         }
 
         private void btaccountinput_Click(object sender, RoutedEventArgs e)//При аккаунте

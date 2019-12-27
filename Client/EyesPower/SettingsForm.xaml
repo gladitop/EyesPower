@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="EysePower: Настройки" ResizeMode="NoResize" Icon="Resources\SettingsIcon.ico" Height="332.4" Width="371.711">
     <Grid>
-        <CheckBox x:Name="checkstartprogram" Content="Автозапуск программы" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkautoload" Content="Автозапуск программы" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="checkhelp" Content="Отправлять нам данные (анонимно)" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="checkprogram" Content="Отключать режим защита глаз при работе программ" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="checkupdate" Content="Проверять обновление при запуске программы" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>

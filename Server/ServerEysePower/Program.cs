@@ -15,7 +15,8 @@ namespace ServerEysePower
 {
     class Program
     {
-        public static string connectString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb;";
+        //public static string connectString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb;"; // для 32 битной системы
+        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database.mdb;"; // для 64 бит
         static OleDbConnection myConnection;
         static Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         static byte[] buffer = new byte[1024];
