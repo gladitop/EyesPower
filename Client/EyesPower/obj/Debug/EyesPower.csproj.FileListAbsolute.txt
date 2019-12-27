@@ -97,3 +97,5 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\WelcomTraning.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\SettingsForm.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\SettingsForm.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Account.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Account.baml

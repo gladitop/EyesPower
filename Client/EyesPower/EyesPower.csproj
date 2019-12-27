@@ -67,6 +67,9 @@
     <Compile Include="About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Account.xaml.cs">
+      <DependentUpon>Account.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Customizationing.xaml.cs">
       <DependentUpon>Customizationing.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,10 @@
       <DependentUpon>СonfirmationEmail.xaml</DependentUpon>
     </Compile>
     <Page Include="About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Account.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -234,6 +241,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\SettingsIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\UserIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

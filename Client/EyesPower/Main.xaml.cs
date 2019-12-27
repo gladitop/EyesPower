@@ -101,5 +101,11 @@ namespace EyesPower
             SettingsForm settingsForm = new SettingsForm();
             settingsForm.ShowDialog();
         }
+
+        private void btaccount_Click(object sender, RoutedEventArgs e)//Аккаунт
+        {
+            Account account = new Account();
+            account.ShowDialog();
+        }
     }
 }

@@ -16,6 +16,7 @@
         <Button x:Name="btstarttraning" Click="btstarttraning_Click" Content="Начать тренировку" FontSize="20" HorizontalAlignment="Left" Margin="24,258,0,0" VerticalAlignment="Top" Width="204" Height="43"/>
         <Image x:Name="imagesettings" Source="Resources/Settings.png" HorizontalAlignment="Left" Height="52" Margin="676,-1,0,0" VerticalAlignment="Top" Width="54"/>
         <Button x:Name="btsettings" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="676,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btsettings_Click"/>
+        <Button x:Name="btaccount" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="732,-1,0,0" VerticalAlignment="Top" Width="52" Height="52" Click="btaccount_Click"/>
 
     </Grid>
 </Window>

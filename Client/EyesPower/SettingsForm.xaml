@@ -12,7 +12,7 @@
         <CheckBox x:Name="checkprogram" Content="Отключать режим защита глаз при работе программ" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="checkupdate" Content="Проверять обновление при запуске программы" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="checktraining" Content="Напонимать о тренировках для глаз" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
-        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="281,274,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.647,1.615"/>
+        <Button x:Name="btsave" Content="Сохранить" HorizontalAlignment="Left" Margin="281,274,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.647,1.615" Click="btsave_Click"/>
 
     </Grid>
 </Window>
