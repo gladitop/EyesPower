@@ -26,12 +26,14 @@ namespace EyesPower.Pages
         }
         private void btyes_Click(object sender, RoutedEventArgs e)
         {
-
+            Data.number = 2;
+            Data.NewPage = true;
+            MessageBox.Show("lol1");
         }
 
         private void btno_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Вы уверены?", Title, MessageBoxButton.OK, MessageBoxImage.Question);
         }
     }
 }

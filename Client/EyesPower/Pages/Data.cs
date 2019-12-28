@@ -22,5 +22,6 @@ namespace EyesPower.Pages
         //Для тренировки
 
         public static bool YesTraining = false;//Есть подтверждение тренировки
+        public static short number = 1;// счёт
     }
 }

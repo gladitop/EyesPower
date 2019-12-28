@@ -90,6 +90,9 @@
     <Compile Include="Pages\Training.xaml.cs">
       <DependentUpon>Training.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TrainingCircle.xaml.cs">
+      <DependentUpon>TrainingCircle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
@@ -176,6 +179,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Training.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TrainingCircle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -271,6 +278,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\UpdateIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\VideoCircle.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

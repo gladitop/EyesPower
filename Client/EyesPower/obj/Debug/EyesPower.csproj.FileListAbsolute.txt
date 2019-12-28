@@ -157,3 +157,5 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Update
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\NoAccount.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\YesAccount.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Update.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\TrainingCircle.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\TrainingCircle.baml
