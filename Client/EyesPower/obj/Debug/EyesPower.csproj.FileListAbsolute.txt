@@ -159,3 +159,11 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Update.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\TrainingCircle.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\TrainingCircle.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\TrainingCircle.g.cs
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\TrainingCircle.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Control.g.cs
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Control.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\WelcomControl.g.cs
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\WelcomControl.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\SettingsControl.g.cs
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\SettingsControl.baml

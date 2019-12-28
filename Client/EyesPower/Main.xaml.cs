@@ -214,5 +214,11 @@ namespace EyesPower
                 CheckState();
             }
         }
+
+        private void btcontrol_Click(object sender, RoutedEventArgs e)//Контроль за использованием
+        {
+            Control control = new Control();
+            control.ShowDialog();
+        }
     }
 }

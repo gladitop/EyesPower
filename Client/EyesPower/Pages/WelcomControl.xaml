@@ -1,0 +1,21 @@
+﻿<Page x:Class="EyesPower.Pages.WelcomControl"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EyesPower.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="407" d:DesignWidth="423"
+      Title="WelcomControl">
+
+    <Grid>
+        <Label Content="Видете пароль чтобы" FontSize="30" HorizontalAlignment="Left" Margin="64,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Пароль:" FontSize="25" HorizontalAlignment="Left" Margin="42,163,0,0" VerticalAlignment="Top"/>
+        <Label Content="активировать контроль" FontSize="30" HorizontalAlignment="Left" Margin="42,60,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="lbpass" HorizontalAlignment="Left" FontSize="25" Margin="148,163,0,0" VerticalAlignment="Top" Height="43" Width="227"/>
+        <Label Content="Повторить:" FontSize="25" HorizontalAlignment="Left" Margin="12,237,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="lbrepeatpass" HorizontalAlignment="Left" FontSize="25" Margin="148,237,0,0" VerticalAlignment="Top" Height="43" Width="227"/>
+        <Button x:Name="btactivate" Content="Активировать" FontSize="25" HorizontalAlignment="Left" Margin="126,313,0,0" VerticalAlignment="Top" Width="183" Height="54" Click="btactivate_Click"/>
+
+    </Grid>
+</Page>
