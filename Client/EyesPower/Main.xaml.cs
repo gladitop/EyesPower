@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using EyesPower.Properties;// и да это для удобства
+using Microsoft.Win32;
 
 namespace EyesPower
 {
@@ -27,17 +28,53 @@ namespace EyesPower
             InitializeComponent();
 
             //проверка состояние
-            //настройка
 
             CheckState();
+
+            //Проверка обновлений
+
             if (Settings.Default.Update == true)
             {
                 Thread thread = new Thread(new ThreadStart(CheckUpdate));
                 thread.Start();
             }
+
+            //Автозагрузка
+
+            Thread thread1 = new Thread(new ThreadStart(Autoload));
+            thread1.Start();
         }
 
-        public void CheckUpdate()
+        public void Autoload()//Автозагрузка
+        {
+            string ExePath = System.Reflection.Assembly.GetEntryAssembly().Location;
+            string name = "EysepPower";
+            RegistryKey reg;
+            reg = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run\\");
+
+            if (Settings.Default.Autoload == true)
+            {
+                try
+                {
+                    reg.SetValue(name, ExePath);
+                    reg.Close();
+                }
+                catch
+                { }
+            }
+            else
+            {
+                try
+                {
+                    reg.DeleteValue(name);
+                    reg.Close();
+                }
+                catch
+                {  }
+            }
+        }
+
+        public void CheckUpdate()//Проверка обновления
         {
             try
             {
@@ -98,6 +135,11 @@ namespace EyesPower
                 btstarttraning.Visibility = Visibility.Visible;
                 lbstate.Content = "Состояние: Отличное";
             }
+
+            //Автозагрузка
+
+            Thread thread = new Thread(new ThreadStart(Autoload));
+            thread.Start();
         }
 
         private void main_KeyDown(object sender, KeyEventArgs e)//горячие клавиши
@@ -128,6 +170,7 @@ namespace EyesPower
             {
                 SettingsForm settingsForm = new SettingsForm();
                 settingsForm.ShowDialog();
+                CheckState();
             }
             else
             {

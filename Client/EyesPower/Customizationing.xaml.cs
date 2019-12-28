@@ -79,7 +79,7 @@ namespace EyesPower
                 {
                     this.Dispatcher.Invoke(new Action(() =>
                     {
-                        frame.Navigate(new Pages.SendAndHelp());
+                        frame.Navigate(new Pages.CheckUpdate());
                         Pages.Data.BackPage = false;
                     }));
                 }
@@ -88,7 +88,7 @@ namespace EyesPower
                 {
                     this.Dispatcher.Invoke(new Action(() =>
                     {
-                        frame.Navigate(new Pages.CheckUpdate());
+                        frame.Navigate(new Pages.Programs());
                         Pages.Data.BackPage = false;
                     }));
                 }

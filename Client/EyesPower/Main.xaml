@@ -19,6 +19,6 @@
         <Image x:Name="imageupdate" Source="Resources/Update.png" HorizontalAlignment="Left" Height="52" Margin="611,-1,0,0" VerticalAlignment="Top" Width="54"/>
         <Button x:Name="btaccount" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="732,-1,0,0" VerticalAlignment="Top" Width="52" Height="52" Click="btaccount_Click"/>
         <Button x:Name="btupdate" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="615,0,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btupdate_Click"/>
-        <Button x:Name="NoSettings" Content="Без настройки" HorizontalAlignment="Left" Margin="674,354,0,0" VerticalAlignment="Top" Width="77" Click="NoSettings_Click" Height="29"/>
+        <Button x:Name="NoSettings" Content="Без настройки" HorizontalAlignment="Left" Margin="645,354,0,0" VerticalAlignment="Top" Width="106" Click="NoSettings_Click" Height="29"/>
     </Grid>
 </Window>

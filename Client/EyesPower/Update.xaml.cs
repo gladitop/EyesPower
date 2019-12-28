@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Net;
 using System.Threading;
 using System.Diagnostics;
+using System.IO;
 
 namespace EyesPower
 {
@@ -30,16 +31,16 @@ namespace EyesPower
             lbversion.Content = $"Версия программы: {Data.version}";
         }
 
-        private void btupdate_Click(object sender, RoutedEventArgs e)//Обновление
+        private async void btupdate_Click(object sender, RoutedEventArgs e)//Обновление
         {
-            CheckUpdate();
+            await CheckUpdate();
         }
 
         public async Task CheckUpdate()
         {
             await Task.Run(() =>
             {
-                this.Dispatcher.Invoke(new Action(() =>
+                this.Dispatcher.Invoke(new Action(async () =>
                 {
                     try
                     {
@@ -59,7 +60,7 @@ namespace EyesPower
                             MessageBoxResult lol = MessageBox.Show($"Найдина новая версия! Новая версия: {versoin}. Обновиться?", "EysePower: Центр обновлений", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                             if (lol == MessageBoxResult.Yes)
                             {
-                                web.DownloadFileTaskAsync("https://raw.githubusercontent.com/damiralmaev/ACraftC/master/Update/EyesPower.exe",
+                                await web.DownloadFileTaskAsync("https://raw.githubusercontent.com/damiralmaev/ACraftC/master/Update/EyesPower.exe",
                                     $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}/EysePowerNew.exe");
                                 MessageBoxResult lol1 = MessageBox.Show("Новая версия программы скачана! Запустить?", "EysePower: Центр обновлений",
                                     MessageBoxButton.YesNo,
@@ -67,6 +68,7 @@ namespace EyesPower
 
                                 if (lol1 == MessageBoxResult.Yes)
                                 {
+                                    Directory.Delete($"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}/EyesPower", true);
                                     Process.Start($"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}/EysePowerNew.exe");
                                     Environment.Exit(0);
                                 }
