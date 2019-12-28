@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,6 +30,26 @@ namespace EyesPower
             //настройка
 
             CheckState();
+            if (Settings.Default.Update == true)
+            {
+                Thread thread = new Thread(new ThreadStart(CheckUpdate));
+                thread.Start();
+            }
+        }
+
+        public void CheckUpdate()
+        {
+            try
+            {
+                WebClient web = new WebClient();
+                string versoin = web.DownloadString("https://raw.githubusercontent.com/damiralmaev/ACraftC/master/Update/version.txt");
+                if (versoin != Data.version)
+                {
+                    MessageBox.Show($"Найдена новая версия! Новая версия: {versoin}\n" +
+                        $"Передите в центр обновлений!", "EyesPower: Основное", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+            catch {  }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)//при закрытие
@@ -44,6 +66,7 @@ namespace EyesPower
                 imagesstate.Source = BitmapFrame.Create(new Uri(@"pack://application:,,,/Resources/statebad.png"));
                 lbcustomization.Visibility = Visibility.Visible;
                 btsetting.Visibility = Visibility.Visible;
+                NoSettings.Visibility = Visibility.Visible;
                 btstarttraning.Visibility = Visibility.Collapsed;
                 lbstate.Content = "Состояние: Плохое";
             }
@@ -52,6 +75,7 @@ namespace EyesPower
                 imagesstate.Source = BitmapFrame.Create(new Uri(@"pack://application:,,,/Resources/stategood.png"));
                 lbcustomization.Visibility = Visibility.Collapsed;
                 btsetting.Visibility = Visibility.Collapsed;
+                NoSettings.Visibility = Visibility.Collapsed;
                 btstarttraning.Visibility = Visibility.Visible;
                 lbstate.Content = "Состояние: Отличное";
             }
@@ -61,6 +85,7 @@ namespace EyesPower
                 imagesstate.Source = BitmapFrame.Create(new Uri(@"pack://application:,,,/Resources/statebad.png"));
                 lbcustomization.Visibility = Visibility.Visible;
                 btsetting.Visibility = Visibility.Visible;
+                NoSettings.Visibility = Visibility.Visible;
                 btstarttraning.Visibility = Visibility.Collapsed;
                 lbstate.Content = "Состояние: Плохое";
             }
@@ -69,6 +94,7 @@ namespace EyesPower
                 imagesstate.Source = BitmapFrame.Create(new Uri(@"pack://application:,,,/Resources/stategood.png"));
                 lbcustomization.Visibility = Visibility.Collapsed;
                 btsetting.Visibility = Visibility.Collapsed;
+                NoSettings.Visibility = Visibility.Collapsed;
                 btstarttraning.Visibility = Visibility.Visible;
                 lbstate.Content = "Состояние: Отличное";
             }
@@ -126,6 +152,24 @@ namespace EyesPower
         {
             Update update = new Update();
             update.ShowDialog();
+        }
+
+        private void NoSettings_Click(object sender, RoutedEventArgs e)//Без настроек
+        {
+            MessageBoxResult lol = MessageBox.Show("Вы уверены?", Title, MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (lol == MessageBoxResult.Yes)
+            {
+                Settings.Default.Autoload = true;
+                Settings.Default.Customization = true;
+                Settings.Default.Program = true;
+                Settings.Default.Training = true;
+                Settings.Default.Update = true;
+                Settings.Default.YesHelp = true;
+                NoSettings.Visibility = Visibility.Collapsed;
+                Settings.Default.Save();
+                CheckState();
+            }
         }
     }
 }

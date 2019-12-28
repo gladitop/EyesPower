@@ -10,6 +10,6 @@
         <Image x:Name="imageupdate" Source="Resources/Update.png" HorizontalAlignment="Left" Height="138" Margin="129,30,0,0" VerticalAlignment="Top" Width="138"/>
         <Label x:Name="lbversion" Content="Верси программы:" FontSize="20" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btupdate" Content="Обновить" FontSize="25" HorizontalAlignment="Left" Margin="123,324,0,0" VerticalAlignment="Top" Width="147" Click="btupdate_Click"/>
-        <ProgressBar x:Name="progressdow" Maximum="100" HorizontalAlignment="Left" Height="36" Margin="10,261,0,0" VerticalAlignment="Top" Width="350"/>
+        <ProgressBar x:Name="progressdow" Minimum="0" Maximum="100" HorizontalAlignment="Left" Height="36" Margin="10,261,0,0" VerticalAlignment="Top" Width="350"/>
     </Grid>
 </Window>

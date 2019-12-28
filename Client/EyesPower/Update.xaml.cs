@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Net;
 using System.Threading;
-using System.IO;
+using System.Diagnostics;
 
 namespace EyesPower
 {
@@ -22,7 +22,6 @@ namespace EyesPower
     /// </summary>
     public partial class Update : Window
     {
-        public WebClient web = new WebClient();
 
         public Update()
         {
@@ -33,45 +32,55 @@ namespace EyesPower
 
         private void btupdate_Click(object sender, RoutedEventArgs e)//Обновление
         {
-            Thread thread = new Thread(new ThreadStart(CheckUpdate));
-            thread.Start();
+            CheckUpdate();
         }
 
-        public void CheckUpdate()
+        public async Task CheckUpdate()
         {
-            try
+            await Task.Run(() =>
             {
-                this.Dispatcher.Invoke(new Action(() => {
-                    string versoin = web.DownloadString("");
-                    if (versoin == Data.version)
+                this.Dispatcher.Invoke(new Action(() =>
+                {
+                    try
                     {
-                        MessageBox.Show("У вас последния версия!", "EysePower: Центр обновлений", MessageBoxButton.OK, MessageBoxImage.Information);
-                        Thread.Sleep(0);
-                    }
-                    else
-                    {
-                        MessageBoxResult lol = MessageBox.Show("Найдина новая версия! Обновиться?", "EysePower: Центр обновлений", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-                        if (lol == MessageBoxResult.Yes)
+                        WebClient web = new WebClient();
+                        btupdate.IsEnabled = false;
+                        web.DownloadProgressChanged += web_ProgressChanged;
+                        string versoin = web.DownloadString("https://raw.githubusercontent.com/damiralmaev/ACraftC/master/Update/version.txt");
+                        if (versoin == Data.version)
                         {
-                            web.DownloadProgressChanged += web_ProgressChanged;
-                            web.DownloadFile("", $"{Environment.GetFolderPath(Environment.SpecialFolder.InternetCache)}/EysePower");
-                            MessageBoxResult lol1 = MessageBox.Show("Новая версия программы скачана! Запустить?", "EysePower: Центр обновлений",
-                                MessageBoxButton.YesNo,
-                                MessageBoxImage.Information);
-
-                            if (lol1 == MessageBoxResult.Yes)
-                            {
-
-                            }
+                            MessageBox.Show(versoin + " " + Data.version);
+                            btupdate.IsEnabled = true;
+                            MessageBox.Show("У вас последния версия!", "EysePower: Центр обновлений", MessageBoxButton.OK, MessageBoxImage.Information);
+                            Thread.Sleep(0);
                         }
                         else
                         {
-                            Thread.Sleep(0);
+                            MessageBoxResult lol = MessageBox.Show($"Найдина новая версия! Новая версия: {versoin}. Обновиться?", "EysePower: Центр обновлений", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                            if (lol == MessageBoxResult.Yes)
+                            {
+                                web.DownloadFileTaskAsync("https://raw.githubusercontent.com/damiralmaev/ACraftC/master/Update/EyesPower.exe",
+                                    $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}/EysePowerNew.exe");
+                                MessageBoxResult lol1 = MessageBox.Show("Новая версия программы скачана! Запустить?", "EysePower: Центр обновлений",
+                                    MessageBoxButton.YesNo,
+                                    MessageBoxImage.Information);
+
+                                if (lol1 == MessageBoxResult.Yes)
+                                {
+                                    Process.Start($"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}/EysePowerNew.exe");
+                                    Environment.Exit(0);
+                                }
+                            }
+                            else
+                            {
+                                Thread.Sleep(0);
+                            }
                         }
+
                     }
+                    catch (Exception ex) { MessageBox.Show($"Ошибка обновление: {ex.Message}", "EysePower: Центр обновлений", MessageBoxButton.OK, MessageBoxImage.Error); }
                 }));
-            }
-            catch { MessageBox.Show("Ошибка обновление", "EysePower: Центр обновлений", MessageBoxButton.OK, MessageBoxImage.Error); }
+            });
         }
 
         private void web_ProgressChanged(object sender, DownloadProgressChangedEventArgs e)

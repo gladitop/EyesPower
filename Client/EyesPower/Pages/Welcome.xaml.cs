@@ -42,7 +42,7 @@ namespace EyesPower.Pages
             }
             else if (btno.IsChecked.Value == true)
             {
-                MessageBoxResult lol = MessageBox.Show("При отказе это окно закроетс, но вы можете пройди это потом!", "EysePower: Настройка", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                MessageBoxResult lol = MessageBox.Show("При отказе это окно закроется, но вы можете пройди это потом!", "EysePower: Настройка", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 if (lol == MessageBoxResult.Yes)
                 {
                     Data.exit = true;
