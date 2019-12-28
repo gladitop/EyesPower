@@ -65,6 +65,12 @@ namespace EyesPower
                     СonfirmationEmail email = new СonfirmationEmail();
                     Data.client = client;
                     email.ShowDialog();
+                    if (Data.ExitNewAccount == true)
+                    {
+                        Main main = new Main();
+                        main.Show();
+                        this.Close();
+                    }
                 }
                 catch(Exception ex)
                 {

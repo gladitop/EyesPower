@@ -11,6 +11,6 @@
     <Grid>
         <Image Source="pack://application:,,,/Resources/user.png" Height="105" Margin="189,10,187,0" VerticalAlignment="Top"/>
         <Label x:Name="lblogin" Content="Логин:" FontSize="25" HorizontalAlignment="Left" Margin="23,170,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbpassworld" Content="Логин:" FontSize="25" HorizontalAlignment="Left" Margin="23,238,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbpassworld" Content="Пароль:" FontSize="25" HorizontalAlignment="Left" Margin="23,238,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

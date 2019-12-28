@@ -27,8 +27,8 @@ namespace EyesPower.Pages
 
             //вставка значений
 
-            lblogin.Content = Settings.Default.Login;
-            lbpassworld.Content = Settings.Default.Passworld;
+            lblogin.Content = $"Логин: {Settings.Default.Login}";
+            lbpassworld.Content = $"Пароль: {Settings.Default.Passworld}";
         }
     }
 }

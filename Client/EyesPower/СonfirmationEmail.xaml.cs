@@ -36,6 +36,8 @@ namespace EyesPower
             if (Encoding.UTF8.GetString(buffer, 0, i) == "Yes")
             {
                 MessageBox.Show("Ваш аккаунт зарегистрирован!", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
+                Data.ExitNewAccount = true;
+                this.Close();
             }
             else
             {
