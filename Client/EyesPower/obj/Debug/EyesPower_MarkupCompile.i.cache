@@ -4,17 +4,26 @@
 winexe
 C#
 .cs
-C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\
 EyesPower
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\App.xaml
 22-1906726601
 
 291970831906
 141183416626
 About.xaml;Account.xaml;AccountInput.xaml;AccountNew.xaml;Customizationing.xaml;Main.xaml;MainWindow.xaml;Pages\CheckUpdate.xaml;Pages\NoAccount.xaml;Pages\Programs.xaml;Pages\SendAndHelp.xaml;Pages\Training.xaml;Pages\TrainingCircle.xaml;Pages\TrainingClosing.xaml;Pages\Welcome.xaml;Pages\WelcomTraning.xaml;Pages\YesAccount.xaml;SettingsForm.xaml;Start.xaml;StartTraning.xaml;Update.xaml;СonfirmationEmail.xaml;
+=======
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\App.xaml
+24-2083310082
+
+31643530066
+141266040058
+About.xaml;Account.xaml;AccountInput.xaml;AccountNew.xaml;Control.xaml;Customizationing.xaml;Main.xaml;MainWindow.xaml;Pages\CheckUpdate.xaml;Pages\NoAccount.xaml;Pages\Programs.xaml;Pages\SendAndHelp.xaml;Pages\SettingsControl.xaml;Pages\Training.xaml;Pages\TrainingCircle.xaml;Pages\WelcomControl.xaml;Pages\Welcome.xaml;Pages\WelcomTraning.xaml;Pages\YesAccount.xaml;SettingsForm.xaml;Start.xaml;StartTraning.xaml;Update.xaml;СonfirmationEmail.xaml;
+>>>>>>> 380bbdf09db1753e170fa6369197e4ca9383d40c
 
 True
 

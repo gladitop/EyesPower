@@ -20,5 +20,7 @@
         <Button x:Name="btaccount" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="732,-1,0,0" VerticalAlignment="Top" Width="52" Height="52" Click="btaccount_Click"/>
         <Button x:Name="btupdate" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="615,0,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btupdate_Click"/>
         <Button x:Name="NoSettings" Content="Без настройки" HorizontalAlignment="Left" Margin="645,354,0,0" VerticalAlignment="Top" Width="106" Click="NoSettings_Click" Height="29"/>
+        <Image x:Name="imagescontrol" Source="Resources/Controls.png" HorizontalAlignment="Left" Margin="555,0,0,0" VerticalAlignment="Top" Width="52" Height="51" RenderTransformOrigin="0.409,0.863"/>
+        <Button x:Name="btcontrol" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="557,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btcontrol_Click"/>
     </Grid>
 </Window>

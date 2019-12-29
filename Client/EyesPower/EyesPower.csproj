@@ -70,6 +70,9 @@
     <Compile Include="Account.xaml.cs">
       <DependentUpon>Account.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Control.xaml.cs">
+      <DependentUpon>Control.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Customizationing.xaml.cs">
       <DependentUpon>Customizationing.xaml</DependentUpon>
     </Compile>
@@ -87,14 +90,22 @@
     <Compile Include="Pages\SendAndHelp.xaml.cs">
       <DependentUpon>SendAndHelp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SettingsControl.xaml.cs">
+      <DependentUpon>SettingsControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Training.xaml.cs">
       <DependentUpon>Training.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TrainingCircle.xaml.cs">
       <DependentUpon>TrainingCircle.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Pages\TrainingClosing.xaml.cs">
       <DependentUpon>TrainingClosing.xaml</DependentUpon>
+=======
+    <Compile Include="Pages\WelcomControl.xaml.cs">
+      <DependentUpon>WelcomControl.xaml</DependentUpon>
+>>>>>>> 380bbdf09db1753e170fa6369197e4ca9383d40c
     </Compile>
     <Compile Include="Pages\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
@@ -133,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AccountNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -181,6 +196,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\SettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Training.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -189,7 +208,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< HEAD
     <Page Include="Pages\TrainingClosing.xaml">
+=======
+    <Page Include="Pages\WelcomControl.xaml">
+>>>>>>> 380bbdf09db1753e170fa6369197e4ca9383d40c
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -286,5 +309,14 @@
   <ItemGroup>
     <Resource Include="Resources\UpdateIcon.ico" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <Resource Include="Resources\VideoCircle.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls.png" />
+  </ItemGroup>
+>>>>>>> 380bbdf09db1753e170fa6369197e4ca9383d40c
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
