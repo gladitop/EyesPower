@@ -20,9 +20,16 @@ namespace EyesPower.Pages
     /// </summary>
     public partial class SettingsControl : Page
     {
+        public TimeSpan time;
+
         public SettingsControl()
         {
             InitializeComponent();
+        }
+
+        private void lbHour_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+
         }
     }
 }

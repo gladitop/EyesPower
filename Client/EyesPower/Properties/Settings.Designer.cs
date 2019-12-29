@@ -142,5 +142,29 @@ namespace EyesPower.Properties {
                 this["Autoload"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PassworldControl {
+            get {
+                return ((string)(this["PassworldControl"]));
+            }
+            set {
+                this["PassworldControl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool StartControl {
+            get {
+                return ((bool)(this["StartControl"]));
+            }
+            set {
+                this["StartControl"] = value;
+            }
+        }
     }
 }

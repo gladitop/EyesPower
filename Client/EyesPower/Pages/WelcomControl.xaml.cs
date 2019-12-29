@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using EyesPower.Properties;
 
 namespace EyesPower.Pages
 {
@@ -46,6 +47,9 @@ namespace EyesPower.Pages
             }
             else
             {
+                Settings.Default.StartControl = true;
+                Settings.Default.PassworldControl = lbpass.Password;
+                Settings.Default.Save();
                 Data.number = 2;
                 Data.NewPage = true;
             }
