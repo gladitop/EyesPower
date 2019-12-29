@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +24,29 @@ namespace EyesPower.Pages
         public TrainingCircle()
         {
             InitializeComponent();
+        }
+
+        public void Lol()
+        {
+            this.Dispatcher.Invoke(new Action(() =>
+            {
+                lb.Visibility = Visibility.Collapsed;
+                media.Visibility = Visibility.Visible;
+                media.Play();
+                media.MediaEnded += Media_MediaEnded;
+            }));
+        }
+
+        private void Media_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            Data.number = 3;
+            Data.NewPage = true;
+        }
+
+        private void trainingcircle_Loaded(object sender, RoutedEventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(Lol));
+            thread.Start();
         }
     }
 }

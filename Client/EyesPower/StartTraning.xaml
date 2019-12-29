@@ -7,8 +7,6 @@
         mc:Ignorable="d"
         Title="EysePower: Тренировка" ResizeMode="NoResize" Height="450" Width="800">
     <Grid>
-
-        <MediaElement Source="123.mp3" LoadedBehavior="Pause" UnloadedBehavior="Pause" Stretch="Fill"  HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0"/>
-
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0"/>
     </Grid>
 </Window>

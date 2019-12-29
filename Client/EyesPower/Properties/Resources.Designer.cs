@@ -169,15 +169,5 @@ namespace EyesPower.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Byte[].
-        /// </summary>
-        internal static byte[] VideoCircle {
-            get {
-                object obj = ResourceManager.GetObject("VideoCircle", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

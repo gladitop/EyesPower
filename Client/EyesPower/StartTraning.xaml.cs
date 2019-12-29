@@ -22,21 +22,30 @@ namespace EyesPower
     {
         public StartTraning()
         {
-            //InitializeComponent();
-            //frame.Navigate(new Pages.WelcomTraning());
-            //Thread thread = new Thread(new ThreadStart(Update));
-            //thread.Start();
+            InitializeComponent();
+            frame.Navigate(new Pages.WelcomTraning());
+            Thread thread = new Thread(new ThreadStart(Update));
+            thread.Start();
         }
 
         public void Update()
         {
             while (true)
             {
-                if (Pages.Data.number == 2 && Pages.Data.NewPage == true)
+                this.Dispatcher.Invoke(new Action(() =>
                 {
-                    //Pages.Data.NewPage = false;
-                    //frame.Navigate(new Pages.TrainingCircle());
-                }
+                    if (Pages.Data.number == 2 && Pages.Data.NewPage == true)
+                    {
+                        Pages.Data.NewPage = false;
+                        frame.Navigate(new Pages.TrainingCircle());
+                    }
+
+                    if (Pages.Data.number == 3 && Pages.Data.NewPage == true)
+                    {
+                        Pages.Data.NewPage = false;
+                        frame.Navigate(new Pages.TrainingClosing());
+                    }
+                }));
             }
         }
     }
