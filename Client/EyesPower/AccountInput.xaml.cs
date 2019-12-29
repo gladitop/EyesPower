@@ -45,6 +45,10 @@ namespace EyesPower
             {
                 MessageBox.Show("Без пароля нельзя!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            else if (tbpass.Password.Length < 8)
+            {
+                MessageBox.Show("Пароль слишком короткий", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             else
             {
                 try

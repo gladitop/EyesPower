@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace EyesPower.Pages
 {
@@ -20,7 +22,7 @@ namespace EyesPower.Pages
     /// </summary>
     public partial class SettingsControl : Page
     {
-        public TimeSpan time;
+        DispatcherTimer timer = new DispatcherTimer();
 
         public SettingsControl()
         {
@@ -31,5 +33,14 @@ namespace EyesPower.Pages
         {
 
         }
+
+        private void btsave_Click(object sender, RoutedEventArgs e)//Сохранить
+        {
+            EyesPower.Data.time = new TimeSpan(Convert.ToInt32(lbHour.Text), Convert.ToInt32(lbMinutes.Text),
+                Convert.ToInt32(lbSecond.Text));
+            timer.Interval = EyesPower.Data.time;
+            timer.Start();
+        }
+        
     }
 }

@@ -17,5 +17,8 @@
         <TextBox x:Name="lbHour" HorizontalAlignment="Left" FontSize="30" Height="40" Margin="16,151,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="66" SizeChanged="lbHour_SizeChanged"/>
         <TextBox x:Name="lbMinutes" HorizontalAlignment="Left" FontSize="30" Height="40" Margin="172,151,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="69"/>
         <TextBox x:Name="lbSecond" HorizontalAlignment="Left" FontSize="30" Height="40" Margin="335,151,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="73" RenderTransformOrigin="3.312,1.89"/>
+        <CheckBox x:Name="checkblocking" Content="Заюлокировать пк" FontSize="30" HorizontalAlignment="Left" Margin="10,229,0,0" VerticalAlignment="Top"/>
+        <Label Content="Пароль будет какой вы вошли сюда" FontSize="20" HorizontalAlignment="Left" Margin="16,273,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btsave" Content="Сохранить" FontSize="25" HorizontalAlignment="Left" Margin="136,340,0,0" VerticalAlignment="Top" Width="145" Click="btsave_Click"/>
     </Grid>
 </Page>

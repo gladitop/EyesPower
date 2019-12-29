@@ -28,5 +28,6 @@ namespace EyesPower
         //Разные данные
 
         public static string version = "1.0";//версия программы
+        public static TimeSpan time;//Для контроля
     }
 }
