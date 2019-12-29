@@ -16,3 +16,9 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\Server\ServerEysePower\bin\Debug\
 C:\Users\Дамир\Documents\GitHub\EyesPower\Server\ServerEysePower\obj\Debug\ServerEysePower.csprojAssemblyReference.cache
 C:\Users\Дамир\Documents\GitHub\EyesPower\Server\ServerEysePower\obj\Debug\ServerEysePower.exe
 C:\Users\Дамир\Documents\GitHub\EyesPower\Server\ServerEysePower\obj\Debug\ServerEysePower.pdb
+C:\Users\Дамир\Documents\EyesPower\Server\ServerEysePower\bin\Debug\ServerEysePower.exe.config
+C:\Users\Дамир\Documents\EyesPower\Server\ServerEysePower\bin\Debug\ServerEysePower.exe
+C:\Users\Дамир\Documents\EyesPower\Server\ServerEysePower\bin\Debug\ServerEysePower.pdb
+C:\Users\Дамир\Documents\EyesPower\Server\ServerEysePower\obj\Debug\ServerEysePower.csprojAssemblyReference.cache
+C:\Users\Дамир\Documents\EyesPower\Server\ServerEysePower\obj\Debug\ServerEysePower.exe
+C:\Users\Дамир\Documents\EyesPower\Server\ServerEysePower\obj\Debug\ServerEysePower.pdb

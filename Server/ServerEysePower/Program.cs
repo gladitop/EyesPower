@@ -99,6 +99,24 @@ namespace ServerEysePower
             }
         }
 
+        static bool EmailCheck(Socket client, string email)
+        {
+            try
+            {
+                OleDbCommand command = new OleDbCommand($"SELECT Login FROM Accounts WHERE Login = '{email}'", myConnection);
+                command.ExecuteScalar().ToString();
+                return false;
+            }
+            catch
+            {
+                if (CheckConnectError(client) == false)
+                {
+                    Thread.Sleep(0);
+                }
+            }
+            return true;
+        }
+
         static bool LoginAccount(Socket client, string email, string pass)
         {
             try
@@ -107,7 +125,7 @@ namespace ServerEysePower
                 command.ExecuteScalar().ToString();
                 command = new OleDbCommand($"SELECT Passworld FROM Accounts WHERE Passworld = '{pass}'", myConnection);
                 command.ExecuteScalar().ToString();
-                return true;
+                return false;
             }
             catch 
             {
@@ -116,7 +134,7 @@ namespace ServerEysePower
                     Thread.Sleep(0);
                 }
             }
-            return false;
+            return true;
         }
 
         static void MessClient(object clien)
@@ -142,21 +160,30 @@ namespace ServerEysePower
                         messi = client.Receive(buffer);
                         string pass = Encoding.UTF8.GetString(buffer, 0, messi);
 
-                        //подтверждение email
+                        //Проверка email
 
-                        if (EmailConfirmation(client, email))
+                        if (EmailCheck(client, email))
                         {
+                            //подтверждение email
 
-                            //конец!
+                            if (EmailConfirmation(client, email))
+                            {
 
-                            OleDbCommand command = new OleDbCommand($"INSERT INTO Accounts(Login, Passworld) VALUES('{email}', '{pass}')", myConnection);
-                            command.ExecuteReader();
-                            client.Send(Encoding.UTF8.GetBytes("Yes"));
-                            Write($"Новый аккаунт! email: {email}, {pass}", ConsoleColor.Green);
+                                //конец!
+
+                                OleDbCommand command = new OleDbCommand($"INSERT INTO Accounts(Login, Passworld) VALUES('{email}', '{pass}')", myConnection);
+                                command.ExecuteReader();
+                                client.Send(Encoding.UTF8.GetBytes("Yes"));
+                                Write($"Новый аккаунт! email: {email}, {pass}", ConsoleColor.Green);
+                            }
+                            else
+                            { Write("Ошибка: не тот код!", ConsoleColor.Red); }
                         }
                         else
-                        { Write("Ошибка: не тот код!", ConsoleColor.Red); }
-
+                        {
+                            client.Send(Encoding.UTF8.GetBytes("No"));
+                            Write("Ошибка: Такой email уже использовался", ConsoleColor.Red);
+                        }
                     }
 
                     //Вход
