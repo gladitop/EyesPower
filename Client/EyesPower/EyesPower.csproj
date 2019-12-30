@@ -123,6 +123,7 @@
     <Compile Include="StartTraning.xaml.cs">
       <DependentUpon>StartTraning.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Time.cs" />
     <Compile Include="Update.xaml.cs">
       <DependentUpon>Update.xaml</DependentUpon>
     </Compile>
