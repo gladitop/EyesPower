@@ -55,7 +55,9 @@ namespace EyesPower
             f.ShowDialog();
             if (Data.ExitNewAccount == true)
             {
-                this.Close();
+                Main main = new Main();
+                main.Show();
+                this.Hide();
             }
         }
 

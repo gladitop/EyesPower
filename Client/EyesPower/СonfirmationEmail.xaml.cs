@@ -35,13 +35,20 @@ namespace EyesPower
             int i = Data.client.Receive(buffer);
             if (Encoding.UTF8.GetString(buffer, 0, i) == "Yes")
             {
-                MessageBox.Show("Ваш аккаунт зарегистрирован!", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
-                Data.ExitNewAccount = true;
-                this.Close();
+                if (Encoding.UTF8.GetString(buffer, 0, i) == "Yes")
+                {
+                    MessageBox.Show("Ваш аккаунт зарегистрирован!", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Data.ExitNewAccount = true;
+                    this.Close();
+                }
+                else if (Encoding.UTF8.GetString(buffer, 0, i) == "No")
+                {
+                    MessageBox.Show("Ошибка: код не подходит!", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
             }
             else
             {
-                MessageBox.Show("Ошибка: код не подходит!", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Ошибка: email уже использовался!", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
     }

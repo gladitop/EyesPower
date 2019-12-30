@@ -82,7 +82,10 @@ namespace ServerEysePower
 
                 Write("Ожидание кода...", ConsoleColor.Yellow);
                 int messi = client.Receive(buffer);
-                if (Encoding.UTF8.GetString(buffer, 0, messi) == code)
+                string codee = Encoding.UTF8.GetString(buffer, 0, messi);
+                codee = codee.Trim(new char[] { ' ' });
+                Write(codee, ConsoleColor.Red);
+                if (codee == code)
                 {
                     Write("Подтверждение есть!", ConsoleColor.Green);
                     return true;
@@ -164,6 +167,8 @@ namespace ServerEysePower
 
                         if (EmailCheck(client, email))
                         {
+                            client.Send(Encoding.UTF8.GetBytes("Yes"));
+
                             //подтверждение email
 
                             if (EmailConfirmation(client, email))
@@ -177,7 +182,10 @@ namespace ServerEysePower
                                 Write($"Новый аккаунт! email: {email}, {pass}", ConsoleColor.Green);
                             }
                             else
-                            { Write("Ошибка: не тот код!", ConsoleColor.Red); }
+                            {
+                                client.Send(Encoding.UTF8.GetBytes("No"));
+                                Write("Ошибка: не тот код!", ConsoleColor.Red); 
+                            }
                         }
                         else
                         {

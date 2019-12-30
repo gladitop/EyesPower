@@ -67,7 +67,7 @@ namespace EyesPower
                     email.ShowDialog();
                     if (Data.ExitNewAccount == true)
                     {
-                        Main main = new Main();
+                        MainWindow main = new MainWindow();
                         main.Show();
                         this.Close();
                     }
