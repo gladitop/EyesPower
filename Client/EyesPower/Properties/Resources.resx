@@ -142,6 +142,18 @@
   <data name="stategood" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stategood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TrainingClosing1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrainingClosing1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrainingClosing2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrainingClosing2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrainingClosing3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrainingClosing3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrainingClosing4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrainingClosing4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Update" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

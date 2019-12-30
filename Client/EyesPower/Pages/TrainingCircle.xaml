@@ -10,7 +10,6 @@
 
     <Grid>
         <MediaElement x:Name="media" LoadedBehavior="Manual" Visibility="Collapsed" Volume="100" Source="VideoCircle.mp4" HorizontalAlignment="Left" Height="452" VerticalAlignment="Top" Width="790" Margin="0,0,0,-2.4"/>
-        <Label x:Name="lb" Content="Следите за шариком" FontSize="65" HorizontalAlignment="Left" Margin="86,170,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

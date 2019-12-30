@@ -30,7 +30,6 @@ namespace EyesPower.Pages
         {
             this.Dispatcher.Invoke(new Action(() =>
             {
-                lb.Visibility = Visibility.Collapsed;
                 media.Visibility = Visibility.Visible;
                 media.Play();
                 media.MediaEnded += Media_MediaEnded;
