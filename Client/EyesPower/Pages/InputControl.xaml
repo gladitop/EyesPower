@@ -1,0 +1,18 @@
+﻿<Page x:Class="EyesPower.Pages.InputControl"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EyesPower.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="407" d:DesignWidth="423"
+      Title="EyesPower: Вход">
+
+    <Grid>
+        <Label Content="Видете пароль чтобы войди" FontSize="30" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+        <Label Content="Пароль:" FontSize="25" HorizontalAlignment="Left" Margin="42,163,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="lbpass" HorizontalAlignment="Left" FontSize="25" Margin="148,163,0,0" VerticalAlignment="Top" Height="43" Width="227"/>
+        <Button x:Name="btinput" Content="Войди" FontSize="25" HorizontalAlignment="Left" Margin="126,313,0,0" VerticalAlignment="Top" Width="183" Height="54" Click="btinput_Click"/>
+
+    </Grid>
+</Page>

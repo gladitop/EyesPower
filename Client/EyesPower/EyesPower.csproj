@@ -81,6 +81,9 @@
       <DependentUpon>CheckUpdate.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Data.cs" />
+    <Compile Include="Pages\InputControl.xaml.cs">
+      <DependentUpon>InputControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\NoAccount.xaml.cs">
       <DependentUpon>NoAccount.xaml</DependentUpon>
     </Compile>
@@ -180,6 +183,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\CheckUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\InputControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

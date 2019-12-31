@@ -36,10 +36,13 @@ namespace EyesPower.Pages
 
         private void btsave_Click(object sender, RoutedEventArgs e)//Сохранить
         {
-            EyesPower.Data.time = new TimeSpan(Convert.ToInt32(lbHour.Text), Convert.ToInt32(lbMinutes.Text),
-                Convert.ToInt32(lbSecond.Text));
-            timer.Interval = EyesPower.Data.time;
-            timer.Start();
+            if (checkblocking.IsChecked.Value == true)
+            {
+                MessageBox.Show("lol");
+                Time.tamer tamer = new Time.tamer();
+                tamer.Embed("123", Convert.ToInt32(lbHour.Text), Convert.ToInt32(lbMinutes.Text), Convert.ToInt32(lbSecond.Text));
+                tamer.Start();
+            }
         }
         
     }
