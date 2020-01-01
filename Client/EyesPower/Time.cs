@@ -30,6 +30,11 @@ namespace EyesPower
 
             void Tick()
             {
+                if (File.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Yes.txt"))
+                    File.Create($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Yes.txt");
+                if (File.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt"))
+                    File.Create($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt");
+
                 File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Yes.txt", "Yes");
                 File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Passworld);
             }
@@ -44,6 +49,7 @@ namespace EyesPower
             {
                 while (true)
                 {
+                    Thread.Sleep(1000);
                     Second--;
 
                     if (Second == 0)

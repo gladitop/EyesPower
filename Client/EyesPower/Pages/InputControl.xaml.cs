@@ -31,6 +31,8 @@ namespace EyesPower.Pages
             if (Settings.Default.PassworldControl == lbpass.Password)
             {
                 MessageBox.Show("Пароль верный!", Title, MessageBoxButton.OK, MessageBoxImage.Information);
+                Data.number = 2;
+                Data.NewPage = true;
             }
             else
             {
