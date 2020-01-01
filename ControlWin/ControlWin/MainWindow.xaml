@@ -1,0 +1,15 @@
+﻿<Window x:Class="ControlWin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControlWin"
+        mc:Ignorable="d"
+        Title="EysePower: Нужны тренировка!" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Height="450" Width="405.419">
+    <Grid>
+        <Label Content="Внимание нужна" FontSize="40" HorizontalAlignment="Left" Margin="33,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Тренировка!" FontSize="40" HorizontalAlignment="Left" Margin="76,73,0,0" VerticalAlignment="Top"/>
+        <Image Source="Resources/Waring.jpg" HorizontalAlignment="Left" Height="208" Margin="99,165,0,0" VerticalAlignment="Top" Width="195"/>
+
+    </Grid>
+</Window>

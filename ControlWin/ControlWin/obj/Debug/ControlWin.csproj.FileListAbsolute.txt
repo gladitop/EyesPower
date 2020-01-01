@@ -1,0 +1,14 @@
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\bin\Debug\ControlWin.exe.config
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\bin\Debug\ControlWin.exe
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\bin\Debug\ControlWin.pdb
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\obj\Debug\ControlWin.csprojAssemblyReference.cache
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\obj\Debug\MainWindow.g.cs
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\obj\Debug\App.g.cs
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\obj\Debug\ControlWin_MarkupCompile.cache
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\obj\Debug\ControlWin_MarkupCompile.lref
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\obj\Debug\MainWindow.baml
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\obj\Debug\ControlWin.g.resources
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\obj\Debug\ControlWin.Properties.Resources.resources
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\obj\Debug\ControlWin.csproj.GenerateResource.cache
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\obj\Debug\ControlWin.exe
+C:\Users\Дамир\source\repos\ControlWin\ControlWin\obj\Debug\ControlWin.pdb

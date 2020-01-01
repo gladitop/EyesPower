@@ -18,6 +18,26 @@ namespace EyesPower
             int Second;
             string Passworld;
 
+            public int TimeHour()
+            {
+                return Hour;
+            }
+
+            public int TimeMinute()
+            {
+                return Minute;
+            }
+
+            public int TimeSecond()
+            {
+                return Second;
+            }
+
+            public string TimePassworld()
+            {
+                return Passworld;
+            }
+
             public void Embed(string passworld, int hour = 0, int minute = 0, int second = 0)
             {
                 Hour = hour;
@@ -28,14 +48,19 @@ namespace EyesPower
                 Passworld = Encoding.UTF8.GetString(md5pass);
             }
 
+            void GetTime()
+            {
+                
+            }
+
             void Tick()
             {
-                if (File.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Yes.txt"))
-                    File.Create($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Yes.txt");
+                if (File.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt"))
+                    File.Create($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Timme.txt");
                 if (File.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt"))
                     File.Create($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt");
 
-                File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Yes.txt", "Yes");
+                File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt", "Yes");
                 File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Passworld);
             }
 
@@ -50,6 +75,7 @@ namespace EyesPower
                 while (true)
                 {
                     Thread.Sleep(1000);
+
                     Second--;
 
                     if (Second == 0)
