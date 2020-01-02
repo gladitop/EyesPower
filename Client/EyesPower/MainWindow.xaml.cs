@@ -57,7 +57,7 @@ namespace EyesPower
             {
                 Main main = new Main();
                 main.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
