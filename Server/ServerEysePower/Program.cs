@@ -167,6 +167,7 @@ namespace ServerEysePower
 
                         if (EmailCheck(client, email))
                         {
+                            Task.Delay(100).Wait();
                             client.Send(Encoding.UTF8.GetBytes("Yes"));
 
                             //подтверждение email
@@ -178,6 +179,7 @@ namespace ServerEysePower
 
                                 OleDbCommand command = new OleDbCommand($"INSERT INTO Accounts(Login, Passworld) VALUES('{email}', '{pass}')", myConnection);
                                 command.ExecuteReader();
+                                Task.Delay(100).Wait();
                                 client.Send(Encoding.UTF8.GetBytes("Yes"));
                                 Write($"Новый аккаунт! email: {email}, {pass}", ConsoleColor.Green);
                             }

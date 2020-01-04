@@ -55,22 +55,21 @@ namespace EyesPower
                 try
                 {
                     client.Connect("127.0.0.1", 904);
+                    MessageBox.Show("Лол");
                     client.Send(Encoding.UTF8.GetBytes("EysePower 1.0"));
                     Task.Delay(100).Wait();
+                    MessageBox.Show("Лол1");
                     client.Send(Encoding.UTF8.GetBytes("Reg"));
                     Task.Delay(10).Wait();
+                    MessageBox.Show("Лол2");
                     client.Send(Encoding.UTF8.GetBytes(tbemail.Text));
                     Task.Delay(10).Wait();
+                    MessageBox.Show("Лол3");
                     client.Send(Encoding.UTF8.GetBytes(tbpass.Password));
+                    MessageBox.Show("Лол4");
                     СonfirmationEmail email = new СonfirmationEmail();
                     Data.client = client;
                     email.ShowDialog();
-                    if (Data.ExitNewAccount == true)
-                    {
-                        MainWindow main = new MainWindow();
-                        main.Show();
-                        this.Close();
-                    }
                 }
                 catch(Exception ex)
                 {

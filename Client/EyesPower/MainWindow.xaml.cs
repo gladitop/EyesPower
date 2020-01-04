@@ -46,19 +46,17 @@ namespace EyesPower
             AccountInput f = new AccountInput();
             f.ShowDialog();
             if (Data.ExitMain == true)
+            {
+                Main main = new Main();
+                main.Show();
                 this.Hide();
+            }
         }
 
         private void btaccountinput_Click(object sender, RoutedEventArgs e)//При аккаунте (регистер)
         {
             AccountNew f = new AccountNew();
             f.ShowDialog();
-            if (Data.ExitNewAccount == true)
-            {
-                Main main = new Main();
-                main.Show();
-                this.Close();
-            }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)//закрытие проги

@@ -23,7 +23,6 @@ namespace EyesPower
 
         public static bool UpdateCustomizationing = false;//Проверка настройки
         public static bool ExitMain = false;//Это нужно чтобы закрыть Main
-        public static bool ExitNewAccount = false;//Закрыть окно ExitNewAccount
 
         //Разные данные
 
