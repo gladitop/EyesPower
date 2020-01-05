@@ -26,14 +26,14 @@ namespace EyesPower.Pages
         }
         private void btyes_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Следите за шариком!", Title, MessageBoxButton.OK, MessageBoxImage.Warning);
+            MessageBox.Show("Следите за шариком!", "EysePower: Тренировка", MessageBoxButton.OK, MessageBoxImage.Warning);
             Data.number = 2;
             Data.NewPage = true;
         }
 
         private void btno_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Вы уверены?", Title, MessageBoxButton.OK, MessageBoxImage.Question);
+            MessageBox.Show("Вы уверены?", "EysePower: Тренировка", MessageBoxButton.OK, MessageBoxImage.Question);
         }
     }
 }

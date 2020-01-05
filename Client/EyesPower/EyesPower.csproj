@@ -108,6 +108,9 @@
     <Compile Include="Pages\TrainingClosing.xaml.cs">
       <DependentUpon>TrainingClosing.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TraningWindow.xaml.cs">
+      <DependentUpon>TraningWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\WelcomControl.xaml.cs">
       <DependentUpon>WelcomControl.xaml</DependentUpon>
     </Compile>
@@ -221,6 +224,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\TraningWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\WelcomControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -276,6 +283,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

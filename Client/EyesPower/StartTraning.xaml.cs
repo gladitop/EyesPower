@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Threading;
+using EyesPower.Properties;
 
 namespace EyesPower
 {
@@ -30,7 +31,8 @@ namespace EyesPower
 
         public void Update()
         {
-            while (true)
+            bool whiles = true;
+            do
             {
                 this.Dispatcher.Invoke(new Action(() =>
                 {
@@ -45,8 +47,22 @@ namespace EyesPower
                         Pages.Data.NewPage = false;
                         frame.Navigate(new Pages.TrainingClosing());
                     }
+
+                    if (Pages.Data.number == 4 && Pages.Data.NewPage == true)
+                    {
+                        Pages.Data.NewPage = false;
+                        frame.Navigate(new Pages.TraningWindow());
+                    }
+
+                    if (Pages.Data.exit == true)
+                    {
+                        //Settings.Default.TraningQuantity += 1;
+                        //Settings.Default.Save();
+                        //whiles = false;
+                        this.Close();
+                    }
                 }));
-            }
+            } while (whiles);
         }
     }
 }

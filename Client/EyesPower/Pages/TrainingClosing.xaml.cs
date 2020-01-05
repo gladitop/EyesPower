@@ -28,7 +28,7 @@ namespace EyesPower.Pages
 
         public void Update()
         {
-            this.Dispatcher.Invoke(new Action(() =>
+            this.Dispatcher.Invoke(new Action(async () =>
             {
                 media.Visibility = Visibility.Visible;
                 media.Play();
@@ -36,9 +36,16 @@ namespace EyesPower.Pages
             }));
         }
 
+        public void Slep()
+        {
+            Task.Delay(30000).Wait();
+            Data.number = 4;
+            Data.NewPage = true;
+        }
+
         private void Media_MediaEnded(object sender, RoutedEventArgs e)
         {
-            media.Stop();
+            media.Position = new TimeSpan(0);
             Thread thread = new Thread(new ThreadStart(Update));
             thread.Start();
         }
@@ -47,6 +54,8 @@ namespace EyesPower.Pages
         {
             Thread thread = new Thread(new ThreadStart(Update));
             thread.Start();
+            Thread thread1 = new Thread(new ThreadStart(Slep));
+            thread1.Start();
         }
     }
 }

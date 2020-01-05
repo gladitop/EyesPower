@@ -241,3 +241,5 @@ C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\InputCo
 C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\InputControl.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\InputControl.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\InputControl.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\TraningWindow.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\TraningWindow.baml

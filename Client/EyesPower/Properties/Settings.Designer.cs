@@ -166,5 +166,17 @@ namespace EyesPower.Properties {
                 this["StartControl"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int TraningQuantity {
+            get {
+                return ((int)(this["TraningQuantity"]));
+            }
+            set {
+                this["TraningQuantity"] = value;
+            }
+        }
     }
 }
