@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EyesPower.Pages
+﻿namespace EyesPower.Pages
 {
-    static class Data//Это для хранение переменных (только для быстрой настройки)
+    internal static class Data//Это для хранение переменных (только для быстрой настройки)
     {
         //для быстрой настройки
 

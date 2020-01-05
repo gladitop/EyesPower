@@ -1,20 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using EyesPower.Properties;// и да это для удобства
+﻿using EyesPower.Properties;// и да это для удобства
 using Microsoft.Win32;
+using System;
+using System.Net;
+using System.Threading;
+using System.Windows;
+using System.Windows.Input;
+using System.Windows.Media.Imaging;
 
 namespace EyesPower
 {
@@ -70,7 +61,7 @@ namespace EyesPower
                     reg.Close();
                 }
                 catch
-                {  }
+                { }
             }
         }
 
@@ -86,7 +77,7 @@ namespace EyesPower
                         $"Передите в центр обновлений!", "EyesPower: Основное", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
-            catch {  }
+            catch { }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)//при закрытие

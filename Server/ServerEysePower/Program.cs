@@ -1,29 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net;
-using System.Net.Sockets;
 using System.IO;
-using System.Threading;
+using System.Net;
 using System.Net.Mail;
 using System.Net.NetworkInformation;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ServerEysePower
 {
-    class Program
+    internal class Program
     {
         //public static string connectString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb;"; // для 32 битной системы
         public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database.mdb;"; // для 64 бит
-        static OleDbConnection myConnection;
-        static Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        static byte[] buffer = new byte[1024];
-        static MailAddress frommail = new MailAddress("dam.almaev@gmail.com");
-        static Random rand = new Random();
+        private static OleDbConnection myConnection;
+        private static Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        private static byte[] buffer = new byte[1024];
+        private static MailAddress frommail = new MailAddress("dam.almaev@gmail.com");
+        private static Random rand = new Random();
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.Title = "EysePower: Сервер";
             Write("Запуск всех компонентах..", ConsoleColor.Yellow);
@@ -63,7 +61,7 @@ namespace ServerEysePower
             }
         }
 
-        static bool EmailConfirmation(Socket client, string email)
+        private static bool EmailConfirmation(Socket client, string email)
         {
             try
             {
@@ -92,7 +90,7 @@ namespace ServerEysePower
                 }
                 return false;
             }
-            catch 
+            catch
             {
                 if (CheckConnectError(client) == false)
                 {
@@ -102,7 +100,7 @@ namespace ServerEysePower
             }
         }
 
-        static bool EmailCheck(Socket client, string email)
+        private static bool EmailCheck(Socket client, string email)
         {
             try
             {
@@ -120,7 +118,7 @@ namespace ServerEysePower
             return true;
         }
 
-        static bool LoginAccount(Socket client, string email, string pass)
+        private static bool LoginAccount(Socket client, string email, string pass)
         {
             try
             {
@@ -130,7 +128,7 @@ namespace ServerEysePower
                 command.ExecuteScalar().ToString();
                 return false;
             }
-            catch 
+            catch
             {
                 if (CheckConnectError(client) == false)
                 {
@@ -140,7 +138,7 @@ namespace ServerEysePower
             return true;
         }
 
-        static void MessClient(object clien)
+        private static void MessClient(object clien)
         {
             Socket client = (Socket)clien;
             bool whiles = true;
@@ -186,7 +184,7 @@ namespace ServerEysePower
                             else
                             {
                                 client.Send(Encoding.UTF8.GetBytes("No"));
-                                Write("Ошибка: не тот код!", ConsoleColor.Red); 
+                                Write("Ошибка: не тот код!", ConsoleColor.Red);
                             }
                         }
                         else
@@ -226,11 +224,11 @@ namespace ServerEysePower
 
                     if (Encoding.UTF8.GetString(buffer, 0, messi) == "Scr")
                     {
-                        
+
                     }
                 }
-                catch(Exception ex) 
-                { 
+                catch (Exception ex)
+                {
                     Write($"Ошибка! {ex.Message}", ConsoleColor.Red);
 
                     if (CheckConnectError(client) == false)
@@ -241,7 +239,7 @@ namespace ServerEysePower
             }
         }
 
-        static bool CheckConnectError(Socket client)//проверка клиента после ошибки
+        private static bool CheckConnectError(Socket client)//проверка клиента после ошибки
         {
             try
             {
@@ -255,14 +253,14 @@ namespace ServerEysePower
                     return true;
                 }
             }
-            catch 
-            { 
+            catch
+            {
                 Write("Отключение клиента!", ConsoleColor.Red);
             }
             return false;
         }
 
-        static void CheckConnect(object clien)
+        private static void CheckConnect(object clien)
         {
             try
             {
@@ -275,7 +273,7 @@ namespace ServerEysePower
                     Thread thread = new Thread(new ParameterizedThreadStart(MessClient));
                     thread.Start(client);
                 }
-                else 
+                else
                 {
                     Write("Ошибка нового подключения!", ConsoleColor.Red);
                     client.Close();
@@ -285,7 +283,7 @@ namespace ServerEysePower
             catch { }
         }
 
-        static void Connects()
+        private static void Connects()
         {
             while (true)
             {
@@ -300,7 +298,7 @@ namespace ServerEysePower
             }
         }
 
-        static void Write(string text, ConsoleColor color)
+        private static void Write(string text, ConsoleColor color)
         {
             Console.ForegroundColor = color;
             Console.WriteLine(text);

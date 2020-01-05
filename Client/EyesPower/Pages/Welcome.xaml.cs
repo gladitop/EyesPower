@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace EyesPower.Pages
 {
@@ -29,7 +17,10 @@ namespace EyesPower.Pages
         private void btyes_Checked(object sender, RoutedEventArgs e)//Кнопка да
         {
             if (Data.numberanswer == 1)
+            {
                 btnext.IsEnabled = true;
+            }
+
             Data.NewPage = true;
         }
 
@@ -54,7 +45,9 @@ namespace EyesPower.Pages
         private void btno_Checked(object sender, RoutedEventArgs e)//Кнопка нет
         {
             if (Data.numberanswer == 1)
+            {
                 btnext.IsEnabled = true;
+            }
         }
     }
 }

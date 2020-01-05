@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Net;
-using System.Net.Sockets;
 
 namespace EyesPower
 {
@@ -21,7 +11,7 @@ namespace EyesPower
     /// </summary>
     public partial class AccountNew : Window
     {
-        Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        private Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
         public AccountNew()
         {
@@ -71,7 +61,7 @@ namespace EyesPower
                     Data.client = client;
                     email.ShowDialog();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     client.Close();
                     Data.client.Close();

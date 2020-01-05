@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using EyesPower.Properties;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Net.Sockets;
-using System.Net;
-using EyesPower.Properties;
 
 namespace EyesPower
 {
@@ -22,8 +11,8 @@ namespace EyesPower
     /// </summary>
     public partial class AccountInput : Window
     {
-        Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        byte[] buffer = new byte[1024];
+        private Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        private byte[] buffer = new byte[1024];
 
         public AccountInput()
         {

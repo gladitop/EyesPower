@@ -1,22 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Security.Cryptography;
 
 namespace EyesPower
 {
-    static class Time
+    internal static class Time
     {
         public struct tamer
         {
-            int Hour;
-            int Minute;
-            int Second;
-            string Passworld;
+            private int Hour;
+            private int Minute;
+            private int Second;
+            private string Passworld;
 
             public int TimeHour()
             {
@@ -48,17 +45,22 @@ namespace EyesPower
                 Passworld = Encoding.UTF8.GetString(md5pass);
             }
 
-            void GetTime()
+            private void GetTime()
             {
-                
+
             }
 
-            void Tick()
+            private void Tick()
             {
                 if (File.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt"))
+                {
                     File.Create($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Timme.txt");
+                }
+
                 if (File.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt"))
+                {
                     File.Create($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt");
+                }
 
                 File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt", "Yes");
                 File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Passworld);
@@ -70,7 +72,7 @@ namespace EyesPower
                 thread.Start();
             }
 
-            void Work()
+            private void Work()
             {
                 while (true)
                 {
@@ -85,7 +87,9 @@ namespace EyesPower
                             if (Hour == 0)
                             {
                                 if (Second == 0 && Minute == 0 && Hour == 0)
+                                {
                                     Tick();
+                                }
                             }
                             Minute = 59;
                             Hour--;

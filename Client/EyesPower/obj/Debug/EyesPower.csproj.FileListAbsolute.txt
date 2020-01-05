@@ -102,7 +102,6 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Accoun
 C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\bin\Debug\EyesPower.exe.config
 C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\bin\Debug\EyesPower.exe
 C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\bin\Debug\EyesPower.pdb
-C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\EyesPower.csprojAssemblyReference.cache
 C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\About.g.cs
 C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Account.g.cs
 C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\AccountInput.g.cs
@@ -243,3 +242,5 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\InputControl.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\TraningWindow.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\TraningWindow.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\TraningWindow.g.cs
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\TraningWindow.baml

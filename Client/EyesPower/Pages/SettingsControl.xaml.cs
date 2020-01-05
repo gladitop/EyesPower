@@ -1,18 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace EyesPower.Pages
@@ -22,7 +10,7 @@ namespace EyesPower.Pages
     /// </summary>
     public partial class SettingsControl : Page
     {
-        DispatcherTimer timer = new DispatcherTimer();
+        private DispatcherTimer timer = new DispatcherTimer();
 
         public SettingsControl()
         {
@@ -44,6 +32,6 @@ namespace EyesPower.Pages
                 tamer.Start();
             }
         }
-        
+
     }
 }
