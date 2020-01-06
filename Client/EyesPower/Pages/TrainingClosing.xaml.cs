@@ -18,7 +18,9 @@ namespace EyesPower.Pages
 
         public void Update()
         {
+#pragma warning disable CS1998 // В асинхронном методе отсутствуют операторы await, будет выполнен синхронный метод
             this.Dispatcher.Invoke(new Action(async () =>
+#pragma warning restore CS1998 // В асинхронном методе отсутствуют операторы await, будет выполнен синхронный метод
             {
                 media.Visibility = Visibility.Visible;
                 media.Play();

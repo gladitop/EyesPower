@@ -17,5 +17,9 @@
 
         public static bool YesTraining = false;//Есть подтверждение тренировки
         public static short number = 1;// счёт
+
+        //доп.
+
+        public static bool ExitLogin = false;//Для выхода из проги и потом вход
     }
 }

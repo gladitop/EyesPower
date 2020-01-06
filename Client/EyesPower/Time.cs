@@ -13,7 +13,19 @@ namespace EyesPower
             private int Hour;
             private int Minute;
             private int Second;
+            Thread thread;
             private string Passworld;
+
+            public void StartThread()
+            {
+                thread.Start();
+            }
+
+            [Obsolete]
+            public void StopThread()
+            {
+                thread.Suspend();
+            }
 
             public int TimeHour()
             {
@@ -68,7 +80,7 @@ namespace EyesPower
 
             public void Start()
             {
-                Thread thread = new Thread(new ThreadStart(Work));
+                thread = new Thread(new ThreadStart(Work));
                 thread.Start();
             }
 

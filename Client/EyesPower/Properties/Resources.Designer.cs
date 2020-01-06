@@ -121,6 +121,15 @@ namespace EyesPower.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на TIMEOUT 3.
+        /// </summary>
+        internal static string StartEyesPower {
+            get {
+                return ResourceManager.GetString("StartEyesPower", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap statebad {

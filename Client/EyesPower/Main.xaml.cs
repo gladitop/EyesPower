@@ -1,6 +1,8 @@
 ﻿using EyesPower.Properties;// и да это для удобства
 using Microsoft.Win32;
 using System;
+using System.Diagnostics;
+using System.IO;
 using System.Net;
 using System.Threading;
 using System.Windows;
@@ -175,6 +177,31 @@ namespace EyesPower
             {
                 Account account = new Account();
                 account.ShowDialog();
+
+                if (Pages.Data.ExitLogin == true)
+                {
+                    string path = Settings.Default.ProgramLocation;
+                    path = Path.GetDirectoryName(path);
+                    MessageBox.Show(path);
+                    if (File.Exists($"{path}/StartEyesPower.cmd"))
+                    {
+                        File.Delete($"{path}/StartEyesPower.cmd");
+                    }
+
+                    //File.WriteAllBytes($"{path}/StartEyesPower.cmd", Properties.Resources.StartEyesPower);
+                    string[] lol = new string[2];
+                    lol[0] = "TIMEOUT 3";
+                    lol[1] = $"start {Settings.Default.ProgramLocation}";
+                    File.WriteAllLines($"StartEyesPower.cmd", lol);
+                    MessageBox.Show(File.ReadAllText($"{path}/StartEyesPower.cmd"));
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = $"{path}/StartEyesPower.cmd",
+                        WindowStyle = ProcessWindowStyle.Hidden,
+                    });
+                    
+                    Environment.Exit(0);
+                }
             }
             else
             {

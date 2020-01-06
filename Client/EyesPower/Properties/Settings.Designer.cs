@@ -178,5 +178,29 @@ namespace EyesPower.Properties {
                 this["TraningQuantity"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ProgramLocation {
+            get {
+                return ((string)(this["ProgramLocation"]));
+            }
+            set {
+                this["ProgramLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Reset {
+            get {
+                return ((bool)(this["Reset"]));
+            }
+            set {
+                this["Reset"] = value;
+            }
+        }
     }
 }
