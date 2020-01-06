@@ -24,10 +24,11 @@ namespace EyesPower.Pages
             if (lol == MessageBoxResult.Yes)
             {
                 Directory.Delete($"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}/EyesPower", true);
-                string path = System.Reflection.Assembly.GetEntryAssembly().Location;
-                Settings.Default.ProgramLocation = path;
+                Settings.Default.Reset = true;
+                Settings.Default.ResetExit = false;
+                Settings.Default.LoginReset = true;
                 Settings.Default.Save();
-                Data.ExitLogin = true;
+                EyesPower.Data.ExitLogin = true;
             }
             else
             {
@@ -38,7 +39,23 @@ namespace EyesPower.Pages
 
         private void btnew_Click(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult lol = MessageBox.Show("Внимание при этом выборе удалиться вся ваша информация!", "EyesPower: Ваш аккаунт",
+    MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
+            if (lol == MessageBoxResult.Yes)
+            {
+                Directory.Delete($"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}/EyesPower", true);
+                Settings.Default.Reset = true;
+                Settings.Default.ResetExit = false;
+                Settings.Default.LoginReset = false;
+                Settings.Default.Save();
+                EyesPower.Data.ExitLogin = true;
+            }
+            else
+            {
+                MessageBox.Show("Не бугайте меня так!", "EyesPower: Ваш аккаунт",
+                MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

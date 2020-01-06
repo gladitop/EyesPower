@@ -243,3 +243,4 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\TraningWindow.baml
 C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\TraningWindow.g.cs
 C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\TraningWindow.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\EyesPower.csprojAssemblyReference.cache

@@ -23,6 +23,7 @@ namespace EyesPower
 
         public static string version = "1.0";//версия программы
         public static TimeSpan time;//Для контроля
+        public static bool ExitLogin = false;//исправление бага
         private static Time.tamer tamer = new Time.tamer();//Это сам таймер
     }
 }
