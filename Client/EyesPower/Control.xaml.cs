@@ -27,7 +27,7 @@ namespace EyesPower
                 Task.Delay(10).Wait();
                 if (Pages.Data.number == 2 && Pages.Data.NewPage == true)
                 {
-                    this.Dispatcher.Invoke(new Action(() =>
+                    Dispatcher.Invoke(new Action(() =>
                     {
                         Pages.Data.NewPage = false;
                         frame.Navigate(new Pages.SettingsControl());
@@ -35,7 +35,7 @@ namespace EyesPower
                 }
                 else if (Settings.Default.StartControl == true && Pages.Data.NewPage == true)
                 {
-                    this.Dispatcher.Invoke(new Action(() =>
+                    Dispatcher.Invoke(new Action(() =>
                     {
                         Pages.Data.NewPage = false;
                         frame.Navigate(new Pages.InputControl());

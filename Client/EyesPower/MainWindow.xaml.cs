@@ -26,7 +26,7 @@ namespace EyesPower
                 Settings.Default.Save();
                 Main m = new Main();
                 m.Show();
-                this.Hide();
+                Hide();
             }
         }
 
@@ -38,7 +38,7 @@ namespace EyesPower
             {
                 Main main = new Main();
                 main.Show();
-                this.Hide();
+                Hide();
             }
         }
 

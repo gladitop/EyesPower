@@ -1,8 +1,8 @@
-﻿using System.Windows.Controls;
-using System.Windows;
-using System.IO;
+﻿using EyesPower.Properties;
 using System;
-using EyesPower.Properties;
+using System.IO;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace EyesPower.Pages
 {

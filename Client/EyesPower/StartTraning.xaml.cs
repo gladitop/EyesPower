@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 
 namespace EyesPower
@@ -22,8 +23,9 @@ namespace EyesPower
             bool whiles = true;
             do
             {
-                this.Dispatcher.Invoke(new Action(() =>
+                Dispatcher.Invoke(new Action(() =>
                 {
+                    Task.Delay(10).Wait();
                     if (Pages.Data.number == 2 && Pages.Data.NewPage == true)
                     {
                         Pages.Data.NewPage = false;

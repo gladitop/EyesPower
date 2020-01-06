@@ -17,7 +17,7 @@ namespace EyesPower.Pages
 
         public void Lol()
         {
-            this.Dispatcher.Invoke(new Action(() =>
+            Dispatcher.Invoke(new Action(() =>
             {
                 media.Visibility = Visibility.Visible;
                 media.Play();

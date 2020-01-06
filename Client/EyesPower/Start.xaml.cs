@@ -21,7 +21,7 @@ namespace EyesPower
                 Main f = new Main();
                 f.Show();
             }
-            this.Hide();
+            Hide();
         }
     }
 }

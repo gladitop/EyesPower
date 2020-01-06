@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EyesPower"
         mc:Ignorable="d"
-        Title="EysePower: Ваш аккаунт" ResizeMode="NoResize" Icon="Resources\UserIcon.ico" Height="450" Width="491.336">
+        Title="EysePower: Ваш аккаунт" ResizeMode="NoResize" Icon="Resources\UserIcon.ico" Height="450" Width="491.336" Closing="Window_Closing" Loaded="Window_Loaded">
     <Grid>
         <Frame x:Name="frame" Content="" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="421" VerticalAlignment="Top" Width="485"/>
 

@@ -1,6 +1,8 @@
 ﻿using EyesPower.Properties;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System;
 
 namespace EyesPower
 {
@@ -24,16 +26,33 @@ namespace EyesPower
 
         public void Update()
         {
-            while (true)
+            new Thread(() =>
             {
-                Task.Delay(10).Wait();
-                if (Pages.Data.ExitLogin == true)
+                while (true)
                 {
-                    Settings.Default.Reset = true;
-                    Settings.Default.Save();
-                    this.Close();
+                    Dispatcher.Invoke(new Action(() =>
+                    {
+                        Task.Delay(10).Wait();
+                        if (Pages.Data.ExitLogin == true)
+                        {
+                            Settings.Default.Reset = true;
+                            MessageBox.Show("kjk");
+                            Settings.Default.Save();
+                            this.Close();
+                        }
+                    }));
                 }
-            }
+            });
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Update();
         }
     }
 }

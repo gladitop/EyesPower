@@ -30,7 +30,7 @@ namespace EyesPower
                 //проверка выхода
                 if (Pages.Data.exit == true)
                 {
-                    this.Dispatcher.Invoke(new Action(() =>
+                    Dispatcher.Invoke(new Action(() =>
                     {
                         Pages.Data.exit = false;
                         exit = true;
@@ -40,7 +40,7 @@ namespace EyesPower
 
                 if (Pages.Data.numberanswer == 1 && Pages.Data.BackPage == true)
                 {
-                    this.Dispatcher.Invoke(new Action(() =>
+                    Dispatcher.Invoke(new Action(() =>
                     {
                         frame.Navigate(new Pages.Welcome());
                         Pages.Data.BackPage = false;
@@ -49,7 +49,7 @@ namespace EyesPower
 
                 if (Pages.Data.numberanswer == 2 && Pages.Data.BackPage == true)
                 {
-                    this.Dispatcher.Invoke(new Action(() =>
+                    Dispatcher.Invoke(new Action(() =>
                     {
                         frame.Navigate(new Pages.SendAndHelp());
                         Pages.Data.BackPage = false;
@@ -58,7 +58,7 @@ namespace EyesPower
 
                 if (Pages.Data.numberanswer == 2 && Pages.Data.NewPage == true)
                 {
-                    this.Dispatcher.Invoke(new Action(() =>
+                    Dispatcher.Invoke(new Action(() =>
                     {
                         frame.Navigate(new Pages.SendAndHelp());
                         Pages.Data.NewPage = false;
@@ -67,7 +67,7 @@ namespace EyesPower
 
                 if (Pages.Data.numberanswer == 3 && Pages.Data.BackPage == true)
                 {
-                    this.Dispatcher.Invoke(new Action(() =>
+                    Dispatcher.Invoke(new Action(() =>
                     {
                         frame.Navigate(new Pages.CheckUpdate());
                         Pages.Data.BackPage = false;
@@ -76,7 +76,7 @@ namespace EyesPower
 
                 if (Pages.Data.numberanswer == 4 && Pages.Data.BackPage == true)
                 {
-                    this.Dispatcher.Invoke(new Action(() =>
+                    Dispatcher.Invoke(new Action(() =>
                     {
                         frame.Navigate(new Pages.Programs());
                         Pages.Data.BackPage = false;
@@ -85,7 +85,7 @@ namespace EyesPower
 
                 if (Pages.Data.numberanswer == 3 && Pages.Data.NewPage == true)
                 {
-                    this.Dispatcher.Invoke(new Action(() =>
+                    Dispatcher.Invoke(new Action(() =>
                     {
                         frame.Navigate(new Pages.CheckUpdate());
                         Pages.Data.NewPage = false;
@@ -94,7 +94,7 @@ namespace EyesPower
 
                 if (Pages.Data.numberanswer == 4 && Pages.Data.NewPage == true)
                 {
-                    this.Dispatcher.Invoke(new Action(() =>
+                    Dispatcher.Invoke(new Action(() =>
                     {
                         frame.Navigate(new Pages.Programs());
                         Pages.Data.NewPage = false;
@@ -103,7 +103,7 @@ namespace EyesPower
 
                 if (Pages.Data.numberanswer == 5 && Pages.Data.NewPage == true)
                 {
-                    this.Dispatcher.Invoke(new Action(() =>
+                    Dispatcher.Invoke(new Action(() =>
                     {
                         frame.Navigate(new Pages.Training());
                         Pages.Data.NewPage = false;

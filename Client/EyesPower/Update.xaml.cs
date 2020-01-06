@@ -30,7 +30,7 @@ namespace EyesPower
         {
             await Task.Run(() =>
             {
-                this.Dispatcher.Invoke(new Action(async () =>
+                Dispatcher.Invoke(new Action(async () =>
                 {
                     try
                     {

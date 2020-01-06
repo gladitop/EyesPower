@@ -13,7 +13,7 @@ namespace EyesPower
             private int Hour;
             private int Minute;
             private int Second;
-            Thread thread;
+            private Thread thread;
             private string Passworld;
 
             public void StartThread()

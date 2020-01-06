@@ -56,7 +56,6 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\EyesPower\obj\Debug\Pages\Program
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\bin\Debug\EyesPower.exe.config
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\bin\Debug\EyesPower.exe
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\bin\Debug\EyesPower.pdb
-C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\EyesPower.csprojAssemblyReference.cache
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\About.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\AccountInput.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\AccountNew.g.cs
