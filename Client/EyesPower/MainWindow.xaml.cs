@@ -57,6 +57,12 @@ namespace EyesPower
         {
             AccountNew f = new AccountNew();
             f.ShowDialog();
+            if (Data.ExitNewAccount == true)
+            {
+                Main main = new Main();
+                main.Show();
+                Hide();
+            }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)//закрытие проги
