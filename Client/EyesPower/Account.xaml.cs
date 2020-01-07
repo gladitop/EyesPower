@@ -26,23 +26,19 @@ namespace EyesPower
 
         public void Update()
         {
-            new Thread(() =>
+            while (true)
             {
-                while (true)
+                Thread.Sleep(10);
+                Dispatcher.Invoke(new Action(() =>
                 {
-                    Dispatcher.Invoke(new Action(() =>
+                    if (EyesPower.Data.ExitLogin == true)
                     {
-                        Task.Delay(10).Wait();
-                        if (Pages.Data.ExitLogin == true)
-                        {
-                            Settings.Default.Reset = true;
-                            MessageBox.Show("kjk");
-                            Settings.Default.Save();
-                            this.Close();
-                        }
-                    }));
-                }
-            });
+                        Settings.Default.Reset = true;
+                        Settings.Default.Save();
+                        this.Close();
+                    }
+                }));
+            }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -52,7 +48,8 @@ namespace EyesPower
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Update();
+            Thread thread = new Thread(new ThreadStart(Update));
+            thread.Start();
         }
     }
 }

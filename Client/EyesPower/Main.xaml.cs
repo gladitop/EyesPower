@@ -178,15 +178,16 @@ namespace EyesPower
                 Account account = new Account();
                 account.ShowDialog();
 
-                if (Data.ExitLogin == true)//тут баг в 32 бит
+                if (Data.ExitLogin == true)//тут баг в 32 бит и в 64 бит (Исправлено!)
                 {
-
-                    string path = Settings.Default.ProgramLocation;
+                    string path = "";
+                    path = System.Reflection.Assembly.GetEntryAssembly().Location;
+                    MessageBox.Show(path);
                     path = Path.GetDirectoryName(path);
                     //MessageBox.Show(path);
-                    if (File.Exists($"{path}/StartEyesPower.cmd"))
+                    if (File.Exists($"{path}//StartEyesPower.cmd"))
                     {
-                        File.Delete($"{path}/StartEyesPower.cmd");
+                        File.Delete($"{path}//StartEyesPower.cmd");
                     }
 
                     //File.WriteAllBytes($"{path}/StartEyesPower.cmd", Properties.Resources.StartEyesPower);
@@ -196,7 +197,7 @@ namespace EyesPower
                     File.WriteAllLines($"StartEyesPower.cmd", lol);
                     Process.Start(new ProcessStartInfo
                     {
-                        FileName = $"{path}/StartEyesPower.cmd",
+                        FileName = $@"{path}/StartEyesPower.cmd",
                         WindowStyle = ProcessWindowStyle.Hidden,
                     });
 

@@ -96,7 +96,20 @@ namespace ServerEysePower
                     else
                     {
                         Write("Подтверждение нет!", ConsoleColor.Red);
-                        whiles = true;
+                        client.Send(Encoding.UTF8.GetBytes("Yes replay?"));
+                        Task.Delay(10).Wait();
+                        int i = client.Receive(buffer);
+
+                        if (Encoding.UTF8.GetString(buffer, 0, i) == "Yes")
+                        {
+                            whiles = true;
+                            i = client.Receive(buffer);
+                            email = Encoding.UTF8.GetString(buffer, 0, i);
+                        }
+                        else if (Encoding.UTF8.GetString(buffer, 0, i) == "No")
+                        {
+                            whiles = false;
+                        }
                     }
                     return false;
                 }

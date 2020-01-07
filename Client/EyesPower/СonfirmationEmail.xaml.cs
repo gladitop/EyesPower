@@ -24,11 +24,27 @@ namespace EyesPower
             client.Send(Encoding.UTF8.GetBytes(btcode.Text));
             Task.Delay(100).Wait();
             int i = client.Receive(buffer);
-            MessageBox.Show(Encoding.UTF8.GetString(buffer, 0, i));
+            Task.Delay(100).Wait();
             if (Encoding.UTF8.GetString(buffer, 0, i) == "Yes")
             {
                 Task.Delay(100).Wait();
-                MessageBox.Show(Encoding.UTF8.GetString(buffer, 0, i));
+
+                if (Encoding.UTF8.GetString(buffer, 0, i) == "Yes replay?")
+                {
+                    MessageBoxResult lol1 = MessageBox.Show("Ваш код не подходит. Повторить?", "EyesPower: Новый аккаунт", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                    if (lol1 == MessageBoxResult.Yes)
+                    {
+                        client.Send(Encoding.UTF8.GetBytes("Yes"));
+                        Task.Delay(100).Wait();
+
+                    }
+                    else
+                    {
+                        client.Send(Encoding.UTF8.GetBytes("No"));
+                        this.Close();
+                    }
+                }
                 if (Encoding.UTF8.GetString(buffer, 0, i) == "Yes")
                 {
                     MessageBox.Show("Ваш аккаунт зарегистрирован!", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
