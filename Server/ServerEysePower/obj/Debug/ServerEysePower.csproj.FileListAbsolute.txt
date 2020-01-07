@@ -21,3 +21,4 @@ C:\Users\Дамир\Documents\EyesPower\Server\ServerEysePower\bin\Debug\ServerE
 C:\Users\Дамир\Documents\EyesPower\Server\ServerEysePower\bin\Debug\ServerEysePower.pdb
 C:\Users\Дамир\Documents\EyesPower\Server\ServerEysePower\obj\Debug\ServerEysePower.exe
 C:\Users\Дамир\Documents\EyesPower\Server\ServerEysePower\obj\Debug\ServerEysePower.pdb
+C:\Users\Дамир\Documents\EyesPower\Server\ServerEysePower\obj\Debug\ServerEysePower.csprojAssemblyReference.cache

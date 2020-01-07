@@ -1,4 +1,6 @@
 ﻿using System;
+using EyesPower.Properties;
+using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
@@ -76,6 +78,8 @@ namespace EyesPower
 
                 File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt", "Yes");
                 File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Passworld);
+                if (Settings.Default.ControlWinloc)
+                    Process.Start("Winloc.exe");
             }
 
             public void Start()

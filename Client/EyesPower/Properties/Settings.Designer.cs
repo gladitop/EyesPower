@@ -202,5 +202,41 @@ namespace EyesPower.Properties {
                 this["Reset"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool LoginReset {
+            get {
+                return ((bool)(this["LoginReset"]));
+            }
+            set {
+                this["LoginReset"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ResetExit {
+            get {
+                return ((bool)(this["ResetExit"]));
+            }
+            set {
+                this["ResetExit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ControlWinloc {
+            get {
+                return ((bool)(this["ControlWinloc"]));
+            }
+            set {
+                this["ControlWinloc"] = value;
+            }
+        }
     }
 }

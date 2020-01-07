@@ -178,8 +178,9 @@ namespace EyesPower
                 Account account = new Account();
                 account.ShowDialog();
 
-                if (Pages.Data.ExitLogin == true)
+                if (Data.ExitLogin == true)//тут баг в 32 бит
                 {
+
                     string path = Settings.Default.ProgramLocation;
                     path = Path.GetDirectoryName(path);
                     //MessageBox.Show(path);

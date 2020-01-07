@@ -63,41 +63,52 @@ namespace ServerEysePower
 
         private static bool EmailConfirmation(Socket client, string email)
         {
-            try
+            bool whiles = false;
+            do
             {
-                MailAddress tomail = new MailAddress(email);
-                MailMessage message = new MailMessage(frommail, tomail);
-                message.Subject = "EysePower: подтвердите свой email";
-                string code = Convert.ToString(rand.Next(1, 9999));
-                message.Body = $"Ваш код: {code}";
-
-                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                smtp.Credentials = new NetworkCredential("dam.almaev@gmail.com", "1506.2006A");
-                smtp.EnableSsl = true;
-                Write($"Отправка письма от {email}", ConsoleColor.Yellow);
-                smtp.Send(message);
-                Write("Готово", ConsoleColor.Green);
-
-                Write("Ожидание кода...", ConsoleColor.Yellow);
-                int messi = client.Receive(buffer);
-                string codee = Encoding.UTF8.GetString(buffer, 0, messi);
-                codee = codee.Trim(new char[] { ' ' });
-                Write(codee, ConsoleColor.Red);
-                if (codee == code)
+                try
                 {
-                    Write("Подтверждение есть!", ConsoleColor.Green);
-                    return true;
+                    MailAddress tomail = new MailAddress(email);
+                    MailMessage message = new MailMessage(frommail, tomail);
+                    message.Subject = "EysePower: подтвердите свой email";
+                    string code = Convert.ToString(rand.Next(1, 9999));
+                    message.Body = $"Ваш код: {code}";
+
+                    SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+                    smtp.Credentials = new NetworkCredential("dam.almaev@gmail.com", "1506.2006A");
+                    smtp.EnableSsl = true;
+                    Write($"Отправка письма от {email}", ConsoleColor.Yellow);
+                    smtp.Send(message);
+                    Write("Готово", ConsoleColor.Green);
+
+                    Write("Ожидание кода...", ConsoleColor.Yellow);
+                    int messi = client.Receive(buffer);
+                    string codee = Encoding.UTF8.GetString(buffer, 0, messi);
+                    codee = codee.Trim(new char[] { ' ' });
+                    Write(codee, ConsoleColor.Red);
+
+                    if (codee == code)
+                    {
+                        Write("Подтверждение есть!", ConsoleColor.Green);
+                        whiles = false;
+                        return true;
+                    }
+                    else
+                    {
+                        Write("Подтверждение нет!", ConsoleColor.Red);
+                        whiles = true;
+                    }
+                    return false;
                 }
-                return false;
-            }
-            catch
-            {
-                if (CheckConnectError(client) == false)
+                catch
                 {
-                    Thread.Sleep(0);
+                    if (CheckConnectError(client) == false)
+                    {
+                        Thread.Sleep(0);
+                    }
+                    return false;
                 }
-                return false;
-            }
+            } while (whiles);
         }
 
         private static bool EmailCheck(Socket client, string email)
