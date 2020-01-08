@@ -19,6 +19,11 @@ namespace EyesPower
         public static bool UpdateCustomizationing = false;//Проверка настройки
         public static bool ExitMain = false;//Это нужно чтобы закрыть Main
 
+        //Для регистрации
+
+        public static string email = "";//email
+        public static string passworld = "";//пароль
+
         //Разные данные
 
         public static string version = "1.0";//версия программы

@@ -53,10 +53,12 @@ namespace EyesPower
                     Task.Delay(10).Wait();
                     client.Send(Encoding.UTF8.GetBytes(tbpass.Password));
                     СonfirmationEmail email = new СonfirmationEmail();
+                    Data.email = tbemail.Text;
+                    Data.passworld = tbpass.Password;
                     Data.client = client;
                     email.ShowDialog();
                     if (Data.ExitNewAccount == true)
-                        Close();
+                        this.Close();
                 }
                 catch (Exception ex)
                 {

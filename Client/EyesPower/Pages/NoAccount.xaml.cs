@@ -1,4 +1,5 @@
 ﻿using EyesPower.Properties;
+using Microsoft.Win32;
 using System;
 using System.IO;
 using System.Windows;
@@ -27,8 +28,19 @@ namespace EyesPower.Pages
                 Settings.Default.Reset = true;
                 Settings.Default.ResetExit = false;
                 Settings.Default.LoginReset = true;
-                Settings.Default.Save();
                 EyesPower.Data.ExitLogin = true;
+                Settings.Default.Save();
+                try
+                {
+                    string ExePath = System.Reflection.Assembly.GetEntryAssembly().Location;
+                    string name = "EysepPower";
+                    RegistryKey reg;
+                    reg = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run\\");
+                    reg.DeleteValue(name);
+                    reg.Close();
+                }
+                catch
+                { }
             }
             else
             {
@@ -48,8 +60,19 @@ namespace EyesPower.Pages
                 Settings.Default.Reset = true;
                 Settings.Default.ResetExit = false;
                 Settings.Default.LoginReset = false;
-                Settings.Default.Save();
                 EyesPower.Data.ExitLogin = true;
+                Settings.Default.Save();
+                try
+                {
+                    string ExePath = System.Reflection.Assembly.GetEntryAssembly().Location;
+                    string name = "EysepPower";
+                    RegistryKey reg;
+                    reg = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run\\");
+                    reg.DeleteValue(name);
+                    reg.Close();
+                }
+                catch
+                { }
             }
             else
             {

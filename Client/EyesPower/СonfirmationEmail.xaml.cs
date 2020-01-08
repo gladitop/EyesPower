@@ -2,6 +2,7 @@
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using EyesPower.Properties;
 
 namespace EyesPower
 {
@@ -24,26 +25,36 @@ namespace EyesPower
             client.Send(Encoding.UTF8.GetBytes(btcode.Text));
             Task.Delay(100).Wait();
             int i = client.Receive(buffer);
-            MessageBox.Show(Encoding.UTF8.GetString(buffer, 0, i));
             Task.Delay(100).Wait();
             if (Encoding.UTF8.GetString(buffer, 0, i) == "Yes")
             {
-                Task.Delay(100).Wait();
 
                 if (string.IsNullOrWhiteSpace(btcode.Text))
                 {
                     MessageBox.Show("Нужен код!", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-                else if (Encoding.UTF8.GetString(buffer, 0, i) == "Yes")
+                else
                 {
-                    MessageBox.Show("Ваш аккаунт зарегистрирован!", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
-                    Data.ExitNewAccount = true;
-                    this.Close();
-                }
-                else if (Encoding.UTF8.GetString(buffer, 0, i) == "No")
-                {
-                    MessageBox.Show("Ошибка: код не подходит!", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
-                    Close();
+                    Task.Delay(100).Wait();
+                    i = client.Receive(buffer);
+                    string lol = Encoding.UTF8.GetString(buffer, 0, i);
+                    MessageBox.Show(lol);
+                    if (lol == "Yes")
+                    {
+                        MessageBox.Show("Ваш аккаунт зарегистрирован!", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
+                        Settings.Default.Account = true;
+                        Settings.Default.Login = Data.email;
+                        Settings.Default.Passworld = Data.passworld;
+                        Settings.Default.StartProgram = true;
+                        Settings.Default.Save();
+                        Data.ExitNewAccount = true;
+                        this.Close();
+                    }
+                    else if (lol == "No")
+                    {
+                        MessageBox.Show("Ошибка: код не подходит!", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
+                        this.Close();
+                    }
                 }
             }
             else if (Encoding.UTF8.GetString(buffer, 0, i) == "No")

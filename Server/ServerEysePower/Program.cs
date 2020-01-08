@@ -189,6 +189,7 @@ namespace ServerEysePower
                             }
                             else
                             {
+                                Task.Delay(100).Wait();
                                 client.Send(Encoding.UTF8.GetBytes("No"));
                                 Write("Ошибка: не тот код!", ConsoleColor.Red);
                             }

@@ -182,7 +182,6 @@ namespace EyesPower
                 {
                     string path = "";
                     path = System.Reflection.Assembly.GetEntryAssembly().Location;
-                    MessageBox.Show(path);
                     path = Path.GetDirectoryName(path);
                     //MessageBox.Show(path);
                     if (File.Exists($"{path}//StartEyesPower.cmd"))

@@ -78,8 +78,10 @@ namespace EyesPower
 
                 File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt", "Yes");
                 File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Passworld);
-                if (Settings.Default.ControlWinloc)
+                if (Settings.Default.ControlWinloc == true)
                     Process.Start("Winloc.exe");
+                else
+                    Process.Start("ControlWin.exe");
             }
 
             public void Start()
