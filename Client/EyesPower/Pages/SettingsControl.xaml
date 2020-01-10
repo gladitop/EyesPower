@@ -9,7 +9,7 @@
       Title="SettingsControl">
 
     <Grid>
-        <CheckBox x:Name="checkwarning" Content="Включить предупреждение" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkwarning" Content="Включить предупреждение" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="361"/>
         <Label Content="За сколько показать сообщение предупреждение" FontSize="17" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
         <Label Content="Часов" FontSize="20" HorizontalAlignment="Left" Margin="16,109,0,0" VerticalAlignment="Top"/>
         <Label Content="Минут" FontSize="20" HorizontalAlignment="Left" Margin="172,109,0,0" VerticalAlignment="Top"/>
