@@ -5,6 +5,8 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
 
 namespace EyesPower
 {
@@ -66,22 +68,30 @@ namespace EyesPower
 
             private void Tick()
             {
-                if (File.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt"))
+                if (Directory.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower") == false)
                 {
-                    File.Create($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Timme.txt");
+                    Directory.CreateDirectory($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower");
                 }
 
-                if (File.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt"))
+                if (File.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt") == false)
                 {
-                    File.Create($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt");
+                    File.Create($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Timme.txt");
                 }
 
-                File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt", "Yes");
-                File.AppendAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Passworld);
+                if (File.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt") == false)
+                {
+                    File.Create($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt");
+                }
+                Task.Delay(100).Wait();
+                File.AppendAllText($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt", "Yes");
+                File.AppendAllText($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Passworld);
                 if (Settings.Default.ControlWinloc == true)
                     Process.Start("Winloc.exe");
                 else
+                {
+                    MessageBox.Show("Lol");
                     Process.Start("ControlWin.exe");
+                }
             }
 
             public void Start()

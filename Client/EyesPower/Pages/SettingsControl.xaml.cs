@@ -27,7 +27,7 @@ namespace EyesPower.Pages
             else
             {
                 checkblocking.IsChecked = false;
-                checkwarning.Content = true;
+                checkwarning.IsChecked = true;
             }
         }
 
@@ -56,7 +56,7 @@ namespace EyesPower.Pages
             }
             else if (checkwarning.IsChecked.Value == true)
             {
-                Settings.Default.ControlWinloc = true;
+                Settings.Default.ControlWinloc = false;
             }
 
             Settings.Default.Save();
@@ -64,6 +64,22 @@ namespace EyesPower.Pages
             tamer.Start();
             Thread thread = new Thread(new ThreadStart(Update));
             thread.Start();
+        }
+
+        private void checkwarning_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkwarning.IsChecked.Value == true)
+            {
+                checkblocking.IsChecked = false;
+            }
+        }
+
+        private void checkblocking_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkblocking.IsChecked.Value == true)
+            {
+                checkwarning.IsChecked = false;
+            }
         }
     }
 }

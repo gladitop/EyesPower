@@ -48,7 +48,7 @@ namespace Winloc
             }
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void main_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (Closing == true)
             {

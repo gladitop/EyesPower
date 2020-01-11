@@ -9,7 +9,7 @@
       Title="SettingsControl">
 
     <Grid>
-        <CheckBox x:Name="checkwarning" Content="Включить предупреждение" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="361"/>
+        <CheckBox x:Name="checkwarning" Content="Включить предупреждение" FontSize="30" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="403" Checked="checkwarning_Checked"/>
         <Label Content="За сколько показать сообщение предупреждение" FontSize="17" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
         <Label Content="Часов" FontSize="20" HorizontalAlignment="Left" Margin="16,109,0,0" VerticalAlignment="Top"/>
         <Label Content="Минут" FontSize="20" HorizontalAlignment="Left" Margin="172,109,0,0" VerticalAlignment="Top"/>
@@ -17,7 +17,7 @@
         <TextBox x:Name="lbHour" HorizontalAlignment="Left" FontSize="30" Height="40" Margin="16,151,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="66" SizeChanged="lbHour_SizeChanged"/>
         <TextBox x:Name="lbMinutes" HorizontalAlignment="Left" FontSize="30" Height="40" Margin="172,151,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="69"/>
         <TextBox x:Name="lbSecond" HorizontalAlignment="Left" FontSize="30" Height="40" Margin="335,151,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="73" RenderTransformOrigin="3.312,1.89"/>
-        <CheckBox x:Name="checkblocking" Content="Заблокировать пк" FontSize="30" HorizontalAlignment="Left" Margin="10,229,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkblocking" Content="Заблокировать пк" FontSize="30" HorizontalAlignment="Left" Margin="10,229,0,0" VerticalAlignment="Top" Checked="checkblocking_Checked"/>
         <Label Content="Пароль будет какой вы вошли сюда" FontSize="20" HorizontalAlignment="Left" Margin="16,273,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btsave" Content="Сохранить" FontSize="25" HorizontalAlignment="Left" Margin="136,340,0,0" VerticalAlignment="Top" Width="145" Click="btsave_Click"/>
     </Grid>
