@@ -50,14 +50,14 @@ namespace Winloc
 
         private void main_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (Closing == true)
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                e.Cancel = false;
-            }
+            //if (Closing == true)
+            //{
+            //    e.Cancel = true;
+            //}
+            //else
+            //{
+            //    e.Cancel = false;
+            //}
         }
     }
 }

@@ -58,12 +58,9 @@ namespace EyesPower
                 Second = second;
                 var md5create = MD5.Create();
                 var md5pass = md5create.ComputeHash(Encoding.UTF8.GetBytes(passworld));
-                Passworld = Encoding.UTF8.GetString(md5pass);
-            }
 
-            private void GetTime()
-            {
-
+                //string lol = Encoding.UTF8.GetString(md5pass);
+                Passworld = Convert.ToBase64String(md5pass);
             }
 
             private void Tick()
@@ -75,21 +72,25 @@ namespace EyesPower
 
                 if (File.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt") == false)
                 {
-                    File.Create($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Timme.txt");
+                    File.Delete($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt");
+                    File.Create($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt");
                 }
 
                 if (File.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt") == false)
                 {
+                    File.Delete($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt");
                     File.Create($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt");
                 }
                 Task.Delay(100).Wait();
-                File.AppendAllText($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt", "Yes");
-                File.AppendAllText($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Passworld);
+                File.WriteAllText($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt", "Yes");
+
+                //if (Settings.Default.ControlWinloc == true)
+                    File.WriteAllText($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Convert.ToString(Passworld));
+
                 if (Settings.Default.ControlWinloc == true)
                     Process.Start("Winloc.exe");
                 else
                 {
-                    MessageBox.Show("Lol");
                     Process.Start("ControlWin.exe");
                 }
             }
