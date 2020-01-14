@@ -7,6 +7,9 @@ using System.Windows;
 using System.IO;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using ProcessKiller;
+using System.Threading;
+using System.Diagnostics;
 
 namespace Winloc
 {
@@ -22,6 +25,9 @@ namespace Winloc
         {
             InitializeComponent();
             pass = File.ReadAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt");
+            Proces.Kill("explorer");
+            Thread thread = new Thread(new ThreadStart(Taskmsg));
+            thread.Start();
         }
 
         private void btpass_Click(object sender, EventArgs e)
@@ -33,7 +39,8 @@ namespace Winloc
             {
                 MessageBox.Show("Пароль верный!", "Уря!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Closing = true;
-                this.Close();
+                Process.Start("explorer");
+                Environment.Exit(0);
             }
             else
             {
@@ -43,12 +50,28 @@ namespace Winloc
 
         public void Taskmsg()
         {
-            
+            while (true)
+            {
+                Task.Delay(50).Wait();
+                Proces.Kill("explorer");
+                Proces.Kill("Taskmgr");
+                Proces.Kill("taskmgr");
+            }
         }
 
-        private void main_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        //private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    if (altF4)
+        //    {
+        //        if (e.CloseReason == CloseReason.UserClosing)
+        //            e.Cancel = true;
+        //        altF4 = false;
+        //    }
+        //}
+
+        private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            if (Closing == true)
+            if (Closing == false)
             {
                 e.Cancel = true;
             }
