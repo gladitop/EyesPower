@@ -58,7 +58,9 @@ namespace EyesPower
                     Data.client = client;
                     email.ShowDialog();
                     if (Data.ExitNewAccount == true)
+                    {
                         this.Close();
+                    }
                 }
                 catch (Exception ex)
                 {

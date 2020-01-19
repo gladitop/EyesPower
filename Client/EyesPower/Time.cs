@@ -1,5 +1,5 @@
-﻿using System;
-using EyesPower.Properties;
+﻿using EyesPower.Properties;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography;
@@ -70,11 +70,11 @@ namespace EyesPower
                     Directory.CreateDirectory($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower");
                 }
 
-                if (File.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt") == false)
-                {
-                    File.Delete($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt");
-                    File.Create($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt");
-                }
+                //if (File.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt") == false)
+                //{
+                //    File.Delete($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt");
+                //    File.Create($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt");
+                //}
 
                 if (File.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt") == false)
                 {
@@ -82,13 +82,21 @@ namespace EyesPower
                     File.Create($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt");
                 }
                 Task.Delay(100).Wait();
-                File.WriteAllText($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Time.txt", "Yes");
 
                 //if (Settings.Default.ControlWinloc == true)
-                    File.WriteAllText($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Convert.ToString(Passworld));
+                File.WriteAllText($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Convert.ToString(Passworld));
 
                 if (Settings.Default.ControlWinloc == true)
-                    Process.Start("Winloc.exe");
+                {
+                    //Process.Start("Winloc.exe");
+
+                    Process proc = new Process();
+                    ProcessStartInfo process = new ProcessStartInfo();
+                    process.FileName = "Winloc.exe";
+                    process.Verb = "runas";
+                    proc.StartInfo = process;
+                    proc.Start();
+                }
                 else
                 {
                     Process.Start("ControlWin.exe");

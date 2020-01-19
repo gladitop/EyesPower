@@ -10,26 +10,27 @@ namespace EyesPower
     /// </summary>
     public partial class StartTraning : Window
     {
+        public object contect;
+
         public StartTraning()
         {
             InitializeComponent();
-            frame.Navigate(new Pages.WelcomTraning());
-            Thread thread = new Thread(new ThreadStart(Update));
-            thread.Start();
         }
 
         public void Update()
         {
-            bool whiles = true;
-            do
+            //bool whiles = true;
+            while(true)
             {
+                Task.Delay(10).Wait();
                 Dispatcher.Invoke(new Action(() =>
                 {
-                    Task.Delay(10).Wait();
                     if (Pages.Data.number == 2 && Pages.Data.NewPage == true)
                     {
                         Pages.Data.NewPage = false;
-                        frame.Navigate(new Pages.TrainingCircle());
+                        contect = new Pages.TrainingCircle();
+                        frame.Navigate(contect);
+                        MessageBox.Show("1");
                     }
 
                     if (Pages.Data.number == 3 && Pages.Data.NewPage == true)
@@ -55,10 +56,20 @@ namespace EyesPower
                         //Settings.Default.TraningQuantity += 1;
                         //Settings.Default.Save();
                         //whiles = false;
+                        Pages.Data.exit = false;
+                        Thread.Sleep(0);
                         this.Close();
                     }
                 }));
-            } while (whiles);
+            }
+        }
+
+        private void main_Loaded(object sender, RoutedEventArgs e)
+        {
+            contect = new Pages.WelcomTraning();
+            frame.Navigate(contect);
+            Thread thread = new Thread(new ThreadStart(Update));
+            thread.Start();
         }
     }
 }

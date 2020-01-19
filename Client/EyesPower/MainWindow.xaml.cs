@@ -17,9 +17,13 @@ namespace EyesPower
             if (Settings.Default.Reset == true && Settings.Default.ResetExit == false)
             {
                 if (Settings.Default.LoginReset == true)
+                {
                     btaccountyes_Click(btaccountyes, null);
+                }
                 else
+                {
                     btaccountinput_Click(btaccountinput, null);
+                }
 
                 Settings.Default.Reset = false;
                 Settings.Default.Save();

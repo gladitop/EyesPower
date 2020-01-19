@@ -1,8 +1,8 @@
-﻿using System.Net.Sockets;
+﻿using EyesPower.Properties;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using EyesPower.Properties;
 
 namespace EyesPower
 {

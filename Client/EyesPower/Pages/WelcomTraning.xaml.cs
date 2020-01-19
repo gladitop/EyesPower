@@ -21,7 +21,10 @@ namespace EyesPower.Pages
 
         private void btno_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Вы уверены?", "EysePower: Тренировка", MessageBoxButton.OK, MessageBoxImage.Question);
+            MessageBoxResult lol = MessageBox.Show("Вы уверены?", "EysePower: Тренировка", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (lol == MessageBoxResult.Yes)
+                Data.exit = true;
         }
     }
 }
