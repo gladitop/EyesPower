@@ -11,6 +11,8 @@ namespace EyesPower.Pages
     /// </summary>
     public partial class TrainingClosing : Page
     {
+        public Thread thread;
+
         public TrainingClosing()
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace EyesPower.Pages
         public void Slep()
         {
             Task.Delay(30000).Wait();
+            thread.Join();
             Data.number = 4;
             Data.NewPage = true;
         }
@@ -38,7 +41,7 @@ namespace EyesPower.Pages
         private void Media_MediaEnded(object sender, RoutedEventArgs e)
         {
             media.Position = new TimeSpan(0);
-            Thread thread = new Thread(new ThreadStart(Update));
+            thread = new Thread(new ThreadStart(Update));
             thread.Start();
         }
 

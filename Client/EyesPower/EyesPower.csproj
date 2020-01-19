@@ -92,6 +92,9 @@
     <Compile Include="Pages\NoAccount.xaml.cs">
       <DependentUpon>NoAccount.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PicturesTraning.xaml.cs">
+      <DependentUpon>PicturesTraning.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Programs.xaml.cs">
       <DependentUpon>Programs.xaml</DependentUpon>
     </Compile>
@@ -199,6 +202,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\NoAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PicturesTraning.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -343,6 +350,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\TrainingClosing4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\TraningPIc.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

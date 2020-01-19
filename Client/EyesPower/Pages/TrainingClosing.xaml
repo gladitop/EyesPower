@@ -11,7 +11,7 @@
     <Grid>
         <Label Content="Плотно закрывайте и открывайте глаза" FontSize="40" HorizontalAlignment="Left" Margin="42,10,0,0" VerticalAlignment="Top"/>
         <MediaElement x:Name="media" LoadedBehavior="Manual" Visibility="Collapsed" Volume="100" Source="VideoClosing.mp4" HorizontalAlignment="Left" Height="256" Margin="217,97,0,0" VerticalAlignment="Top" Width="359" RenderTransformOrigin="0.5,0.5"/>
-        <Label Content="И так половину минуту :)" FontSize="25" HorizontalAlignment="Left" Margin="264,353,0,0" VerticalAlignment="Top"/>
+        <Label Content="И так половину минуты :)" FontSize="25" HorizontalAlignment="Left" Margin="264,353,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

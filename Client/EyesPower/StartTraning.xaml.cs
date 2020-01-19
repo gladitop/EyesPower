@@ -44,6 +44,12 @@ namespace EyesPower
                         frame.Navigate(new Pages.TraningWindow());
                     }
 
+                    if (Pages.Data.number == 5 && Pages.Data.NewPage == true)
+                    {
+                        Pages.Data.NewPage = false;
+                        frame.Navigate(new Pages.PicturesTraning());
+                    }
+
                     if (Pages.Data.exit == true)
                     {
                         //Settings.Default.TraningQuantity += 1;

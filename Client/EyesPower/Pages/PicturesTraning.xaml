@@ -1,0 +1,17 @@
+﻿<Page x:Class="EyesPower.Pages.PicturesTraning"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EyesPower.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="420" d:DesignWidth="794"
+      Title="PicturesTraning">
+
+    <Grid>
+        <Image HorizontalAlignment="Left" Stretch="Fill" Source="pack://application:,,,/Resources/TraningPic.jpg" Height="321" VerticalAlignment="Top" Width="646" Margin="94,5,0,0"/>
+        <Label Content="Посмотрите на эту картинку и потом нажмите на кнопку" HorizontalAlignment="Left" Margin="225,330,0,0" VerticalAlignment="Top" Height="24" Width="335"/>
+        <Button x:Name="btend" Content="Конец" FontSize="30" HorizontalAlignment="Left" Margin="318,358,0,0" VerticalAlignment="Top" Width="174" Click="btend_Click" Height="46"/>
+
+    </Grid>
+</Page>

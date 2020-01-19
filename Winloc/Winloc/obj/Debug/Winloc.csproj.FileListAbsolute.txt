@@ -19,3 +19,14 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\Winloc\Winloc\obj\Debug\Winloc.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\Winloc\Winloc\obj\Debug\Winloc.exe
 C:\Users\Дамир\Documents\GitHub\EyesPower\Winloc\Winloc\obj\Debug\Winloc.pdb
 C:\Users\Дамир\Documents\GitHub\EyesPower\Winloc\Winloc\obj\Debug\Winloc.csproj.CopyComplete
+C:\Users\3\Documents\GitHub\EyesPower\Winloc\Winloc\bin\Debug\Winloc.exe.config
+C:\Users\3\Documents\GitHub\EyesPower\Winloc\Winloc\bin\Debug\Winloc.exe
+C:\Users\3\Documents\GitHub\EyesPower\Winloc\Winloc\bin\Debug\Winloc.pdb
+C:\Users\3\Documents\GitHub\EyesPower\Winloc\Winloc\obj\Debug\Winloc.csprojAssemblyReference.cache
+C:\Users\3\Documents\GitHub\EyesPower\Winloc\Winloc\obj\Debug\Winloc.g.resources
+C:\Users\3\Documents\GitHub\EyesPower\Winloc\Winloc\obj\Debug\Winloc.Form1.resources
+C:\Users\3\Documents\GitHub\EyesPower\Winloc\Winloc\obj\Debug\Winloc.Properties.Resources.resources
+C:\Users\3\Documents\GitHub\EyesPower\Winloc\Winloc\obj\Debug\Winloc.csproj.GenerateResource.cache
+C:\Users\3\Documents\GitHub\EyesPower\Winloc\Winloc\obj\Debug\Winloc.csproj.CopyComplete
+C:\Users\3\Documents\GitHub\EyesPower\Winloc\Winloc\obj\Debug\Winloc.exe
+C:\Users\3\Documents\GitHub\EyesPower\Winloc\Winloc\obj\Debug\Winloc.pdb
