@@ -25,6 +25,7 @@ namespace EyesPower
             InitializeComponent();
 
             lbstattraning.Content = $"Было тренировок: {Settings.Default.TraningQuantity}";
+            lbstatstart.Content = $"Программа запущена на пк: {Settings.Default.StartProgramQuantity}";
         }
     }
 }

@@ -226,5 +226,17 @@ namespace EyesPower.Properties {
                 this["ControlWinloc"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int StartProgramQuantity {
+            get {
+                return ((int)(this["StartProgramQuantity"]));
+            }
+            set {
+                this["StartProgramQuantity"] = value;
+            }
+        }
     }
 }

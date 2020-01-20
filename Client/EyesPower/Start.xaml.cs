@@ -11,6 +11,8 @@ namespace EyesPower
         public Start()// при запуске это формы (хотя она скрыта ;) )
         {
             InitializeComponent();
+            Settings.Default.StartProgramQuantity++;
+            Settings.Default.Save();
             if (Settings.Default.StartProgram == false)
             {
                 MainWindow f = new MainWindow();

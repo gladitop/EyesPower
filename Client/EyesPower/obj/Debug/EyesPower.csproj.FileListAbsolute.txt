@@ -317,3 +317,5 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\EyesPower.csprojAssemblyReference.cache
 C:\Users\3\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\TraningQuantity.g.cs
 C:\Users\3\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\TraningQuantity.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\TraningQuantity.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\TraningQuantity.baml

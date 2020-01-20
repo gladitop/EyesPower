@@ -31,5 +31,21 @@ namespace EyesPower
             Settings.Default.Save();
             MessageBox.Show("Настройки сохранине!", Title, MessageBoxButton.OK, MessageBoxImage.Information);
         }
+
+        private void checkstats_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkstats.IsChecked.Value == false)
+            {
+                MessageBoxResult lol = MessageBox.Show("Внимание! При отключение будет удалена вся ваша статистика!", Title,
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+                if (lol == MessageBoxResult.Yes)
+                {
+                    e.Handled = true;
+                }
+                else
+                    e.Handled = false;
+            }
+        }
     }
 }
