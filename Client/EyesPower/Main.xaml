@@ -22,5 +22,7 @@
         <Button x:Name="NoSettings" Content="Без настройки" HorizontalAlignment="Left" Margin="645,354,0,0" VerticalAlignment="Top" Width="106" Click="NoSettings_Click" Height="29"/>
         <Image x:Name="imagescontrol" Source="Resources/Controls.png" HorizontalAlignment="Left" Margin="555,0,0,0" VerticalAlignment="Top" Width="52" Height="51" RenderTransformOrigin="0.409,0.863"/>
         <Button x:Name="btcontrol" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="557,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btcontrol_Click"/>
+        <Image x:Name="imagesstats" Source="Resources/stats.png" HorizontalAlignment="Left" Margin="500,0,0,0" VerticalAlignment="Top" Width="52" Height="51" RenderTransformOrigin="0.409,0.863"/>
+        <Button x:Name="btstats" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="500,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btstats_Click"/>
     </Grid>
 </Window>

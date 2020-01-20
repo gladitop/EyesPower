@@ -16,6 +16,7 @@ namespace EyesPower.Pages
         private void btend_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Вы завершили тренировку!", "EysePower: Тренировка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            EyesPower.Data.TraningGood = true;
             Data.exit = true;
         }
     }

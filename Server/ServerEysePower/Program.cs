@@ -72,7 +72,7 @@ namespace ServerEysePower
                 message.Body = $"Ваш код: {code}";
 
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                smtp.Credentials = new NetworkCredential("dam.almaev@gmail.com", "1506.2006A");
+                smtp.Credentials = new NetworkCredential("dam.almaev@gmail.com", "1506.2006ADamir");
                 smtp.EnableSsl = true;
                 Write($"Отправка письма от {email}", ConsoleColor.Yellow);
                 smtp.Send(message);

@@ -155,6 +155,12 @@ namespace EyesPower
         {
             StartTraning startTraning = new StartTraning();
             startTraning.ShowDialog();
+            if (Data.TraningGood == true)
+            {
+                Settings.Default.TraningQuantity++;
+                Settings.Default.Save();
+                Data.TraningGood = false;
+            }
         }
 
         private void btsettings_Click(object sender, RoutedEventArgs e)//Настройки
@@ -237,6 +243,19 @@ namespace EyesPower
         {
             Control control = new Control();
             control.ShowDialog();
+        }
+
+        private void btstats_Click(object sender, RoutedEventArgs e)//Статистика
+        {
+            if (Settings.Default.Customization == true)
+            {
+                TraningQuantity traningQuantity = new TraningQuantity();
+                traningQuantity.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Пройдите настройку!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

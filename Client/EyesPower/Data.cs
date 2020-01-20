@@ -31,6 +31,6 @@ namespace EyesPower
         public static bool ExitLogin = false;//исправление бага
         public static object timer;//Это сам таймер
         public static bool ExitNewAccount = false;//После регистрации
-
+        public static bool TraningGood = false;//Это говорит что тренировка завершина успешно
     }
 }

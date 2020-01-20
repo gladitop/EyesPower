@@ -156,6 +156,9 @@
       <DependentUpon>StartTraning.xaml</DependentUpon>
     </Compile>
     <Compile Include="Time.cs" />
+    <Compile Include="TraningQuantity.xaml.cs">
+      <DependentUpon>TraningQuantity.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Update.xaml.cs">
       <DependentUpon>Update.xaml</DependentUpon>
     </Compile>
@@ -283,6 +286,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TraningQuantity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Update.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -383,6 +390,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\statsicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\stats.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
