@@ -90,6 +90,8 @@ namespace EyesPower
                 {
                     //Process.Start("Winloc.exe");
 
+                    //тут не понятный баг!
+
                     Process proc = new Process();
                     ProcessStartInfo process = new ProcessStartInfo();
                     process.FileName = "Winloc.exe";

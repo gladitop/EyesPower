@@ -96,10 +96,11 @@ namespace ServerEysePower
                 }
                 return false;
             }
-            catch
+            catch(Exception ex)
             {
                 if (CheckConnectError(client) == false)
                 {
+                    Write(ex.Message, ConsoleColor.Red);
                     Thread.Sleep(0);
                 }
                 return false;
