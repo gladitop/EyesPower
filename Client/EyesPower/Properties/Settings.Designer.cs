@@ -238,5 +238,29 @@ namespace EyesPower.Properties {
                 this["StartProgramQuantity"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int WaringQuantity {
+            get {
+                return ((int)(this["WaringQuantity"]));
+            }
+            set {
+                this["WaringQuantity"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool QuantityYes {
+            get {
+                return ((bool)(this["QuantityYes"]));
+            }
+            set {
+                this["QuantityYes"] = value;
+            }
+        }
     }
 }

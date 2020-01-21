@@ -85,7 +85,9 @@ namespace EyesPower
 
                 //if (Settings.Default.ControlWinloc == true)
                 File.WriteAllText($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Convert.ToString(Passworld));
-
+                if (Settings.Default.QuantityYes == true)
+                    Settings.Default.WaringQuantity++;
+                Settings.Default.Save();
                 if (Settings.Default.ControlWinloc == true)
                 {
                     //Process.Start("Winloc.exe");

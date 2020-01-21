@@ -1,4 +1,7 @@
 ﻿using EyesPower.Properties;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 
 namespace EyesPower
@@ -19,6 +22,7 @@ namespace EyesPower
             checkprogram.IsChecked = Settings.Default.Program;
             checkupdate.IsChecked = Settings.Default.Update;
             checktraining.IsChecked = Settings.Default.Training;
+            checkstats.IsChecked = Settings.Default.QuantityYes;
         }
 
         private void btsave_Click(object sender, RoutedEventArgs e)
@@ -28,24 +32,44 @@ namespace EyesPower
             Settings.Default.Program = checkprogram.IsChecked.Value;
             Settings.Default.Update = checkupdate.IsChecked.Value;
             Settings.Default.Training = checktraining.IsChecked.Value;
+            Settings.Default.QuantityYes = checkstats.IsChecked.Value;
             Settings.Default.Save();
             MessageBox.Show("Настройки сохранине!", Title, MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
+        public void Crack()//Есть какой-то баг!
+        {
+            Dispatcher.Invoke(new Action(() =>
+            {
+                Task.Delay(100).Wait();
+                if (checkstats.IsChecked == false)
+                {
+                    MessageBoxResult lol = MessageBox.Show("Внимание! При отключение будет удалена вся ваша статистика!", Title,
+                        MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+                    if (lol == MessageBoxResult.Yes)
+                    {
+                        Settings.Default.StartProgramQuantity = 0;
+                        Settings.Default.TraningQuantity = 0;
+                        Settings.Default.WaringQuantity = 0;
+                        Settings.Default.Save();
+                        MessageBox.Show("1");
+                        checkstats.IsChecked = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("2");
+                        checkstats.IsChecked = true;
+                    }
+                }
+                Thread.Sleep(0);
+            }));
+        }
+
         private void checkstats_Checked(object sender, RoutedEventArgs e)
         {
-            if (checkstats.IsChecked.Value == false)
-            {
-                MessageBoxResult lol = MessageBox.Show("Внимание! При отключение будет удалена вся ваша статистика!", Title,
-                    MessageBoxButton.YesNo, MessageBoxImage.Warning);
-
-                if (lol == MessageBoxResult.Yes)
-                {
-                    e.Handled = true;
-                }
-                else
-                    e.Handled = false;
-            }
+            Thread th = new Thread(new ThreadStart(Crack));
+            th.Start();
         }
     }
 }

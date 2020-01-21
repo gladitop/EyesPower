@@ -24,5 +24,6 @@
         <Button x:Name="btcontrol" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="557,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btcontrol_Click"/>
         <Image x:Name="imagesstats" Source="Resources/stats.png" HorizontalAlignment="Left" Margin="500,0,0,0" VerticalAlignment="Top" Width="52" Height="51" RenderTransformOrigin="0.409,0.863"/>
         <Button x:Name="btstats" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="500,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btstats_Click"/>
+        <Button x:Name="btprogramtry" Content="Программы исключение" FontSize="20" HorizontalAlignment="Left" Margin="273,258,0,0" VerticalAlignment="Top" Width="254" Height="43"/>
     </Grid>
 </Window>

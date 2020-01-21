@@ -65,6 +65,7 @@ namespace EyesPower
                 catch
                 { }
             }
+            Thread.Sleep(0);
         }
 
         public void CheckUpdate()//Проверка обновления
@@ -157,7 +158,8 @@ namespace EyesPower
             startTraning.ShowDialog();
             if (Data.TraningGood == true)
             {
-                Settings.Default.TraningQuantity++;
+                if (Settings.Default.QuantityYes == true)
+                    Settings.Default.TraningQuantity++;
                 Settings.Default.Save();
                 Data.TraningGood = false;
             }
@@ -249,8 +251,15 @@ namespace EyesPower
         {
             if (Settings.Default.Customization == true)
             {
-                TraningQuantity traningQuantity = new TraningQuantity();
-                traningQuantity.ShowDialog();
+                if (Settings.Default.QuantityYes == true)
+                {
+                    TraningQuantity traningQuantity = new TraningQuantity();
+                    traningQuantity.ShowDialog();
+                }
+                else if (Settings.Default.QuantityYes == false)
+                {
+                    MessageBox.Show("Нужно включить статистку в настройках!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
             else
             {

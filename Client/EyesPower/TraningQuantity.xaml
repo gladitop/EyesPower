@@ -10,5 +10,6 @@
         <Image x:Name="imagesstats" Source="Resources/stats.png" HorizontalAlignment="Left" Margin="128,20,0,0" VerticalAlignment="Top" Width="126" Height="124" RenderTransformOrigin="0.409,0.863"/>
         <Label x:Name="lbstattraning" Content="Было тренировок:" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbstatstart" Content="Программа запущена на пк:" HorizontalAlignment="Left" Margin="10,202,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbstatwaring" Content="Сколько раз было включено предуждение:" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
