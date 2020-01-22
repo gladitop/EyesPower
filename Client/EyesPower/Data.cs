@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Sockets;
 
 namespace EyesPower
@@ -32,5 +33,9 @@ namespace EyesPower
         public static object timer;//Это сам таймер
         public static bool ExitNewAccount = false;//После регистрации
         public static bool TraningGood = false;//Это говорит что тренировка завершина успешно
+
+        //Программы исключение (данные)
+
+        public static List<string> Process = new List<string>();//Если эти процессы есть то надо бежать...
     }
 }

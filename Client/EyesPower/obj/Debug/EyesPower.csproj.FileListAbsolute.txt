@@ -319,3 +319,5 @@ C:\Users\3\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\TraningQuantity
 C:\Users\3\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\TraningQuantity.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\TraningQuantity.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\TraningQuantity.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\ProgramTry.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\ProgramTry.baml

@@ -146,6 +146,9 @@
     <Compile Include="Pages\YesAccount.xaml.cs">
       <DependentUpon>YesAccount.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProgramTry.xaml.cs">
+      <DependentUpon>ProgramTry.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SettingsForm.xaml.cs">
       <DependentUpon>SettingsForm.xaml</DependentUpon>
     </Compile>
@@ -271,6 +274,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\YesAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProgramTry.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
