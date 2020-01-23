@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using System.IO;
+using System.Text;
 
 namespace EyesPower
 {
@@ -37,5 +39,39 @@ namespace EyesPower
         //Программы исключение (данные)
 
         public static List<string> Process = new List<string>();//Если эти процессы есть то надо бежать...
+
+        public static void GetProcess()//Получение
+        {
+            if (File.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt") == true)
+            {
+                string[] read = File.ReadAllLines($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt");
+
+                foreach (string str in read)
+                {
+                    Process.Add(str);
+                }
+            }
+        }
+
+        public static void SetProcess()//Сохранение
+        {
+            if (File.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt") == false)
+            {
+                File.Delete($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt");
+                File.Create($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt");
+            }
+
+            using (StreamWriter rw = new StreamWriter($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt"))
+            {
+                rw.AutoFlush = true;
+
+                foreach (string write in Process)
+                {
+                    rw.WriteLine(write);
+                }
+
+                rw.Close();
+            }
+        }
     }
 }

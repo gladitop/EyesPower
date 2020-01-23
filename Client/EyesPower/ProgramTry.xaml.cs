@@ -20,12 +20,25 @@ namespace EyesPower
     /// </summary>
     public partial class ProgramTry : Window
     {
+        //public List<string> Pross = new List<string>();
+
         public ProgramTry()
         {
             InitializeComponent();
 
+            //Data.Process.Clear();
+            //Pross.Clear();
             lbback.Content = "<--";//Прикольчик
+            Data.GetProcess();
             GetProcces();
+        }
+
+        public void Update()//Обновление (тут баг)
+        {
+            foreach (string lol in Data.Process)
+            {
+                listprocback.Items.Add(lol);
+            }
         }
 
         public void GetProcces()
@@ -36,17 +49,22 @@ namespace EyesPower
             listprocforward.Items.Clear();
             foreach (Process proc in processes)
             {
-                foreach (string lol in Data.Process)
+                //MessageBox.Show(proc.ProcessName);
+                foreach (string lol in Data.Process)//проврка
                 {
-                    if (lol == proc.ProcessName)
+                    //MessageBox.Show(lol);
+                    if (lol == proc.ProcessName || proc.ProcessName == "EyesPower")
                     {
-                        MessageBox.Show("1");
+                        //MessageBox.Show("1");
                         yes = false;
                     }
-
-                    if(yes == true)
-                        listprocforward.Items.Add(proc.ProcessName);
                 }
+                if (yes == true)
+                {
+                    listprocforward.Items.Add(proc.ProcessName);
+                }
+                yes = true;
+                Update();
             }
         }
 
@@ -57,11 +75,24 @@ namespace EyesPower
                 string lol = listprocforward.SelectedItem.ToString();
                 Data.Process.Add(lol);
                 GetProcces();
+                Update();
             }
             catch
             {
                 MessageBox.Show("Нужен процесс!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void btdone_Click(object sender, RoutedEventArgs e)//Применить
+        {
+            Data.SetProcess();
+            GetProcces();
+            Update();
+        }
+
+        private void ___main_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Data.Process.Clear();
         }
     }
 }
