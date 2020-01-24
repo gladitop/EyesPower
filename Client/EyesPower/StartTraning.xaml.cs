@@ -20,7 +20,7 @@ namespace EyesPower
         public void Update()
         {
             //bool whiles = true;
-            while(true)
+            while (true)
             {
                 Task.Delay(10).Wait();
                 Dispatcher.Invoke(new Action(() =>

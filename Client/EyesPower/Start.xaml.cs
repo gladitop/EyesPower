@@ -1,4 +1,5 @@
 ﻿using EyesPower.Properties;
+using System.Threading;
 using System.Windows;
 
 namespace EyesPower
@@ -12,7 +13,10 @@ namespace EyesPower
         {
             InitializeComponent();
             if (Settings.Default.QuantityYes == true)
+            {
                 Settings.Default.StartProgramQuantity++;
+            }
+
             Settings.Default.Save();
             if (Settings.Default.StartProgram == false)
             {
@@ -24,6 +28,8 @@ namespace EyesPower
                 Main f = new Main();
                 f.Show();
             }
+            Thread thread = new Thread(new ThreadStart(ProgramTryClass.Update));
+            thread.Start();
             Hide();
         }
     }

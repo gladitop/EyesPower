@@ -262,5 +262,17 @@ namespace EyesPower.Properties {
                 this["QuantityYes"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ProgramTry {
+            get {
+                return ((bool)(this["ProgramTry"]));
+            }
+            set {
+                this["ProgramTry"] = value;
+            }
+        }
     }
 }

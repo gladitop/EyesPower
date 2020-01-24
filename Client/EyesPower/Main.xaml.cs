@@ -99,6 +99,7 @@ namespace EyesPower
                 btsetting.Visibility = Visibility.Visible;
                 NoSettings.Visibility = Visibility.Visible;
                 btstarttraning.Visibility = Visibility.Collapsed;
+                btprogramtry.Visibility = Visibility.Collapsed;
                 lbstate.Content = "Состояние: Плохое";
             }
             else
@@ -108,6 +109,7 @@ namespace EyesPower
                 btsetting.Visibility = Visibility.Collapsed;
                 NoSettings.Visibility = Visibility.Collapsed;
                 btstarttraning.Visibility = Visibility.Visible;
+                btprogramtry.Visibility = Visibility.Visible;
                 lbstate.Content = "Состояние: Отличное";
             }
 
@@ -118,6 +120,7 @@ namespace EyesPower
                 btsetting.Visibility = Visibility.Visible;
                 NoSettings.Visibility = Visibility.Visible;
                 btstarttraning.Visibility = Visibility.Collapsed;
+                btprogramtry.Visibility = Visibility.Collapsed;
                 lbstate.Content = "Состояние: Плохое";
             }
             else
@@ -127,6 +130,7 @@ namespace EyesPower
                 btsetting.Visibility = Visibility.Collapsed;
                 NoSettings.Visibility = Visibility.Collapsed;
                 btstarttraning.Visibility = Visibility.Visible;
+                btprogramtry.Visibility = Visibility.Visible;
                 lbstate.Content = "Состояние: Отличное";
             }
 
@@ -159,7 +163,10 @@ namespace EyesPower
             if (Data.TraningGood == true)
             {
                 if (Settings.Default.QuantityYes == true)
+                {
                     Settings.Default.TraningQuantity++;
+                }
+
                 Settings.Default.Save();
                 Data.TraningGood = false;
             }
@@ -269,9 +276,23 @@ namespace EyesPower
 
         private void btprogramtry_Click(object sender, RoutedEventArgs e)
         {
-            ProgramTry p = new ProgramTry();
-            p.ShowDialog();
-            //p.Show();
+            if (Settings.Default.Customization == true)
+            {
+                if (Settings.Default.Program == true)
+                {
+                    ProgramTry p = new ProgramTry();
+                    p.ShowDialog();
+                    //p.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Включите эту функцию в настройках!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Пройдите настройку!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

@@ -6,7 +6,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace EyesPower
 {
@@ -86,7 +85,10 @@ namespace EyesPower
                 //if (Settings.Default.ControlWinloc == true)
                 File.WriteAllText($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Passworld.txt", Convert.ToString(Passworld));
                 if (Settings.Default.QuantityYes == true)
+                {
                     Settings.Default.WaringQuantity++;
+                }
+
                 Settings.Default.Save();
                 if (Settings.Default.ControlWinloc == true)
                 {

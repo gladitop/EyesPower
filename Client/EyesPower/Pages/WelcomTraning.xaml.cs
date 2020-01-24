@@ -24,7 +24,9 @@ namespace EyesPower.Pages
             MessageBoxResult lol = MessageBox.Show("Вы уверены?", "EysePower: Тренировка", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             if (lol == MessageBoxResult.Yes)
+            {
                 Data.exit = true;
+            }
         }
     }
 }

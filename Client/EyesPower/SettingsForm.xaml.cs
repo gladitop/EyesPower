@@ -23,6 +23,7 @@ namespace EyesPower
             checkupdate.IsChecked = Settings.Default.Update;
             checktraining.IsChecked = Settings.Default.Training;
             checkstats.IsChecked = Settings.Default.QuantityYes;
+            //checkprogramtry.IsChecked = Settings.Default.ProgramTry;
         }
 
         private void btsave_Click(object sender, RoutedEventArgs e)
@@ -70,6 +71,11 @@ namespace EyesPower
         {
             Thread th = new Thread(new ThreadStart(Crack));
             th.Start();
+        }
+
+        private void checkprogramtry_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
