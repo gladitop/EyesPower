@@ -31,10 +31,12 @@ namespace EyesPower
             lbback.Content = "<--";//Прикольчик
             Data.GetProcess();
             GetProcces();
+            Update();
         }
 
         public void Update()//Обновление (тут баг)
         {
+            listprocback.Items.Clear();
             foreach (string lol in Data.Process)
             {
                 listprocback.Items.Add(lol);

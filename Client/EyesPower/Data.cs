@@ -55,11 +55,11 @@ namespace EyesPower
 
         public static void SetProcess()//Сохранение
         {
-            if (File.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt") == false)
-            {
-                File.Delete($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt");
-                File.Create($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt");
-            }
+            //if (File.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt") == false)
+            //{
+            //    File.Delete($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt");
+            //    File.Create($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt");
+            //}
 
             using (StreamWriter rw = new StreamWriter($@"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}/EyesPower/Process.txt"))
             {

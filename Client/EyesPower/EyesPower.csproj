@@ -149,6 +149,7 @@
     <Compile Include="ProgramTry.xaml.cs">
       <DependentUpon>ProgramTry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProgramTryClass.cs" />
     <Compile Include="SettingsForm.xaml.cs">
       <DependentUpon>SettingsForm.xaml</DependentUpon>
     </Compile>
