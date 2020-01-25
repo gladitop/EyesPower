@@ -12,9 +12,10 @@ namespace EyesPower
         {
             if (Settings.Default.Program == true)
             {
+                Data.GetProcess();
                 while (true)
                 {
-                    Task.Delay(100).Wait();
+                    Task.Delay(1000).Wait();
                     Data.GetProcess();
                     Process[] processes = Process.GetProcesses();
                     bool yes = false;
@@ -31,7 +32,7 @@ namespace EyesPower
 
                         if (yes == true)
                         {
-                            MessageBox.Show("1");
+                            
                         }
 
                         yes = false;

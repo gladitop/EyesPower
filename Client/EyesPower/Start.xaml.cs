@@ -28,8 +28,6 @@ namespace EyesPower
                 Main f = new Main();
                 f.Show();
             }
-            Thread thread = new Thread(new ThreadStart(ProgramTryClass.Update));
-            thread.Start();
             Hide();
         }
     }

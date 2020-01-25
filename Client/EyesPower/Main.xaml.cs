@@ -36,6 +36,12 @@ namespace EyesPower
 
             Thread thread1 = new Thread(new ThreadStart(Autoload));
             thread1.Start();
+
+            //Процессы!
+
+            Data.GetProcess();
+            Thread thread2 = new Thread(new ThreadStart(ProgramTryClass.Update));
+            thread2.Start();
         }
 
         public void Autoload()//Автозагрузка
