@@ -15,6 +15,11 @@
         <TextBox x:Name="tbemail" HorizontalAlignment="Left" FontSize="20" Margin="223,159,0,0" VerticalAlignment="Top" Width="255" Height="37"/>
         <PasswordBox x:Name="tbpassreplay" HorizontalAlignment="Left" FontSize="20" Margin="223,282,0,0" VerticalAlignment="Top" Width="255" Height="37"/>
         <Button x:Name="btnewaccount" Content="Зарегистрировать" FontSize="20" HorizontalAlignment="Left" Margin="241,345,0,0" VerticalAlignment="Top" Width="212" Height="45" Click="btnewaccount_Click" Background="#FF00FFE8"/>
+        <Button x:Name="btpass" ToolTip="Показать пароль" HorizontalAlignment="Left" Margin="541,206,0,0" VerticalAlignment="Top" Width="53" Height="55" Click="btpass_Click">
+            <StackPanel Orientation=" Vertical">
+                <Image Source="Resources\CloseEyes.png" Height="48" Width="48" />
+            </StackPanel>
+        </Button>
 
     </Grid>
 </Window>

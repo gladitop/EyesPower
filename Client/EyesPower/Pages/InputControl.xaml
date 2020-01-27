@@ -12,7 +12,7 @@
         <Label Content="Видете пароль чтобы войди" FontSize="30" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
         <Label Content="Пароль:" FontSize="25" HorizontalAlignment="Left" Margin="42,163,0,0" VerticalAlignment="Top"/>
         <PasswordBox x:Name="lbpass" HorizontalAlignment="Left" FontSize="25" Margin="148,163,0,0" VerticalAlignment="Top" Height="43" Width="227"/>
-        <Button x:Name="btinput" Content="Войди" FontSize="25" HorizontalAlignment="Left" Margin="126,313,0,0" VerticalAlignment="Top" Width="183" Height="54" Click="btinput_Click"/>
+        <Button ToolTip="Войди в управление" x:Name="btinput" Content="Войди" FontSize="25" HorizontalAlignment="Left" Margin="126,313,0,0" VerticalAlignment="Top" Width="183" Height="54" Click="btinput_Click"/>
 
     </Grid>
 </Page>

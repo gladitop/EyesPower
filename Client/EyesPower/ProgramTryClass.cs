@@ -3,6 +3,12 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.Win32;
+using System;
+using System.IO;
+using System.Net;
+using System.Windows.Input;
+using System.Windows.Media.Imaging;
 
 namespace EyesPower
 {
@@ -32,7 +38,7 @@ namespace EyesPower
 
                         if (yes == true)
                         {
-                            
+                            Environment.Exit(0);
                         }
 
                         yes = false;

@@ -9,21 +9,21 @@
     <Grid Margin="0,2,0,-2">
         <Border BorderBrush="Snow" BorderThickness="1" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="794" Background="#FF0CE7B4" Margin="0,0,-0.4,0"/>
         <Image Source="Resources\user.png" HorizontalAlignment="Left" Height="52" Margin="732,0,0,0" VerticalAlignment="Top" Width="52"/>
-        <Image x:Name="imagesstate" Source="Resources\stategood.png" HorizontalAlignment="Left" Height="174" Margin="257,52,0,0" VerticalAlignment="Top" Width="289"/>
+        <Image ToolTip="Это ваше состояние" x:Name="imagesstate" Source="Resources\stategood.png" HorizontalAlignment="Left" Height="174" Margin="257,52,0,0" VerticalAlignment="Top" Width="289"/>
         <Label x:Name="lbstate" Content="Состояние: Отличное" HorizontalAlignment="Left" Margin="336,208,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbcustomization" Visibility="Collapsed" Content="Требуется пройти настройку!"  HorizontalAlignment="Left" Margin="316,239,0,0" VerticalAlignment="Top" Foreground="#FFFF0707"/>
         <Button x:Name="btsetting" Content="Настройка" Visibility="Collapsed" FontSize="25" HorizontalAlignment="Left" Margin="317,288,0,0" VerticalAlignment="Top" Width="162" Click="btsetting_Click"/>
-        <Button x:Name="btstarttraning" Click="btstarttraning_Click" Content="Начать тренировку" FontSize="20" HorizontalAlignment="Left" Margin="24,258,0,0" VerticalAlignment="Top" Width="204" Height="43"/>
+        <Button ToolTip="Тренировка глаз" x:Name="btstarttraning" Click="btstarttraning_Click" Content="Начать тренировку" FontSize="20" HorizontalAlignment="Left" Margin="24,258,0,0" VerticalAlignment="Top" Width="204" Height="43"/>
         <Image x:Name="imagesettings" Source="Resources/Settings.png" HorizontalAlignment="Left" Height="52" Margin="676,-1,0,0" VerticalAlignment="Top" Width="54"/>
-        <Button x:Name="btsettings" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="674,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btsettings_Click"/>
+        <Button ToolTip="Настройки" x:Name="btsettings" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="674,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btsettings_Click"/>
         <Image x:Name="imageupdate" Source="Resources/Update.png" HorizontalAlignment="Left" Height="52" Margin="611,-1,0,0" VerticalAlignment="Top" Width="54"/>
-        <Button x:Name="btaccount" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="732,-1,0,0" VerticalAlignment="Top" Width="52" Height="52" Click="btaccount_Click"/>
-        <Button x:Name="btupdate" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="615,0,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btupdate_Click"/>
-        <Button x:Name="NoSettings" Content="Без настройки" HorizontalAlignment="Left" Margin="645,354,0,0" VerticalAlignment="Top" Width="106" Click="NoSettings_Click" Height="29"/>
+        <Button ToolTip="Ваш аккаунт" x:Name="btaccount" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="732,-1,0,0" VerticalAlignment="Top" Width="52" Height="52" Click="btaccount_Click"/>
+        <Button ToolTip="Обновление" x:Name="btupdate" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="615,0,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btupdate_Click"/>
+        <Button ToolTip="Настройки по умолчанию" x:Name="NoSettings" Content="Без настройки" HorizontalAlignment="Left" Margin="645,354,0,0" VerticalAlignment="Top" Width="106" Click="NoSettings_Click" Height="29"/>
         <Image x:Name="imagescontrol" Source="Resources/Controls.png" HorizontalAlignment="Left" Margin="555,0,0,0" VerticalAlignment="Top" Width="52" Height="51" RenderTransformOrigin="0.409,0.863"/>
-        <Button x:Name="btcontrol" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="557,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btcontrol_Click"/>
+        <Button ToolTip="Контроль" x:Name="btcontrol" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="557,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btcontrol_Click"/>
         <Image x:Name="imagesstats" Source="Resources/stats.png" HorizontalAlignment="Left" Margin="500,0,0,0" VerticalAlignment="Top" Width="52" Height="51" RenderTransformOrigin="0.409,0.863"/>
-        <Button x:Name="btstats" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="500,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btstats_Click"/>
-        <Button x:Name="btprogramtry" Content="Программы исключение" FontSize="20" HorizontalAlignment="Left" Margin="273,258,0,0" VerticalAlignment="Top" Width="254" Height="43" Click="btprogramtry_Click"/>
+        <Button ToolTip="Статистика" x:Name="btstats" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="500,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btstats_Click"/>
+        <Button ToolTip="Из-за этих процессов программа отключиться!" x:Name="btprogramtry" Content="Программы исключение" FontSize="20" HorizontalAlignment="Left" Margin="273,258,0,0" VerticalAlignment="Top" Width="254" Height="43" Click="btprogramtry_Click"/>
     </Grid>
 </Window>

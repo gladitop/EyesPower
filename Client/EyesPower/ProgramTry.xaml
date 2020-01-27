@@ -7,12 +7,17 @@
         mc:Ignorable="d"
         Title="EyesPower: Программы исключение" ResizeMode="NoResize" Height="455.248" Width="436.589" Closing="___main_Closing">
     <Grid>
-        <Button x:Name="btdone" Content="Применить" FontSize="30" HorizontalAlignment="Left" Margin="120,341,0,0" VerticalAlignment="Top" Width="197" Height="50" Click="btdone_Click"/>
+        <Button ToolTip="Сохраняет процессы в файл" x:Name="btdone" Content="Применить" FontSize="30" HorizontalAlignment="Left" Margin="120,341,0,0" VerticalAlignment="Top" Width="197" Height="50" Click="btdone_Click"/>
         <Label Content="Выберите процессы" HorizontalAlignment="Left" Margin="160,22,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="listprocforward" HorizontalAlignment="Left" Height="233" Margin="10,66,0,0" VerticalAlignment="Top" Width="185"/>
         <ListBox x:Name="listprocback" HorizontalAlignment="Left" Height="233" Margin="235,66,0,0" VerticalAlignment="Top" Width="185"/>
         <Button x:Name="btforward" Content="-->" HorizontalAlignment="Left" Margin="200,82,0,0" VerticalAlignment="Top" Width="30" Height="17" Click="btforward_Click"/>
         <Button x:Name="lbback" Content="--" HorizontalAlignment="Left" Margin="200,113,0,0" VerticalAlignment="Top" Width="30" Height="17"/>
+        <Button ToolTip="Добавить свой процесс"  HorizontalAlignment="Left" Margin="361,3,0,0" VerticalAlignment="Top" Width="57" Height="51">
+            <StackPanel Orientation=" Vertical">
+                <Image Source="Resources\Add.png" Height="36" Width="36" />
+            </StackPanel>
+        </Button>
 
     </Grid>
 </Window>

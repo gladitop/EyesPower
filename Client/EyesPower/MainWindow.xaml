@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="EyesPower: Вход" ResizeMode="NoResize" Height="450" Width="371.875" Closing="Window_Closing" KeyDown="mainWindow_KeyDown">
     <Grid>
-        <Button x:Name="btaccountyes" Content="С аккаунтом"  FontSize="20" HorizontalAlignment="Left" Margin="114,183,0,0" VerticalAlignment="Top" Width="141" Height="42" Click="btaccountyes_Click" BorderBrush="#7F000006" Background="#CC27EEE3">
+        <Button ToolTip="Вход" x:Name="btaccountyes" Content="С аккаунтом"  FontSize="20" HorizontalAlignment="Left" Margin="114,183,0,0" VerticalAlignment="Top" Width="141" Height="42" Click="btaccountyes_Click" BorderBrush="#7F000006" Background="#CC27EEE3">
 
         </Button>
         <Image HorizontalAlignment="Left" Source="Resources\icon.png" Height="113" Margin="91,-3,0,0" VerticalAlignment="Top" Width="182"/>
         <Label Content="Как зайди?" FontSize="15" HorizontalAlignment="Left" Margin="144,106,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnotakk" Content="Без аккаунта"  FontSize="20" HorizontalAlignment="Left" Margin="114,247,0,0" VerticalAlignment="Top" Width="141" Height="42" Click="btnotakk_Click"/>
-        <Button x:Name="btaccountinput" Content="Новый аккаунт"  FontSize="20" HorizontalAlignment="Left" Margin="102,315,0,0" VerticalAlignment="Top" Width="162" Height="42" Click="btaccountinput_Click"/>
+        <Button ToolTip="Автономно"  x:Name="btnotakk" Content="Без аккаунта"  FontSize="20" HorizontalAlignment="Left" Margin="114,247,0,0" VerticalAlignment="Top" Width="141" Height="42" Click="btnotakk_Click"/>
+        <Button ToolTip="Регистрация" x:Name="btaccountinput" Content="Новый аккаунт"  FontSize="20" HorizontalAlignment="Left" Margin="102,315,0,0" VerticalAlignment="Top" Width="162" Height="42" Click="btaccountinput_Click"/>
     </Grid>
 </Window>

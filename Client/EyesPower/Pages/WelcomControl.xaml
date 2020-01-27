@@ -15,7 +15,7 @@
         <PasswordBox x:Name="lbpass" HorizontalAlignment="Left" FontSize="25" Margin="148,163,0,0" VerticalAlignment="Top" Height="43" Width="227"/>
         <Label Content="Повторить:" FontSize="25" HorizontalAlignment="Left" Margin="12,237,0,0" VerticalAlignment="Top"/>
         <PasswordBox x:Name="lbrepeatpass" HorizontalAlignment="Left" FontSize="25" Margin="148,237,0,0" VerticalAlignment="Top" Height="43" Width="227"/>
-        <Button x:Name="btactivate" Content="Активировать" FontSize="25" HorizontalAlignment="Left" Margin="126,313,0,0" VerticalAlignment="Top" Width="183" Height="54" Click="btactivate_Click"/>
+        <Button ToolTip="Это будет ваш пароль!" x:Name="btactivate" Content="Активировать" FontSize="25" HorizontalAlignment="Left" Margin="126,313,0,0" VerticalAlignment="Top" Width="183" Height="54" Click="btactivate_Click"/>
 
     </Grid>
 </Page>

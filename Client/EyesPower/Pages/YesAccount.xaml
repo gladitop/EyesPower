@@ -12,6 +12,6 @@
         <Image Source="pack://application:,,,/Resources/user.png" Height="105" Margin="189,10,187,0" VerticalAlignment="Top"/>
         <Label x:Name="lblogin" Content="Логин:" FontSize="25" HorizontalAlignment="Left" Margin="23,170,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbpassworld" Content="Пароль:" FontSize="25" HorizontalAlignment="Left" Margin="23,238,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btexit" Content="Выход" FontSize="25" HorizontalAlignment="Left" Margin="197,304,0,0" VerticalAlignment="Top" Width="97" Height="61" Click="btexit_Click"/>
+        <Button ToolTip="Смена аккаунта" x:Name="btexit" Content="Выход" FontSize="25" HorizontalAlignment="Left" Margin="197,304,0,0" VerticalAlignment="Top" Width="97" Height="61" Click="btexit_Click"/>
     </Grid>
 </Page>

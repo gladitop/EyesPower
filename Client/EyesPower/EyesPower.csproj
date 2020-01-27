@@ -405,5 +405,14 @@
   <ItemGroup>
     <Resource Include="Resources\stats.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CloseEyes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\OpenEyes.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

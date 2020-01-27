@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="EysePower: Настройки" ResizeMode="NoResize" Icon="Resources\SettingsIcon.ico" Height="332.4" Width="371.711">
     <Grid>
-        <CheckBox x:Name="checkautoload" Content="Автозапуск программы" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkhelp" Content="Отправлять нам данные (анонимно)" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkprogram" Content="Отключать режим защита глаз при работе программ" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkupdate" Content="Проверять обновление при запуске программы" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checktraining" Content="Напонимать о тренировках для глаз" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
+        <CheckBox ToolTip="При запуске системы программа откроется" x:Name="checkautoload" Content="Автозапуск программы" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <CheckBox ToolTip="Отправление ошибок и статистику" x:Name="checkhelp" Content="Отправлять нам данные (анонимно)" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+        <CheckBox ToolTip="Отключает режим защиты при этих программ" x:Name="checkprogram" Content="Отключать режим защита глаз при работе программ" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+        <CheckBox ToolTip="При новом обновление программа вам сообщит" x:Name="checkupdate" Content="Проверять обновление при запуске программы" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
+        <CheckBox ToolTip="Обычное сообщение" x:Name="checktraining" Content="Напонимать о тренировках для глаз" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btsave" Content="Сохранить" HorizontalAlignment="Left" Margin="281,274,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.647,1.615" Click="btsave_Click"/>
-        <CheckBox x:Name="checkstats" Content="Включить статистику" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Checked="checkstats_Checked"/>
+        <CheckBox ToolTip="Например: Сколько было тренировок?" x:Name="checkstats" Content="Включить статистику" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Checked="checkstats_Checked"/>
 
     </Grid>
 </Window>

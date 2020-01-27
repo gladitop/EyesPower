@@ -12,6 +12,7 @@ namespace EyesPower
     public partial class AccountNew : Window
     {
         private Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+//        public bool Pass = false;//Показ пароля
 
         public AccountNew()
         {
@@ -22,11 +23,11 @@ namespace EyesPower
         {
             if (string.IsNullOrWhiteSpace(tbemail.Text))
             {
-                MessageBox.Show("Видите email! Без email нельзя!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Видете email! Без email нельзя!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (string.IsNullOrWhiteSpace(tbpass.Password))
             {
-                MessageBox.Show("Видите пароль! Без пароля нельзя!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Видете пароль! Без пароля нельзя!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (tbpass.Password.Length < 8)
             {
@@ -68,6 +69,22 @@ namespace EyesPower
                     Data.client.Close();
                     MessageBox.Show($"Ошибка! {ex.Message}", "EyesPower: Новый аккаунт", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
+            }
+        }
+
+        private void btpass_Click(object sender, RoutedEventArgs e)//Показать пароль
+        {
+            if (string.IsNullOrWhiteSpace(tbpass.Password))
+                MessageBox.Show("Видете пароль! Без пароля нельзя!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
+            else if (string.IsNullOrWhiteSpace(tbpassreplay.Password) == false)
+            {
+                MessageBox.Show($"Ваш пароль: {tbpass.Password}\n" +
+                    $"Повтор пароля: {tbpassreplay.Password}", Title, MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show($"Ваш пароль: {tbpass.Password}\n" +
+                    $"Повтора пароля нет!", Title, MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
     }
