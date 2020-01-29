@@ -84,5 +84,12 @@ namespace EyesPower
         {
             Data.Process.Clear();
         }
+
+        private void btadd_Click(object sender, RoutedEventArgs e)//Добавить процесс
+        {
+            ProcessAdd processAdd = new ProcessAdd();
+            processAdd.ShowDialog();
+            Update();
+        }
     }
 }
