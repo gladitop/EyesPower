@@ -25,5 +25,9 @@
         <Image x:Name="imagesstats" Source="Resources/stats.png" HorizontalAlignment="Left" Margin="500,0,0,0" VerticalAlignment="Top" Width="52" Height="51" RenderTransformOrigin="0.409,0.863"/>
         <Button ToolTip="Статистика" x:Name="btstats" Opacity="0"  Content="Button" HorizontalAlignment="Left" Margin="500,-1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btstats_Click"/>
         <Button ToolTip="Из-за этих процессов программа отключиться!" x:Name="btprogramtry" Content="Программы исключение" FontSize="20" HorizontalAlignment="Left" Margin="273,258,0,0" VerticalAlignment="Top" Width="254" Height="43" Click="btprogramtry_Click"/>
+        <Image x:Name="imagequestion" Source="Resources/QuestionIcon.png" HorizontalAlignment="Left" Margin="448,1,0,0" VerticalAlignment="Top" Width="52" Height="51" RenderTransformOrigin="0.409,0.863"/>
+        <Button ToolTip="О программе" x:Name="btquestion" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="449,1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btquestion_Click"/>
+        <Image x:Name="imageinstruction" Source="Resources/instruction.png" HorizontalAlignment="Left" Margin="397,2,0,0" VerticalAlignment="Top" Width="52" Height="51" RenderTransformOrigin="0.409,0.863"/>
+
     </Grid>
 </Window>

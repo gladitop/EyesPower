@@ -300,5 +300,13 @@ namespace EyesPower
                 MessageBox.Show("Пройдите настройку!", Title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        //О программе
+
+        private void btquestion_Click(object sender, RoutedEventArgs e)
+        {
+            About about = new About();
+            about.ShowDialog();
+        }
     }
 }

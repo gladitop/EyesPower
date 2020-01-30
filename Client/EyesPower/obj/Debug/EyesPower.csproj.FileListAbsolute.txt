@@ -325,3 +325,5 @@ C:\Users\3\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\ProgramTry.g.cs
 C:\Users\3\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\ProgramTry.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\ProcessAdd.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\ProcessAdd.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Instruction.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Instruction.baml

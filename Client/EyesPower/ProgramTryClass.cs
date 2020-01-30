@@ -14,6 +14,26 @@ namespace EyesPower
 {
     public static class ProgramTryClass
     {
+        /* У меня прекрасный English)
+         * Это для проверки если есть процесс 
+         */
+
+        static public bool Proverca(string tbprocess)
+        {
+            bool yes = true;
+
+            foreach (string proc in Data.Process)
+            {
+                if (proc == tbprocess)
+                    yes = false;
+            }
+
+            if (yes == true)
+                return true;
+
+            return false;
+        }
+
         public static void Update()
         {
             if (Settings.Default.Program == true)
