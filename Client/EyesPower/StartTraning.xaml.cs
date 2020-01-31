@@ -30,7 +30,6 @@ namespace EyesPower
                         Pages.Data.NewPage = false;
                         contect = new Pages.TrainingCircle();
                         frame.Navigate(contect);
-                        MessageBox.Show("1");
                     }
 
                     if (Pages.Data.number == 3 && Pages.Data.NewPage == true)

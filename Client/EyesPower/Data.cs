@@ -48,7 +48,8 @@ namespace EyesPower
 
                 foreach (string str in read)
                 {
-                    Process.Add(str);
+                    if (ProgramTryClass.Proverca(str))
+                        Process.Add(str);
                 }
             }
         }

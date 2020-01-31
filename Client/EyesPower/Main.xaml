@@ -28,6 +28,7 @@
         <Image x:Name="imagequestion" Source="Resources/QuestionIcon.png" HorizontalAlignment="Left" Margin="448,1,0,0" VerticalAlignment="Top" Width="52" Height="51" RenderTransformOrigin="0.409,0.863"/>
         <Button ToolTip="О программе" x:Name="btquestion" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="449,1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btquestion_Click"/>
         <Image x:Name="imageinstruction" Source="Resources/instruction.png" HorizontalAlignment="Left" Margin="397,2,0,0" VerticalAlignment="Top" Width="52" Height="51" RenderTransformOrigin="0.409,0.863"/>
+        <Button ToolTip="Инструкция" x:Name="btinstruction" Opacity="0" Content="Button" HorizontalAlignment="Left" Margin="397,1,0,0" VerticalAlignment="Top" Width="51" Height="52" Click="btinstruction_Click"/>
 
     </Grid>
 </Window>

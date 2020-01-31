@@ -54,12 +54,10 @@ namespace EyesPower
                         Settings.Default.TraningQuantity = 0;
                         Settings.Default.WaringQuantity = 0;
                         Settings.Default.Save();
-                        MessageBox.Show("1");
                         checkstats.IsChecked = false;
                     }
                     else
                     {
-                        MessageBox.Show("2");
                         checkstats.IsChecked = true;
                     }
                 }

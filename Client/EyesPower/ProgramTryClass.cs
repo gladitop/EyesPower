@@ -34,7 +34,7 @@ namespace EyesPower
             return false;
         }
 
-        public static void Update()
+        public static void Update()//Для проверки совподение (в начале)
         {
             if (Settings.Default.Program == true)
             {

@@ -30,6 +30,7 @@ namespace EyesPower
             {
                 Thread thread = new Thread(new ThreadStart(CheckUpdate));
                 thread.Start();
+                MessageBox.Show("1");
             }
 
             //Автозагрузка
@@ -307,6 +308,12 @@ namespace EyesPower
         {
             About about = new About();
             about.ShowDialog();
+        }
+
+        private void btinstruction_Click(object sender, RoutedEventArgs e)//Инструкция
+        {
+            Instruction instruction = new Instruction();
+            instruction.ShowDialog();
         }
     }
 }
