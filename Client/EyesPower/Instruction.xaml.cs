@@ -23,5 +23,20 @@ namespace EyesPower
         {
             InitializeComponent();
         }
+
+        //private treeview_Selected(object sender, RoutedEventArgs e)
+        //{
+        //    TreeViewItem tvItem = (TreeViewItem)sender;
+        //    MessageBox.Show("Выбран узел: " + tvItem.Header.ToString());
+        //}
+
+        private void treeview_Selected(object sender, RoutedEventArgs e)
+        {
+            TreeViewItem tvItem = (TreeViewItem)sender;
+            if (tvItem.Header.ToString() == "Что делать если состояние плохое")
+            {
+                frame.Navigate(new Pages.badstatusin());
+            }
+        }
     }
 }

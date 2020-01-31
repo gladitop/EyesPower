@@ -27,6 +27,7 @@ namespace EyesPower
             {
                 Main f = new Main();
                 f.Show();
+                MessageBox.Show("1");
             }
             Hide();
         }

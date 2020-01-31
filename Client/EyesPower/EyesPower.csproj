@@ -103,6 +103,9 @@
     <Compile Include="Instruction.xaml.cs">
       <DependentUpon>Instruction.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\badstatusin.xaml.cs">
+      <DependentUpon>badstatusin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CheckUpdate.xaml.cs">
       <DependentUpon>CheckUpdate.xaml</DependentUpon>
     </Compile>
@@ -228,6 +231,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\badstatusin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CheckUpdate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -439,6 +446,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\instructionIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\InBadStatus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
