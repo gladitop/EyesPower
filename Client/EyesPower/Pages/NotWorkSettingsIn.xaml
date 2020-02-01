@@ -1,0 +1,18 @@
+﻿<Page x:Class="EyesPower.Pages.NotWorkSettingsIn"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EyesPower.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="555"
+      Title="NotWorkSettingsIn">
+
+    <Grid>
+        <Label Content="Первое" FontSize="20" HorizontalAlignment="Left" Margin="227,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Нажмите на Windows + R и наберите как в этой картинке" FontSize="20" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top"/>
+        <Image Source="pack://application:,,,/Resources/NotWorkSettingsInWin.png" HorizontalAlignment="Left" Height="149" Margin="10,93,0,0" VerticalAlignment="Top" Width="236"/>
+        <Label Content="Второе" FontSize="20" HorizontalAlignment="Left" Margin="227,247,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>

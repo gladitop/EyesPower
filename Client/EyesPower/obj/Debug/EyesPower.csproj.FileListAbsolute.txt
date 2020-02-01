@@ -333,3 +333,7 @@ C:\Users\3\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Instruction.bam
 C:\Users\3\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\ProcessAdd.baml
 C:\Users\3\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\badstatusin.g.cs
 C:\Users\3\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\badstatusin.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\badstatusin.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\badstatusin.baml
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\NotWorkSettingsIn.g.cs
+C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\NotWorkSettingsIn.baml

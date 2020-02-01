@@ -30,12 +30,17 @@ namespace EyesPower
         //    MessageBox.Show("Выбран узел: " + tvItem.Header.ToString());
         //}
 
-        private void treeview_Selected(object sender, RoutedEventArgs e)
+        private void treeview_Selected(object sender, RoutedEventArgs e)//При выборе элемента
         {
             TreeViewItem tvItem = (TreeViewItem)sender;
+
             if (tvItem.Header.ToString() == "Что делать если состояние плохое")
             {
                 frame.Navigate(new Pages.badstatusin());
+            }
+            else if (tvItem.Header.ToString() == "У меня не работают настройки")
+            {
+                frame.Navigate(new Pages.NotWorkSettingsIn());
             }
         }
     }

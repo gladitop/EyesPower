@@ -10,7 +10,7 @@
         <Image HorizontalAlignment="Left" Source="Resources/icon.png" Height="148" Margin="84,10,0,0" VerticalAlignment="Top" Width="238"/>
         <Label Content="Название программы: Eysepower" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top"/>
         <Label Content="Версия: 1.0" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top"/>
-        <Label Content="Автор: Дамир Алмаев" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top"/>
+        <Label Content="Автор: Дамир Алмаев &#128540;" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top"/>
         <Label Content="Описание программы: Эта программа для тренировки глаз" HorizontalAlignment="Left" Margin="10,256,0,0" VerticalAlignment="Top"/>
         <Label Content="и контроль за использованием пк" HorizontalAlignment="Left" Margin="10,282,0,0" VerticalAlignment="Top"/>
         <Button Click="btexit_Click" x:Name="btexit" Content="Выход" FontSize="25" HorizontalAlignment="Left" Margin="112,346,0,0" VerticalAlignment="Top" Width="175" Height="45" Background="#FF00FFFA"/>

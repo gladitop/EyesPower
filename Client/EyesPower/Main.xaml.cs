@@ -36,7 +36,6 @@ namespace EyesPower
 
             Thread thread1 = new Thread(new ThreadStart(Autoload));
             thread1.Start();
-
             //Процессы!
 
             Data.GetProcess();
