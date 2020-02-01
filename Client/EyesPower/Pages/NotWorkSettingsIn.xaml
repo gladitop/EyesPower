@@ -13,6 +13,8 @@
         <Label Content="Нажмите на Windows + R и наберите как в этой картинке" FontSize="20" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top"/>
         <Image Source="pack://application:,,,/Resources/NotWorkSettingsInWin.png" HorizontalAlignment="Left" Height="149" Margin="10,93,0,0" VerticalAlignment="Top" Width="236"/>
         <Label Content="Второе" FontSize="20" HorizontalAlignment="Left" Margin="227,247,0,0" VerticalAlignment="Top"/>
+        <Label Content="C:\Users\Дамир\AppData\Local и это удалить!" FontSize="20" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top"/>
+        <Image Source="/EyesPower;component/Resources/NotWorkSettingsInDis.png" HorizontalAlignment="Left" Height="35" Margin="0,332,0,0" VerticalAlignment="Top" Width="480"/>
 
     </Grid>
 </Page>

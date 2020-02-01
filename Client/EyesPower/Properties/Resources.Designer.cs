@@ -153,6 +153,16 @@ namespace EyesPower.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NotWorkSettingsInDis {
+            get {
+                object obj = ResourceManager.GetObject("NotWorkSettingsInDis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NotWorkSettingsInWin {
             get {
                 object obj = ResourceManager.GetObject("NotWorkSettingsInWin", resourceCulture);

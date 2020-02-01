@@ -460,5 +460,8 @@
   <ItemGroup>
     <Resource Include="Resources\NotWorkSettingsInWin.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\NotWorkSettingsInDis.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
