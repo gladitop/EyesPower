@@ -337,3 +337,17 @@ C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\badstatusin.baml
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\NotWorkSettingsIn.g.cs
 C:\Users\Дамир\Documents\GitHub\EyesPower\Client\EyesPower\obj\Debug\Pages\NotWorkSettingsIn.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Instruction.g.cs
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\badstatusin.g.cs
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\NotWorkSettingsIn.g.cs
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\PicturesTraning.g.cs
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\ProcessAdd.g.cs
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\ProgramTry.g.cs
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\TraningQuantity.g.cs
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Instruction.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\badstatusin.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\NotWorkSettingsIn.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\Pages\PicturesTraning.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\ProcessAdd.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\ProgramTry.baml
+C:\Users\Дамир\Documents\EyesPower\Client\EyesPower\obj\Debug\TraningQuantity.baml

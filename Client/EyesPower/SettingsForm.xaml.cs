@@ -26,6 +26,16 @@ namespace EyesPower
             //checkprogramtry.IsChecked = Settings.Default.ProgramTry;
         }
 
+        public void GetSettings()//Вставка параметров
+        {
+            checkautoload.IsChecked = Settings.Default.Autoload;
+            checkhelp.IsChecked = Settings.Default.YesHelp;
+            checkprogram.IsChecked = Settings.Default.Program;
+            checkupdate.IsChecked = Settings.Default.Update;
+            checktraining.IsChecked = Settings.Default.Training;
+            checkstats.IsChecked = Settings.Default.QuantityYes;
+        }
+
         private void btsave_Click(object sender, RoutedEventArgs e)
         {
             Settings.Default.Autoload = checkautoload.IsChecked.Value;
@@ -74,6 +84,24 @@ namespace EyesPower
         private void checkprogramtry_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btstardand_Click(object sender, RoutedEventArgs e)//По умолчанию
+        {
+            MessageBoxResult lol = MessageBox.Show("Вы уверены?", Title, MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (lol == MessageBoxResult.Yes)
+            {
+                Settings.Default.Autoload = true;
+                Settings.Default.YesHelp = true;
+                Settings.Default.Program = true;
+                Settings.Default.Update = true;
+                Settings.Default.Training = true;
+                Settings.Default.QuantityYes = false;
+                Settings.Default.Save();
+                GetSettings();
+                MessageBox.Show("Готово!", Title, MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
     }
 }
